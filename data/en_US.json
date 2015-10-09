@@ -1,0 +1,52 @@
+{
+	"services": {
+		"title": "Our services",
+		"list": [
+			{
+				"id": 1,
+				"title": "Desktop and devices infrastructure",
+				"description": "We develop a corporate management system, install, configure and conduct employee training. We offer design, implementation and training services; update the existing systems; automate processes; accompany IT-system; advise on security issues; realize 'Bring Your Own Device'."
+			},
+			{
+				"id": 2,
+				"title": "Server infrastructure",
+				"description": "We provide reliability, rapid performance and security of server infrastructure of your company. We carry out an audit of information security. We offer contemporary solutions to improve rapid performance and resilience of your IT-infrastructure."
+			},
+			{
+				"id": 3,
+				"title": "Cloud and services infrastructure",
+				"description": "We offer expansion and growth of the performance of your IT infrastructure due to cloud technologies. We will help you to determine a common approach that is optimal for your company and integrate the local infrastructure with cloud solutions."
+			}
+		]
+	},
+	"team": {
+		"title": "Our team",
+		"list": [
+			{
+				"id": 1,
+				"name": "Jevgenijus Vinochodovas",
+				"title": "Senior solutions architect, founder",
+				"interests": ["IT", "virtualization", "big data"],
+				"photoUrl": "http://www.albars.eu/wp-content/uploads/2014/12/vinochodovas.png",
+				"linkedIn": "http://lt.linkedin.com/pub/jevgenijus-vinochodovas/23/587/345"
+			},
+			{
+				"id": 2,
+				"name": "Rimantė Šilauskienė",
+				"title": "Head of Communications",
+				"interests": ["Marketing", "development coordination", "project management"],
+				"photoUrl": "http://www.albars.eu/wp-content/uploads/2015/04/Rimante2.jpg",
+				"linkedIn": ""
+			},
+			{
+				"id": 3,
+				"name": "Sergejus Barinovas",
+				"title": "Software engineering architect",
+				"interests": ["scalability", "high load systems", "big data"],
+				"photoUrl": "http://www.albars.eu/wp-content/uploads/2015/01/Barinovas.jpg",
+				"linkedIn": "https://www.linkedin.com/in/sergejus"
+
+			}
+		]
+	}
+}
