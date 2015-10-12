@@ -8,7 +8,7 @@ let Api =  require('../api/api.js');
 let CHANGE_EVENT = 'change';
 
 
-let _content;
+let _content, _menu;
 
 let AppStore = Object.assign({}, EventEmitter.prototype, {
 	addChangeListener: function(callback){
@@ -22,6 +22,12 @@ let AppStore = Object.assign({}, EventEmitter.prototype, {
 	},
 	getContent: function(){
 		return _content; 
+	},
+	getMenu: function(){
+		return _content.menu;
+	},
+	getCarousel: function(){
+		return _content.carousel;
 	}
 });
 

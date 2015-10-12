@@ -13,10 +13,11 @@ let PartnersComponent = require('./partners-component.jsx');
 let FooterComponent = require('./footer-component.jsx');
 
 let App = React.createClass ({
+
+
   render() {
     return (
       <div>
-      
 	  	  <TopMenuComponent />
         <CarouselComponent />
         <WelcomeComponent />

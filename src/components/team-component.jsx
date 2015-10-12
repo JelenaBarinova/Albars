@@ -31,6 +31,7 @@ let TeamComponent = React.createClass ({
                                 <div className="team-inner">
                                     <p className="team-inner-header">JEVGENIJUS</p>
                                     <p className="team-inner-subtext">Founder</p>
+                                    <p className="team-inner-subtext">Software architect Software architect Software architect Software architect Software architect Software architect Software architect Software architect Software architect </p>
                                 </div>
                             </div>
                         </li>
@@ -45,8 +46,9 @@ let TeamComponent = React.createClass ({
                                     </div>
                                 </div>
                                 <div className="team-inner">
-                                    <p className="team-inner-header">MARY</p>
+                                    <p className="team-inner-header">Rimante</p>
                                     <p className="team-inner-subtext">Developer</p>
+                                    <p className="team-inner-subtext">Developer </p>
                                 </div>
                             </div>
                         </li>
@@ -63,6 +65,7 @@ let TeamComponent = React.createClass ({
                                 <div className="team-inner">
                                     <p className="team-inner-header">SERGEJUS</p>
                                     <p className="team-inner-subtext">Software architect</p>
+                                    <p className="team-inner-subtext">Software architect</p>
                                 </div>
                             </div>
                         </li>
@@ -77,8 +80,9 @@ let TeamComponent = React.createClass ({
                                     </div>
                                 </div>
                                 <div className="team-inner">
-                                    <p className="team-inner-header">LINDA</p>
+                                    <p className="team-inner-header">JEKATERINA</p>
                                     <p className="team-inner-subtext">Manager</p>
+                                    <p className="team-inner-subtext">Software architect</p>
                                 </div>
                             </div>
                         </li>

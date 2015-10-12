@@ -8,7 +8,7 @@ let BlogComponent = React.createClass ({
     
 <div id="templatemo-blog">
             <div className="container">
-                <div className="row">
+                <div className="row" style={{marginTop: '70px'}}>
                     <div className="templatemo-line-header" style={{marginTop: '0px'}} >
                         <div className="text-center">
                             <hr className="team_hr team_hr_left hr_gray"/><span className="span_blog txt_darkgrey">BLOG POSTS</span>

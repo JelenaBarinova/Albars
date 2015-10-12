@@ -1,4 +1,38 @@
 {
+	"menu": {
+		"home": "home",
+		"team": "team",
+		"services": "services",
+		"blog": "blog",
+		"clients": "clients",
+		"contact": "contact"
+	},
+	"carousel":{
+		"title": "",
+		"list": [
+			{
+				"id": 1,
+				"title": "Welcome to ALBARS",
+				"content": "We are very awesome team or young energetic smart and pragmatic people, who always looks how to make the best for the customer. We are really strong in informational technologies: both hardware and software wise. We provide a wide range of different services for small to enterprise level companies.",
+				"url": "#/services",
+				"more": "Read more"
+			},
+			{
+				"id": 2,
+				"title": "Meet our new team member Rimante!",
+				"content": "As a head of communications - Rimante is the one you want to conact if any questions!",
+				"url": "#/team",
+				"more": "Albars team"
+			},
+			{
+				"id": 3,
+				"title": "ALBARS at a biggest IT conference in Europe",
+				"content": "Recently our the one and only Jevgenij gave a talk at Powered by MVP conference.",
+				"url": "http://www.bebetterdeveloper.com",
+				"more": "Read more"
+			}
+		]
+	},
 	"services": {
 		"title": "Our services",
 		"list": [

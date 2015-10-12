@@ -22,6 +22,7 @@ gulp.task('browserify', function(){
 gulp.task('es2015', ['browserify'], function () {  
   return gulp.src('./output/*.js')
         .pipe(plug.babel())
+        //.pipe(plug.uglify())
         .pipe(gulp.dest('output'))
         .pipe(plug.connect.reload());
 });

@@ -4,7 +4,7 @@ let Dispatcher = require('../dispatcher/dispatcher.js');
 let ActionTypes = require('../constants/action-types.js');
 
 let MenuActions = {
-	switchLangauge: function(language) {
+	switchLanguage: function(language) {
 		Dispatcher.dispatch({
 			actionType: ActionTypes.SWITCH_LANGUAGE,
 			language: language

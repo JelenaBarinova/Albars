@@ -89,6 +89,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
         margin-bottom: 20px;
         line-height: 1.4;
         font-size: 21px;
+        font-weight: 400;
     }
 
     #templatemo-carousel .carousel-caption {
@@ -163,8 +164,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 
 .btn-blue {
-    background-color: #35A2D8;
-    border-bottom:2px solid #35A2D8;
+    background-color: #2583C5;    
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 }
 
 .btn-blue:hover, .btn-blue:focus, .btn-blue:active, .btn-blue.active, .open .dropdown-toggle.btn-blue {
-    background-color: #2583C5;
+    background-color: #35A2D8;
     color:#ffffff;
 }
 
@@ -264,7 +264,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 }
 
 .templatemo-team {
-    background: url('../images/background.png') ; 
+    background-color: #8996a0; 
     font-family:  'Open Sans', sans-serif;
     min-height:590px;
     color:#ffffff;
@@ -728,77 +728,4 @@ ul.templatemo-project-gallery  li  a img:hover {
 	 .team_hr {
 		width: 11%;
 	}
-}
-
-.dropotron {
-  text-align: left;
-  border: solid 1px #e5e5e5;
-  border-radius: 4px;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.965);
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
-  padding: 0.75em 0 0.5em 0;
-  min-width: 12em;
-  margin-top: -moz-calc(-0.5em + 1px);
-  margin-top: -webkit-calc(-0.5em + 1px);
-  margin-top: -o-calc(-0.5em + 1px);
-  margin-top: -ms-calc(-0.5em + 1px);
-  margin-top: calc(-0.5em + 1px);
-  margin-left: -2px;
-}
-
-.dropotron.level-0 {
-  margin-top: 1.5em;
-  margin-left: -1em;
-}
-
-.dropotron.level-0:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 1.25em;
-  top: -moz-calc(-0.75em + 1px);
-  top: -webkit-calc(-0.75em + 1px);
-  top: -o-calc(-0.75em + 1px);
-  top: -ms-calc(-0.75em + 1px);
-  top: calc(-0.75em + 1px);
-  border-left: solid 0.75em rgba(255, 255, 255, 0);
-  border-right: solid 0.75em rgba(255, 255, 255, 0);
-  border-bottom: solid 0.75em #fff;
-}
-
-.dropotron.level-0:before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 1.25em;
-  top: -0.75em;
-  border-left: solid 0.75em rgba(255, 255, 255, 0);
-  border-right: solid 0.75em rgba(255, 255, 255, 0);
-  border-bottom: solid 0.75em #ccc;
-}
-
-.dropotron span,
-.dropotron a {
-  display: block;
-  padding: 0.3em 1em 0.3em 1em;
-  border: 0;
-  border-top: solid 1px #f0f0f0;
-  outline: 0;
-}
-
-.dropotron li:first-child > span,
-.dropotron li:first-child > a {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.dropotron li:hover > span,
-.dropotron li:hover > a {
-  color: #ed786a;
-  -moz-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-  -webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-  -o-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-  -ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
-  transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 }
