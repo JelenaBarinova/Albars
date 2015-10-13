@@ -29591,7 +29591,8 @@ let App = React.createClass ({displayName: "App",
   render() {
     return (
       React.createElement("div", null, 
-	 React.createElement("h2", null, "Initialize action is being done")
+	 React.createElement("h2", null, "Initialize action is being done"), 
+   React.createElement("h3", null, "Additional javascript libs removed")
 	    )
     );
   }
