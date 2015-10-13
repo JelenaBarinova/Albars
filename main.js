@@ -29920,8 +29920,8 @@ let App = React.createClass ({displayName: "App",
 
   render() {
     return (
-      React.createElement("div", null, 
-	  	  React.createElement("h2", null, "Hi from React")
+      React.createElement("div", null
+	  	  
 	    )
     );
   }
