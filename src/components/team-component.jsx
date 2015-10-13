@@ -1,9 +1,62 @@
 "use strict";
 let React = require('react');
+let AppStore = require('../stores/app-store.js');
+
+let TeamMember = React.createClass ({
+  render() {
+    return (
+      <li className="col-lg-3 col-md-3 col-sm-6 ">
+        <div className="text-center">
+          <div className="member-thumb">
+            <img src={this.props.member.photoUrl} className="img-responsive" alt={this.props.member.name}/>
+            <div className="thumb-overlay">
+              <a href="#"><span className="social-icon-fb">{this.props.member.fbUrl}</span></a>
+              <a href="#"><span className="social-icon-twitter">{this.props.member.twitterUrl}</span></a>
+              <a href="#"><span className="social-icon-linkedin">{this.props.member.linkedinUrl}</span></a>
+            </div>
+          </div>
+          <div className="team-inner">
+            <p className="team-inner-header">{this.props.member.name.toUpperCase()}</p>
+            <p className="team-inner-header">{this.props.member.title}</p>
+            <p className="team-inner-subtext">{this.props.member.bio}</p>
+          </div>
+        </div>
+      </li>
+    )
+  }
+
+});
 
 let TeamComponent = React.createClass ({
 
+  getInitialState: function() {
+    return {    
+       teamData: AppStore.getTeam()
+    };
+  },
+  componentWillMount: function() {
+    AppStore.addChangeListener(this._onChange); 
+  },
+ 
+  
+  componentWillUnmount: function() {
+    AppStore.removeChangeListener(this._onChange); 
+  },
+  
+  _onChange() {
+    console.log('changing services componenet');
+    this.setState({ 
+      teamData: AppStore.getTeam() 
+    });
+  },
+  
   render() {
+  
+    let teamMembers = this.state.teamData.list.map(function(member) {    
+      return (
+        <TeamMember member={member} key={member.id} />
+      );
+    });
     return (
     
     <div className="templatemo-team" id="templatemo-about">
@@ -11,81 +64,14 @@ let TeamComponent = React.createClass ({
                 <div className="row">
                     <div className="templatemo-line-header">
                         <div className="text-center">
-                            <hr className="team_hr team_hr_left"/><span>MEET OUR TEAM</span>
+                            <hr className="team_hr team_hr_left"/><span>{this.state.teamData.title.toUpperCase()}</span>
                             <hr className="team_hr team_hr_right" />
                         </div>
                     </div>
                 </div>
                 <div className="clearfix"> </div>
                     <ul className="row row_team">
-                        <li className="col-lg-3 col-md-3 col-sm-6 ">
-                            <div className="text-center">
-                                <div className="member-thumb">
-                                    <img src="images/member1.jpg" className="img-responsive" alt="member 1" />
-                                    <div className="thumb-overlay">
-                                        <a href="#"><span className="social-icon-fb"></span></a>
-                                        <a href="#"><span className="social-icon-twitter"></span></a>
-                                        <a href="#"><span className="social-icon-linkedin"></span></a>
-                                    </div>
-                                </div>
-                                <div className="team-inner">
-                                    <p className="team-inner-header">JEVGENIJUS</p>
-                                    <p className="team-inner-subtext">Founder</p>
-                                    <p className="team-inner-subtext">Software architect Software architect Software architect Software architect Software architect Software architect Software architect Software architect Software architect </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="col-lg-3 col-md-3 col-sm-6 ">
-                            <div className="text-center">
-                                <div className="member-thumb">
-                                    <img src="images/member2.jpg" className="img-responsive" alt="member 2" />
-                                    <div className="thumb-overlay">
-                                        <a href="#"><span className="social-icon-fb"></span></a>
-                                        <a href="#"><span className="social-icon-twitter"></span></a>
-                                        <a href="#"><span className="social-icon-linkedin"></span></a>
-                                    </div>
-                                </div>
-                                <div className="team-inner">
-                                    <p className="team-inner-header">Rimante</p>
-                                    <p className="team-inner-subtext">Developer</p>
-                                    <p className="team-inner-subtext">Developer </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="col-lg-3 col-md-3 col-sm-6 ">
-                            <div className="text-center">
-                                <div className="member-thumb">
-                                    <img src="images/member3.jpg" className="img-responsive" alt="member 3" />
-                                    <div className="thumb-overlay">
-                                        <a href="#"><span className="social-icon-fb"></span></a>
-                                        <a href="#"><span className="social-icon-twitter"></span></a>
-                                        <a href="#"><span className="social-icon-linkedin"></span></a>
-                                    </div>
-                                </div>
-                                <div className="team-inner">
-                                    <p className="team-inner-header">SERGEJUS</p>
-                                    <p className="team-inner-subtext">Software architect</p>
-                                    <p className="team-inner-subtext">Software architect</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="col-lg-3 col-md-3 col-sm-6 ">
-                            <div className="text-center">
-                                <div className="member-thumb">
-                                    <img src="images/member4.jpg" className="img-responsive" alt="member 4" />
-                                    <div className="thumb-overlay">
-                                        <a href="#"><span className="social-icon-fb"></span></a>
-                                        <a href="#"><span className="social-icon-twitter"></span></a>
-                                        <a href="#"><span className="social-icon-linkedin"></span></a>
-                                    </div>
-                                </div>
-                                <div className="team-inner">
-                                    <p className="team-inner-header">JEKATERINA</p>
-                                    <p className="team-inner-subtext">Manager</p>
-                                    <p className="team-inner-subtext">Software architect</p>
-                                </div>
-                            </div>
-                        </li>
+                      {teamMembers}
                     </ul>
             </div>
         </div>

@@ -6,7 +6,7 @@ let CarouselComponent = require('./carousel-component.jsx');
 let ServicesComponent = require('./services-component.jsx');
 let TeamComponent = require('./team-component.jsx');
 let BlogComponent = require('./blog-component.jsx');
-let ContactsComponent = require('./contacts-component.jsx');
+
 let TweetsComponent = require('./tweets-component.jsx');
 let PartnersComponent = require('./partners-component.jsx');
 let FooterComponent = require('./footer-component.jsx');
@@ -22,7 +22,7 @@ let App = React.createClass ({
         <ServicesComponent />
         <TeamComponent />
         <BlogComponent />
-        <ContactsComponent />
+        
         <TweetsComponent />
         <PartnersComponent />
         <FooterComponent />

@@ -2,7 +2,6 @@
 let React = require('react');
 let MenuActions = require('../actions/menu-actions.js');
 let AppStore = require('../stores/app-store.js');
-let Link = require('react-router').Link;
 
 let TopMenuComponent = React.createClass ({
 
@@ -60,8 +59,8 @@ let TopMenuComponent = React.createClass ({
                     <li><a href="#templatemo-blog">{this.state.menuData.clients.toUpperCase()}</a></li>
                     <li><a href="#templatemo-contact">{this.state.menuData.contact.toUpperCase()}</a></li> 
 
-                    <li><Link to="/" onClick={this.switchLanguage.bind(this,'en_US')}><img src="images/flags/us.png" alt="en_US" title="English" /></Link></li>
-                    <li><Link to="/" onClick={this.switchLanguage.bind(this,'ru_RU')}><img src="images/flags/ru.png" alt="ru_RU" title="Русский" /></Link></li>
+                    <li><a href="#/en" onClick={this.switchLanguage.bind(this,'en_US')}><img src="images/flags/us.png" alt="en_US" title="English" /></a></li>
+                    <li><a href="#/ru" onClick={this.switchLanguage.bind(this,'ru_RU')}><img src="images/flags/ru.png" alt="ru_RU" title="Русский" /></a></li>
                                                              
                   </ul>  
                 </div>                

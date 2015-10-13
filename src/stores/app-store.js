@@ -37,6 +37,10 @@ let AppStore = Object.assign({}, EventEmitter.prototype, {
 	
 	getServices: function(){
 		return _content.services;
+	},
+	
+	getTeam: function(){
+		return _content.team;
 	}
 });
 
