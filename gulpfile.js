@@ -28,8 +28,7 @@ gulp.task('es2015', ['browserify'], function () {
   return gulp.src(output_dir + '*.js')
         .pipe(plug.babel())
         //.pipe(plug.uglify())
-        .pipe(gulp.dest(output_dir))
-        .pipe(plug.connect.reload());
+        .pipe(gulp.dest(output_dir));
 });
 /*
 gulp.task('test', function () {
@@ -90,9 +89,9 @@ gulp.task('open', ['run_server'], function(){
 /* ------------ TASKS ------------ */
 
 gulp.task('clean-build', function(cb){
-  plug.runSequence('copy-files', 'build', cb);
+  plug.runSequence('copy-files', 'build', 'open', cb);
 });
 
 gulp.task('build', function (cb) {
-  plug.runSequence('es2015', 'open', cb);
+  plug.runSequence('es2015', cb);
 });
