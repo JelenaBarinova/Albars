@@ -9,6 +9,7 @@ let Route = ReactRouter.Route;
 let Routes = (
   <Route path="/" component={require('./components/app.jsx')}>
     
+    
     <Route path="*" component={require('./components/app.jsx')} />
   </Route>
 );

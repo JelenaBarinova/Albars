@@ -19,7 +19,7 @@ let CarouselComponent = React.createClass ({
   },
   
   _onChange() {
-    console.log('changing');
+    console.log('changing courasel component');
     this.setState({ 
       carouselData: AppStore.getCarousel() 
     });

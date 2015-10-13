@@ -1,64 +1,80 @@
 "use strict";
 let React = require('react');
+let AppStore = require('../stores/app-store.js');
 
-let ServicesComponent = React.createClass ({
-
+let ServiceItem = React.createClass({
   render() {
     return (
-    
-<div className="templatemo-service">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-4">
-                        <div className="templatemo-service-item">
-                            <div>
-                                <img src="images/leaf.png" alt="icon" />
-                                <span className="templatemo-service-item-header">AWESOME ICONS</span>
-                            </div>
-                            <p>Nam porta adipiscing tortor, eget rutrum turpis bibendum ut. Donec eu lacus in diam euismod imperdiet eu ut turpis. Morbi felis orci, tincidunt pretium laoreet id, euismod et lacus. Praesent aliquet magna vitae mi elementum pharetra.</p>
-                            <div className="text-center">
-                            	<a href="#" 
-                                	className="templatemo-btn-read-more btn btn-blue">READ MORE</a>
-                            </div>
-                            <br className="clearfix"/>
-                        </div>
-                        <div className="clearfix"></div>
-                    </div>
-                    
-                    <div className="col-md-4">
-                        <div className="templatemo-service-item" >
-                            <div>
-                                <img src="images/mobile.png" alt="icon"/>
-                                <span className="templatemo-service-item-header">FULLY RESPONSIVE</span>
-                            </div>
-							<p><a rel="nofollow" href="http://www.templatemo.com/free-website-templates/395-urbanic" target="_parent">Urbanic</a> is free responsive mobile website template by templatemo. Credits go to <a rel="nofollow" href="http://getbootstrap.com">Bootstrap</a> for responsive layout and <a rel="nofollow" href="http://unsplash.com">Unsplash</a> for images used in this template. Curabitur non eros ut dolor tincidunt interdum sit amet vitae quam.</p>
-                            <div className="text-center">
-                                <a href="#" 
-                                	className="templatemo-btn-read-more btn btn-blue">READ MORE</a>
-                            </div>
-                            <br className="clearfix"/>
-                        </div>
-                        
-                    </div>
-                    
-                    <div className="col-md-4">
-                        <div className="templatemo-service-item">
-                            <div>
-                                <img src="images/battery.png" alt="icon"/>
-                                <span className="templatemo-service-item-header">HIGH EFFICIENCY</span>
-                            </div>
-                            <p>Morbi imperdiet ipsum sit amet dui pharetra, vulputate porta neque tristique. Quisque id turpis tristique, venenatis erat sit amet, venenatis turpis. Ut tellus ipsum, posuere bibendum consectetur vel, egestas sit amet erat. Morbi rhoncus leo fermentum viverra.</p>
-                            <div className="text-center">
-                                <a href="#" 
-                                	className="templatemo-btn-read-more btn btn-blue">READ MORE</a>
-                            </div>
-                            <br className="clearfix"/>
-                        </div>
-                        <br className="clearfix"/>
-                    </div>
-                </div>
+      <div className="col-md-4">
+        <div className="templatemo-service-item">
+          <div>
+            <div className="col-xs-2">
+              <img src="images/leaf.png" alt="icon" style={{float: 'left'}}/>
             </div>
-        </div> 
+            <div className="col-xs-10">
+              <span className="templatemo-service-item-header">{this.props.service.title.toUpperCase()}</span>
+            </div>
+          </div>
+          <p>{this.props.service.description}</p>
+          <br className="clearfix"/>
+        </div>
+        <div className="clearfix"></div>
+      </div>
+    ); 
+  }
+});
+let ServicesComponent = React.createClass ({
+
+  getInitialState: function() {
+    return {    
+       servicesData: AppStore.getServices()
+    };
+  },
+  componentWillMount: function() {
+    AppStore.addChangeListener(this._onChange); 
+  },
+ 
+  
+  componentWillUnmount: function() {
+    AppStore.removeChangeListener(this._onChange); 
+  },
+  
+  _onChange() {
+    console.log('changing services componenet');
+    this.setState({ 
+      servicesData: AppStore.getServices() 
+    });
+  },
+  
+  render() {
+  
+    let serviceItems = this.state.servicesData.list.map(function(service) {
+    
+      return (
+        <ServiceItem service={service} key={service.id} />
+      );
+    });
+    
+    return (
+      <div>
+        <div className="templatemo-welcome" id="templatemo-welcome">
+          <div className="container">
+            <div className="templatemo-slogan text-center">
+              <span className="txt_darkgrey"></span><span className="txt_blue">{this.state.servicesData.title}</span>
+              <p className="txt_slogan"><i>{this.state.servicesData.description}</i></p>
+            </div>	
+          </div>
+        </div>
+        <div className="templatemo-service">
+          <div className="container">
+            <div className="row">
+      
+              {serviceItems} 
+      
+            </div>
+          </div>
+        </div>
+      </div> 
     );
   }
 });

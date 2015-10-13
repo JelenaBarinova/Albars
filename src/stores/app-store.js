@@ -14,20 +14,29 @@ let AppStore = Object.assign({}, EventEmitter.prototype, {
 	addChangeListener: function(callback){
 		this.on(CHANGE_EVENT, callback)
 	},
+	
 	removeChangeListener: function(callback){
 		this.removeListener(CHANGE_EVENT, callback)
 	},
+	
 	emitChange: function() {
 		this.emit(CHANGE_EVENT);
 	},
+	
 	getContent: function(){
 		return _content; 
 	},
+	
 	getMenu: function(){
 		return _content.menu;
 	},
+	
 	getCarousel: function(){
 		return _content.carousel;
+	},
+	
+	getServices: function(){
+		return _content.services;
 	}
 });
 

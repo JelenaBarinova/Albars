@@ -3,7 +3,6 @@ let React = require('react');
 
 let TopMenuComponent = require('./top-menu-component.jsx');
 let CarouselComponent = require('./carousel-component.jsx');
-let WelcomeComponent = require('./welcome-component.jsx');
 let ServicesComponent = require('./services-component.jsx');
 let TeamComponent = require('./team-component.jsx');
 let BlogComponent = require('./blog-component.jsx');
@@ -19,8 +18,7 @@ let App = React.createClass ({
     return (
       <div>
 	  	  <TopMenuComponent />
-        <CarouselComponent />
-        <WelcomeComponent />
+        <CarouselComponent />        
         <ServicesComponent />
         <TeamComponent />
         <BlogComponent />

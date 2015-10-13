@@ -35,6 +35,7 @@
 	},
 	"services": {
 		"title": "Our services",
+		"description": "At ALBARS we believe in ellegant and fast IT, that really helps and improves your work. We can help you solve all the IT issues you have and prepare your infrastructure fro growth. We are the best for these services:",
 		"list": [
 			{
 				"id": 1,
@@ -48,6 +49,11 @@
 			},
 			{
 				"id": 3,
+				"title": "Cloud and services infrastructure",
+				"description": "We offer expansion and growth of the performance of your IT infrastructure due to cloud technologies. We will help you to determine a common approach that is optimal for your company and integrate the local infrastructure with cloud solutions."
+			},
+			{
+				"id": 4,
 				"title": "Cloud and services infrastructure",
 				"description": "We offer expansion and growth of the performance of your IT infrastructure due to cloud technologies. We will help you to determine a common approach that is optimal for your company and integrate the local infrastructure with cloud solutions."
 			}
