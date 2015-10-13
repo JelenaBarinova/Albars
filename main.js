@@ -29846,28 +29846,6 @@ module.exports = require('./lib/React');
 
 let Dispatcher = require('../dispatcher/dispatcher.js');
 let ActionTypes = require('../constants/action-types.js');
-let Api = require('../api/api.js');
-
-let InitializeActions = {
-	
-	initApp: function() {
-	/*	Dispatcher.dispatch({
-			actionType: ActionTypes.INITIALIZE,
-			initialData: {
-				content: Api.getData('en_US')
-			}
-		});
-	*/
-	}
-};
-
-module.exports = InitializeActions;
-
-},{"../api/api.js":166,"../constants/action-types.js":176,"../dispatcher/dispatcher.js":177}],165:[function(require,module,exports){
-"use strict";
-
-let Dispatcher = require('../dispatcher/dispatcher.js');
-let ActionTypes = require('../constants/action-types.js');
 
 let MenuActions = {
 	switchLanguage: function(language) {
@@ -29880,7 +29858,7 @@ let MenuActions = {
 
 module.exports = MenuActions;
 
-},{"../constants/action-types.js":176,"../dispatcher/dispatcher.js":177}],166:[function(require,module,exports){
+},{"../constants/action-types.js":175,"../dispatcher/dispatcher.js":176}],165:[function(require,module,exports){
 "use strict";
 
 let $ = require('jquery');
@@ -29901,7 +29879,7 @@ let Api = {
 
 module.exports = Api;
 
-},{"../../data/en_US.json":1,"../../data/ru_RU.json":2,"jquery":8}],167:[function(require,module,exports){
+},{"../../data/en_US.json":1,"../../data/ru_RU.json":2,"jquery":8}],166:[function(require,module,exports){
 "use strict";
 let React = require('react');
 
@@ -29929,7 +29907,7 @@ let App = React.createClass ({displayName: "App",
 
 module.exports = App;
 
-},{"./blog-component.jsx":168,"./carousel-component.jsx":169,"./footer-component.jsx":170,"./partners-component.jsx":171,"./services-component.jsx":172,"./team-component.jsx":173,"./top-menu-component.jsx":174,"./tweets-component.jsx":175,"react":163}],168:[function(require,module,exports){
+},{"./blog-component.jsx":167,"./carousel-component.jsx":168,"./footer-component.jsx":169,"./partners-component.jsx":170,"./services-component.jsx":171,"./team-component.jsx":172,"./top-menu-component.jsx":173,"./tweets-component.jsx":174,"react":163}],167:[function(require,module,exports){
 "use strict";
 let React = require('react');
 
@@ -30050,7 +30028,7 @@ React.createElement("div", {id: "templatemo-blog"},
 
 module.exports = BlogComponent;
 
-},{"react":163}],169:[function(require,module,exports){
+},{"react":163}],168:[function(require,module,exports){
 "use strict";
 let React = require('react');
 let AppStore = require('../stores/app-store.js');
@@ -30144,7 +30122,7 @@ let CarouselComponent = React.createClass ({displayName: "CarouselComponent",
 
 module.exports = CarouselComponent;
 
-},{"../stores/app-store.js":179,"react":163}],170:[function(require,module,exports){
+},{"../stores/app-store.js":178,"react":163}],169:[function(require,module,exports){
 "use strict";
 let React = require('react');
 
@@ -30205,7 +30183,7 @@ let FooterComponent = React.createClass ({displayName: "FooterComponent",
 
 module.exports = FooterComponent;
 
-},{"react":163}],171:[function(require,module,exports){
+},{"react":163}],170:[function(require,module,exports){
 "use strict";
 let React = require('react');
 
@@ -30264,7 +30242,7 @@ let PartnersComponent = React.createClass ({displayName: "PartnersComponent",
 
 module.exports = PartnersComponent;
 
-},{"react":163}],172:[function(require,module,exports){
+},{"react":163}],171:[function(require,module,exports){
 "use strict";
 let React = require('react');
 let AppStore = require('../stores/app-store.js');
@@ -30348,7 +30326,7 @@ let ServicesComponent = React.createClass ({displayName: "ServicesComponent",
 
 module.exports = ServicesComponent;
 
-},{"../stores/app-store.js":179,"react":163}],173:[function(require,module,exports){
+},{"../stores/app-store.js":178,"react":163}],172:[function(require,module,exports){
 "use strict";
 let React = require('react');
 let AppStore = require('../stores/app-store.js');
@@ -30432,7 +30410,7 @@ let TeamComponent = React.createClass ({displayName: "TeamComponent",
 
 module.exports = TeamComponent;
 
-},{"../stores/app-store.js":179,"react":163}],174:[function(require,module,exports){
+},{"../stores/app-store.js":178,"react":163}],173:[function(require,module,exports){
 "use strict";
 let React = require('react');
 let MenuActions = require('../actions/menu-actions.js');
@@ -30516,7 +30494,7 @@ let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
 
 module.exports = TopMenuComponent;
 
-},{"../actions/menu-actions.js":165,"../stores/app-store.js":179,"react":163}],175:[function(require,module,exports){
+},{"../actions/menu-actions.js":164,"../stores/app-store.js":178,"react":163}],174:[function(require,module,exports){
 "use strict";
 let React = require('react');
 
@@ -30549,7 +30527,7 @@ React.createElement("div", {className: "templatemo-tweets"},
 
 module.exports = TweetsComponent;
 
-},{"react":163}],176:[function(require,module,exports){
+},{"react":163}],175:[function(require,module,exports){
 "use strict";
 
 let keyMirror = require('react/lib/keyMirror');
@@ -30559,27 +30537,45 @@ module.exports = keyMirror({
 	SWITCH_LANGUAGE: null
 });
 
-},{"react/lib/keyMirror":148}],177:[function(require,module,exports){
+},{"react/lib/keyMirror":148}],176:[function(require,module,exports){
 "use strict";
 
 let Dispatcher = require('flux').Dispatcher;
 
 module.exports = new Dispatcher();
 
-},{"flux":5}],178:[function(require,module,exports){
+},{"flux":5}],177:[function(require,module,exports){
 "use strict";
 
 let React   = require('react');
 let App = require('./components/app.jsx');
 
-let InitializeActions = require('./actions/initialize-actions.js');
+//let InitializeActions = require('./actions/initialize-actions.js');
 
-InitializeActions;
 //InitializeActions.initApp();
+
+let Dispatcher = require('./dispatcher/dispatcher.js');
+let ActionTypes = require('./constants/action-types.js');
+let Api = require('./api/api.js');
+
+let InitializeActions = {
+	
+	initApp: function() {
+		Dispatcher.dispatch({
+			actionType: ActionTypes.INITIALIZE,
+			initialData: {
+				content: Api.getData('en_US')
+			}
+		});
+	
+	}
+};
+	
+	InitializeActions.initApp();
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
-},{"./actions/initialize-actions.js":164,"./components/app.jsx":167,"react":163}],179:[function(require,module,exports){
+},{"./api/api.js":165,"./components/app.jsx":166,"./constants/action-types.js":175,"./dispatcher/dispatcher.js":176,"react":163}],178:[function(require,module,exports){
 "use strict";
 
 
@@ -30642,4 +30638,4 @@ Dispatcher.register(function(action){
 
 module.exports = AppStore;
 
-},{"../api/api.js":166,"../constants/action-types.js":176,"../dispatcher/dispatcher.js":177,"events":3}]},{},[178]);
+},{"../api/api.js":165,"../constants/action-types.js":175,"../dispatcher/dispatcher.js":176,"events":3}]},{},[177]);
