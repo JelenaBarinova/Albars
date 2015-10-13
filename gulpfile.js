@@ -4,26 +4,31 @@ var browserify = require('browserify');
 var reactify = require('reactify'); 
 var source = require('vinyl-source-stream'); 
 
+var output_dir = '../gh-pages/';
+var src_dir = './src/';
+
+/* 
 gulp.task('clean', function () {
-    return gulp.src('./output', {read: false})
+    return gulp.src(output_dir, {read: false})
         .pipe(plug.clean());
 });
+*/
 
 /* ------------ CODE & TESTS ------------ */
 
 gulp.task('browserify', function(){
-  browserify(['./src/main.jsx'])
+  browserify([src_dir + 'main.jsx'])
 		.transform(reactify)
 		.bundle()
 		.pipe(source('main.js'))
-		.pipe(gulp.dest('./output/'));   
+		.pipe(gulp.dest(output_dir));   
 });
  
 gulp.task('es2015', ['browserify'], function () {  
-  return gulp.src('./output/*.js')
+  return gulp.src(output_dir + '*.js')
         .pipe(plug.babel())
         //.pipe(plug.uglify())
-        .pipe(gulp.dest('output'))
+        .pipe(gulp.dest(output_dir))
         .pipe(plug.connect.reload());
 });
 /*
@@ -35,76 +40,59 @@ gulp.task('test', function () {
 /* ------------ IMAGES & STYLES ------------ */
 
 gulp.task('copy-index', function() {
-  return gulp.src(['./src/index.html'])
-    .pipe(gulp.dest('./output'));
+  return gulp.src([src_dir + 'index.html'])
+    .pipe(gulp.dest(output_dir));
 });
 
 gulp.task('copy-favicon', function() {
-  return gulp.src(['./src/favicon.ico'])
-    .pipe(gulp.dest('./output/'));
+  return gulp.src([src_dir + 'favicon.ico'])
+    .pipe(gulp.dest(output_dir));
 });
 
 gulp.task('copy-img', function() {
-  return gulp.src(['./src/images/**/*'])
-    .pipe(gulp.dest('./output/images/'));
+  return gulp.src([src_dir + 'images/**/*'])
+    .pipe(gulp.dest(output_dir + 'images/'));
 });
 
 gulp.task('copy-fonts', function() {
-  return gulp.src(['./src/fonts/**'])
-    .pipe(gulp.dest('./output/fonts/'));
+  return gulp.src([src_dir + 'fonts/**'])
+    .pipe(gulp.dest(output_dir + 'fonts/'));
 });
 
 gulp.task('copy-styles', function() {
-  return gulp.src(['./src/css/**/*'])
-    .pipe(gulp.dest('./output/css/'));
+  return gulp.src([src_dir + 'css/**/*'])
+    .pipe(gulp.dest(output_dir + 'css/'));
 });
 
 gulp.task('copy-jstheme', function() {
-  return gulp.src(['./src/js/**/*'])
-    .pipe(gulp.dest('./output/js/'));
+  return gulp.src([src_dir + 'js/**/*'])
+    .pipe(gulp.dest(output_dir + 'js/'));
 });
 
 gulp.task('copy-data', function() {
   return gulp.src(['./data/*'])
-    .pipe(gulp.dest('./output/data/'));
+    .pipe(gulp.dest(output_dir + 'data/'));
 });
 
 gulp.task('copy-files', ['copy-favicon', 'copy-data','copy-jstheme','copy-index', 'copy-img', 'copy-fonts', 'copy-styles'], function() {});
 
 /* ------------ DEV ENV ------------ */
 
-gulp.task('connect', function() {
-	plug.connect.server({
-		root: ['output'],
-		port: 8008,
-		base: 'http://localhost',
-		livereload: true
-	});
-});
-
-gulp.task('open', ['connect'], function(){
-  return gulp.src('./output/index.html')
-        .pipe(plug.open('', {url: 'http://localhost:8008/'}));
-}); 
-
-gulp.task('watch', function() {
-    gulp.watch('./src/**/*', ['es2015']);
+gulp.task('run_server', plug.shell.task([
+  'http-server ../gh-pages --cors -a localhost -p 8000'
+  ]));
+  
+gulp.task('open', ['run_server'], function(){
+  return gulp.src('')
+        .pipe(plug.open('', {url: 'http://localhost:8000/'}));
 });
 
 /* ------------ TASKS ------------ */
 
 gulp.task('clean-build', function(cb){
-  plug.runSequence('clean', ['copy-files'], 'build', cb);
+  plug.runSequence('copy-files', 'build', cb);
 });
 
 gulp.task('build', function (cb) {
-  plug.runSequence('es2015', 'open', 'watch', cb);
+  plug.runSequence('es2015', 'open', cb);
 });
-
-/* ------------ PRODUCTION ------------ */
-
-gulp.task('publish', ['clean-build'], function() {
-  return gulp.src(['./output/**/*'])
-    .pipe(plug.ghPages());
-});
-
