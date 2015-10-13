@@ -30554,28 +30554,11 @@ let App = require('./components/app.jsx');
 
 //InitializeActions.initApp();
 
-let Dispatcher = require('./dispatcher/dispatcher.js');
-let ActionTypes = require('./constants/action-types.js');
-let Api = require('./api/api.js');
-
-let InitializeActions = {
-	
-	initApp: function() {
-		Dispatcher.dispatch({
-			actionType: ActionTypes.INITIALIZE,
-			initialData: {
-				content: Api.getData('en_US')
-			}
-		});
-	
-	}
-};
-	
-	InitializeActions.initApp();
+//let StartUp = require('./actions/start.js');
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
-},{"./api/api.js":165,"./components/app.jsx":166,"./constants/action-types.js":175,"./dispatcher/dispatcher.js":176,"react":163}],178:[function(require,module,exports){
+},{"./components/app.jsx":166,"react":163}],178:[function(require,module,exports){
 "use strict";
 
 
