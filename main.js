@@ -19811,28 +19811,6 @@ module.exports = require('./lib/React');
 
 },{"./lib/React":29}],157:[function(require,module,exports){
 "use strict";
-
-//let Dispatcher = require('../dispatcher/dispatcher.js');
-//let ActionTypes = require('../constants/action-types.js');
-//let Api = require('../api/api.js');
-
-let InitializeActions = {
-	
-	initApp: function() {
-		/*Dispatcher.dispatch({
-			actionType: ActionTypes.INITIALIZE,
-			initialData: {
-				content: Api.getData('en_US')
-			}
-		});
-*/
-	}
-};
-
-module.exports = InitializeActions;
-
-},{}],158:[function(require,module,exports){
-"use strict";
 let React = require('react');
 
 let App = React.createClass ({displayName: "App",
@@ -19843,7 +19821,7 @@ let App = React.createClass ({displayName: "App",
       React.createElement("div", null, 
 	 React.createElement("h2", null, "Hi from empty React"), 
    React.createElement("h2", null, "no initialization"), 	 
-React.createElement("p", null, "all commented")
+React.createElement("p", null, "all commented everything!")
 	    )
     );
   }
@@ -19851,16 +19829,16 @@ React.createElement("p", null, "all commented")
 
 module.exports = App;
 
-},{"react":156}],159:[function(require,module,exports){
+},{"react":156}],158:[function(require,module,exports){
 "use strict";
 
 let React   = require('react');
 let App = require('./components/app.jsx');
 
-let InitializeActions = require('./actions/initialize-actions.js');
+//let InitializeActions = require('./actions/initialize-actions.js');
 
-InitializeActions.initApp();
+//InitializeActions.initApp();
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
-},{"./actions/initialize-actions.js":157,"./components/app.jsx":158,"react":156}]},{},[159]);
+},{"./components/app.jsx":157,"react":156}]},{},[158]);
