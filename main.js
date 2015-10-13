@@ -29935,7 +29935,7 @@ let React = require('react');
 
 let BlogComponent = React.createClass ({displayName: "BlogComponent",
 
-  render() {
+  render: function() {
     return (
     
 React.createElement("div", {id: "templatemo-blog"}, 
@@ -30077,7 +30077,7 @@ let CarouselComponent = React.createClass ({displayName: "CarouselComponent",
       carouselData: AppStore.getCarousel() 
     });
   },
-  render() {
+  render: function() {
   
     return (
       React.createElement("div", null, 
@@ -30150,7 +30150,7 @@ let React = require('react');
 
 let FooterComponent = React.createClass ({displayName: "FooterComponent",
 
-  render() {
+  render: function() {
     return (
     
  React.createElement("div", {className: "templatemo-footer"}, 
@@ -30211,7 +30211,7 @@ let React = require('react');
 
 let PartnersComponent = React.createClass ({displayName: "PartnersComponent",
 
-  render() {
+  render: function() {
     return (
     
      React.createElement("div", {className: "templatemo-partners"}, 
@@ -30270,7 +30270,7 @@ let React = require('react');
 let AppStore = require('../stores/app-store.js');
 
 let ServiceItem = React.createClass({displayName: "ServiceItem",
-  render() {
+  render: function() {
     return (
       React.createElement("div", {className: "col-md-4"}, 
         React.createElement("div", {className: "templatemo-service-item"}, 
@@ -30313,7 +30313,7 @@ let ServicesComponent = React.createClass ({displayName: "ServicesComponent",
     });
   },
   
-  render() {
+  render: function() {
   
     let serviceItems = this.state.servicesData.list.map(function(service) {
     
@@ -30354,7 +30354,7 @@ let React = require('react');
 let AppStore = require('../stores/app-store.js');
 
 let TeamMember = React.createClass ({displayName: "TeamMember",
-  render() {
+  render: function() {
     return (
       React.createElement("li", {className: "col-lg-3 col-md-3 col-sm-6 "}, 
         React.createElement("div", {className: "text-center"}, 
@@ -30401,7 +30401,7 @@ let TeamComponent = React.createClass ({displayName: "TeamComponent",
     });
   },
   
-  render() {
+  render: function() {
   
     let teamMembers = this.state.teamData.list.map(function(member) {    
       return (
@@ -30468,7 +30468,7 @@ let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
     console.log(key);
 	},
 
-  render() {
+  render: function() {
 
     return (
     React.createElement("div", null, 
@@ -30522,7 +30522,7 @@ let React = require('react');
 
 let TweetsComponent = React.createClass ({displayName: "TweetsComponent",
 
-  render() {
+  render: function() {
     return (
     
 React.createElement("div", {className: "templatemo-tweets"}, 
