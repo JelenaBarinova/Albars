@@ -19826,7 +19826,7 @@ let FooterComponent = require('./footer-component.jsx');
 let App = React.createClass ({displayName: "App",
   
   
-  render() {
+  render: function() {
     return (
       React.createElement("h1", null, "Hello, world!")
     );
