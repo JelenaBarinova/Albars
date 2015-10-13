@@ -30469,7 +30469,7 @@ let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
   },
   
   switchLanguage: function(key, event) {
-	  //event.preventDefault();
+	  event.preventDefault();
     MenuActions.switchLanguage(key);
     console.log('add ?lang=key to the path');
     console.log('stitchLangugae called');
@@ -30479,7 +30479,7 @@ let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
   render() {
 
     return (
-    React.createElement("div", {id: "ru"}, 
+    React.createElement("div", null, 
       React.createElement("div", {className: "templatemo-top-bar", id: "templatemo-top"}
               
       ), 
@@ -30507,8 +30507,8 @@ let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
                   React.createElement("li", null, React.createElement("a", {href: "#templatemo-blog"}, this.state.menuData.clients.toUpperCase())), 
                   React.createElement("li", null, React.createElement("a", {href: "#templatemo-contact"}, this.state.menuData.contact.toUpperCase())), 
 
-                  React.createElement("li", null, React.createElement("a", {href: "#", onClick: this.switchLanguage.bind(this,'en_US')}, React.createElement("img", {src: "images/flags/us.png", alt: "en_US", title: "English"}))), 
-                  React.createElement("li", null, React.createElement("a", {href: "#ru", onClick: this.switchLanguage.bind(this,'ru_RU')}, React.createElement("img", {src: "images/flags/ru.png", alt: "ru_RU", title: "Русский"})))
+                  React.createElement("li", null, React.createElement("a", {rel: "nofollow", href: "/en", className: "external-link", onClick: this.switchLanguage.bind(this,'en_US')}, React.createElement("img", {src: "images/flags/us.png", alt: "en_US", title: "English"}))), 
+                  React.createElement("li", null, React.createElement("a", {rel: "nofollow", href: "/ru", className: "external-link", onClick: this.switchLanguage.bind(this,'ru_RU')}, React.createElement("img", {src: "images/flags/ru.png", alt: "ru_RU", title: "Русский"})))
                                                           
                 )
                                
