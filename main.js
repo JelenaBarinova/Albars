@@ -19829,7 +19829,7 @@ let App = React.createClass ({displayName: "App",
   render() {
     return (
       React.createElement("div", null, 
-	  	  React.createElement("h1", null, "Initialize from app")
+	  	  React.createElement("h1", null, "One line from react")
 	    )
     );
   }
@@ -19842,10 +19842,6 @@ module.exports = App;
 
 let React   = require('react');
 let App = require('./components/app.jsx');
-
-//let InitializeActions = require('./actions/initialize-actions.js');
-
-//InitializeActions.initApp();
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
