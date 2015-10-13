@@ -29548,13 +29548,13 @@ let Api = require('../api/api.js');
 let InitializeActions = {
 	
 	initApp: function() {
-		/*Dispatcher.dispatch({
+		Dispatcher.dispatch({
 			actionType: ActionTypes.INITIALIZE,
 			initialData: {
 				content: Api.getData('en_US')
 			}
 		});
-	*/
+
 	}
 };
 
@@ -29592,7 +29592,8 @@ let App = React.createClass ({displayName: "App",
     return (
       React.createElement("div", null, 
 	 React.createElement("h2", null, "Hi from empty React"), 
-   React.createElement("h2", null, "no initialization")	  
+   React.createElement("h2", null, "no initialization")	 
+
 	    )
     );
   }
@@ -29625,7 +29626,7 @@ let App = require('./components/app.jsx');
 
 let InitializeActions = require('./actions/initialize-actions.js');
 
-InitializeActions.initApp();
+//InitializeActions.initApp();
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
