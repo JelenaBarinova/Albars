@@ -19820,8 +19820,8 @@ let App = React.createClass ({displayName: "App",
     return (
       React.createElement("div", null, 
 	 React.createElement("h2", null, "Hi from empty React"), 
-   React.createElement("h2", null, "no initialization"), 	 
-React.createElement("p", null, "all commented everything!")
+   React.createElement("h2", null, "no initialization")	 
+
 	    )
     );
   }
