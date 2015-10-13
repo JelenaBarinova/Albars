@@ -19819,9 +19819,7 @@ let App = React.createClass ({displayName: "App",
   render() {
     return (
       React.createElement("div", null, 
-	 React.createElement("h2", null, "Hi from empty React"), 
-   React.createElement("h2", null, "no initialization")	 
-
+	 React.createElement("h2", null, "Hi from empty React, no nothing, one line as react componenet")
 	    )
     );
   }
