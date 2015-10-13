@@ -19824,6 +19824,8 @@ let PartnersComponent = require('./partners-component.jsx');
 let FooterComponent = require('./footer-component.jsx');
 */
 let App = React.createClass ({displayName: "App",
+  
+  
   render() {
     return (
       React.createElement("div", null, 
