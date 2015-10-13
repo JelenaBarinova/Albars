@@ -19817,15 +19817,19 @@ module.exports = require('./lib/React');
 //let Api = require('../api/api.js');
 
 let InitializeActions = {
-	
+	/*
 	initApp: function() {
-	/*	Dispatcher.dispatch({
+		Dispatcher.dispatch({
 			actionType: ActionTypes.INITIALIZE,
 			initialData: {
 				content: Api.getData('en_US')
 			}
 		});
-*/
+
+	}
+	*/
+	initializeApplication: function() {
+		console.log('new method');
 	}
 };
 
@@ -19858,7 +19862,7 @@ let App = require('./components/app.jsx');
 
 let InitializeActions = require('./actions/initialize-actions.js');
 
-InitializeActions.initApp();
+InitializeActions.initializeApplication();
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
