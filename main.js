@@ -19811,38 +19811,14 @@ module.exports = require('./lib/React');
 
 },{"./lib/React":29}],157:[function(require,module,exports){
 "use strict";
-let React = require('react');
-/*
-let TopMenuComponent = require('./top-menu-component.jsx');
-let CarouselComponent = require('./carousel-component.jsx');
-let ServicesComponent = require('./services-component.jsx');
-let TeamComponent = require('./team-component.jsx');
-let BlogComponent = require('./blog-component.jsx');
-
-let TweetsComponent = require('./tweets-component.jsx');
-let PartnersComponent = require('./partners-component.jsx');
-let FooterComponent = require('./footer-component.jsx');
-*/
-let App = React.createClass ({displayName: "App",
-  
-  
-  render() {
-    return (
-      React.createElement("div", null, 
-	  	  React.createElement("h1", null, "One line from react")
-	    )
-    );
-  }
-});
-
-module.exports = App;
-
-},{"react":156}],158:[function(require,module,exports){
-"use strict";
 
 let React   = require('react');
-let App = require('./components/app.jsx');
+//let App = require('./components/app.jsx');
 
-React.render(React.createElement(App, null), document.getElementById('HomePage'));
+//React.render(<App />, document.getElementById('HomePage'));
+React.render(
+  React.createElement("h1", null, "Hello, world!"),
+  document.getElementById('HomePage')
+);
 
-},{"./components/app.jsx":157,"react":156}]},{},[158]);
+},{"react":156}]},{},[157]);
