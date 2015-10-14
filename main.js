@@ -20709,7 +20709,7 @@ let App = React.createClass ({displayName: "App",
   render: function() {
     return (
       React.createElement("div", null, 
-        React.createElement("h1", null, "Yes! It is working. 2")
+        React.createElement("h1", null, "Yes! It is working. 3")
 	    )
     );
   }
@@ -20844,11 +20844,11 @@ let CHANGE_EVENT = 'change';
 
 let _content, _menu;
 
-let AppStore =Object.assign({}, EventEmitter.prototype, {
-	
+let AppStore =/*Object.assign({}, EventEmitter.prototype,*/ {
+	/*
 	addChangeListener: function(callback){
 		this.on(CHANGE_EVENT, callback)
-	}/*,
+	},
 	
 	removeChangeListener: function(callback){
 		this.removeListener(CHANGE_EVENT, callback)
@@ -20877,7 +20877,7 @@ let AppStore =Object.assign({}, EventEmitter.prototype, {
 	getTeam: function(){
 		return _content.team;
 	}*/
-});
+};//);
 
 Dispatcher.register(function(action){
 	/*
