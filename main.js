@@ -20750,7 +20750,7 @@ let App = React.createClass ({displayName: "App",
   render: function() {
     return (
       React.createElement("div", null, 
-        React.createElement("h1", null, "Yes! It is working. 4")
+        React.createElement("h1", null, "Yes! It is working. 5")
 	    )
     );
   }
@@ -20765,7 +20765,7 @@ let MenuActions = require('../actions/menu-actions.js');
 let AppStore = require('../stores/app-store.js');
 
 let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
-/*
+
   getInitialState: function() {
     return {    
        language: {key: 'en_US', value: 'English'},
@@ -20793,50 +20793,49 @@ let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
     console.log('stitchLangugae called');
     console.log(key);
 	},
-*/
+
   render: function() {
 
-    return (/*
-    <div>
-      <div className="templatemo-top-bar" id="templatemo-top">
+    return (
+    React.createElement("div", null, 
+      React.createElement("div", {className: "templatemo-top-bar", id: "templatemo-top"}
               
-      </div>
-      <div className="templatemo-top-menu">
-        <div className="container">
-          <div className="navbar navbar-default" role="navigation">
-            <div className="container">
-              <div className="navbar-header">
-                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span className="sr-only">Toggle navigation</span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                </button>
+      ), 
+      React.createElement("div", {className: "templatemo-top-menu"}, 
+        React.createElement("div", {className: "container"}, 
+          React.createElement("div", {className: "navbar navbar-default", role: "navigation"}, 
+            React.createElement("div", {className: "container"}, 
+              React.createElement("div", {className: "navbar-header"}, 
+                React.createElement("button", {type: "button", className: "navbar-toggle", "data-toggle": "collapse", "data-target": ".navbar-collapse"}, 
+                  React.createElement("span", {className: "sr-only"}, "Toggle navigation"), 
+                  React.createElement("span", {className: "icon-bar"}), 
+                  React.createElement("span", {className: "icon-bar"}), 
+                  React.createElement("span", {className: "icon-bar"})
+                ), 
                 
-                <a href="#" className="navbar-brand"><img src="images/albars_logo.png" alt="Albars" title="Albars" /></a>
-              </div>
-              <div className="navbar-collapse collapse" id="templatemo-nav-bar">                
+                React.createElement("a", {href: "#", className: "navbar-brand"}, React.createElement("img", {src: "images/albars_logo.png", alt: "Albars", title: "Albars"}))
+              ), 
+              React.createElement("div", {className: "navbar-collapse collapse", id: "templatemo-nav-bar"}, 
                
-                <ul className="nav navbar-nav navbar-right" style={{marginTop: '40px'}}>
-                  <li className="active"><a href="#templatemo-top">{this.state.menuData.home.toUpperCase()}</a></li>
-                  <li><a href="#templatemo-about">{this.state.menuData.team.toUpperCase()}</a></li>
-                  <li><a href="#templatemo-portfolio">{this.state.menuData.services.toUpperCase()}</a></li>
-                  <li><a href="#templatemo-blog">{this.state.menuData.blog.toUpperCase()}</a></li>
-                  <li><a href="#templatemo-blog">{this.state.menuData.clients.toUpperCase()}</a></li>
-                  <li><a href="#templatemo-contact">{this.state.menuData.contact.toUpperCase()}</a></li> 
+                React.createElement("ul", {className: "nav navbar-nav navbar-right", style: {marginTop: '40px'}}, 
+                  React.createElement("li", {className: "active"}, React.createElement("a", {href: "#templatemo-top"}, this.state.menuData.home.toUpperCase())), 
+                  React.createElement("li", null, React.createElement("a", {href: "#templatemo-about"}, this.state.menuData.team.toUpperCase())), 
+                  React.createElement("li", null, React.createElement("a", {href: "#templatemo-portfolio"}, this.state.menuData.services.toUpperCase())), 
+                  React.createElement("li", null, React.createElement("a", {href: "#templatemo-blog"}, this.state.menuData.blog.toUpperCase())), 
+                  React.createElement("li", null, React.createElement("a", {href: "#templatemo-blog"}, this.state.menuData.clients.toUpperCase())), 
+                  React.createElement("li", null, React.createElement("a", {href: "#templatemo-contact"}, this.state.menuData.contact.toUpperCase())), 
 
-                  <li><a rel="nofollow" href="/en" className="external-link" onClick={this.switchLanguage.bind(this,'en_US')}><img src="images/flags/us.png" alt="en_US" title="English" /></a></li>
-                  <li><a rel="nofollow" href="/ru" className="external-link" onClick={this.switchLanguage.bind(this,'ru_RU')}><img src="images/flags/ru.png" alt="ru_RU" title="Русский" /></a></li>
+                  React.createElement("li", null, React.createElement("a", {rel: "nofollow", href: "/en", className: "external-link", onClick: this.switchLanguage.bind(this,'en_US')}, React.createElement("img", {src: "images/flags/us.png", alt: "en_US", title: "English"}))), 
+                  React.createElement("li", null, React.createElement("a", {rel: "nofollow", href: "/ru", className: "external-link", onClick: this.switchLanguage.bind(this,'ru_RU')}, React.createElement("img", {src: "images/flags/ru.png", alt: "ru_RU", title: "Русский"})))
                                                           
-                </ul>  
+                )
                                
-              </div>
-            </div>
-          </div>
-        </div> 
-      </div> 
-      </div> */
-      React.createElement("p", null, "Oh my!")
+              )
+            )
+          )
+        )
+      )
+      ) 
     );
   }
 });
@@ -20875,7 +20874,6 @@ React.render(React.createElement(App, null), document.getElementById('HomePage')
 },{"./actions/initialize-actions.js":164,"./components/app.jsx":167,"react":163}],172:[function(require,module,exports){
 "use strict";
 
-
 let Dispatcher = require('../dispatcher/dispatcher.js');
 let ActionTypes = require('../constants/action-types.js');
 let EventEmitter = require('events').EventEmitter;
@@ -20883,11 +20881,10 @@ let assign = require('object-assign');
 let Api =  require('../api/api.js');
 let CHANGE_EVENT = 'change';
 
-
 let _content, _menu;
 
 //let AppStore =Object.assign({}, EventEmitter.prototype, {
-	let AppStore = assign({}, EventEmitter.prototype, {
+let AppStore = assign({}, EventEmitter.prototype, {
 	
 	addChangeListener: function(callback){
 		this.on(CHANGE_EVENT, callback)
@@ -20923,7 +20920,7 @@ let _content, _menu;
 });
 
 Dispatcher.register(function(action){
-	/*
+	
 	switch(action.actionType) {
 		case ActionTypes.INITIALIZE:
 			_content = action.initialData.content;
@@ -20935,7 +20932,7 @@ Dispatcher.register(function(action){
 			break;
 		default:
 	}
-	*/
+	
 });
 
 module.exports = AppStore;
