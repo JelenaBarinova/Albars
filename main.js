@@ -20974,7 +20974,7 @@ let TeamComponent = React.createClass ({displayName: "TeamComponent",
     AppStore.removeChangeListener(this._onChange); 
   },
   
-  _onChange() {
+  _onChange: function() {
     console.log('changing services componenet');
     this.setState({ 
       teamData: AppStore.getTeam() 
