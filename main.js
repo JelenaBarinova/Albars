@@ -20750,15 +20750,8 @@ let App = React.createClass ({displayName: "App",
   render: function() {
     return (
       React.createElement("div", null, 
-	  	  React.createElement(TopMenuComponent, null), 
-        React.createElement(CarouselComponent, null), 
-        React.createElement(ServicesComponent, null), 
-        React.createElement(TeamComponent, null), 
-        React.createElement(BlogComponent, null), 
+	  	  React.createElement(TopMenuComponent, null)
         
-        React.createElement(TweetsComponent, null), 
-        React.createElement(PartnersComponent, null), 
-        React.createElement(FooterComponent, null)
 	    )
     );
   }
