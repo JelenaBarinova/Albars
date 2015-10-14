@@ -1,46 +1,44 @@
 "use strict";
 
-let Dispatcher = require('../dispatcher/dispatcher.js');
-let ActionTypes = require('../constants/action-types.js');
+let Dispatcher = require('../dispatcher/dispatcher');
+let ActionTypes = require('../constants/action-types');
 let EventEmitter = require('events').EventEmitter;
-let assign = require('object-assign');
-let Api =  require('../api/api.js');
+let Api =  require('../api/api');
 let CHANGE_EVENT = 'change';
 
 let _content, _menu;
 
-//let AppStore =Object.assign({}, EventEmitter.prototype, {
-let AppStore = assign({}, EventEmitter.prototype, {
+let AppStore =Object.assign({}, EventEmitter.prototype, {
 	
-	addChangeListener: function(callback){
+	addChangeListener(callback) {
 		this.on(CHANGE_EVENT, callback)
 	},
 	
-	removeChangeListener: function(callback){
+	removeChangeListener(callback) {
 		this.removeListener(CHANGE_EVENT, callback)
 	},
 	
-	emitChange: function() {
+	emitChange() {
 		this.emit(CHANGE_EVENT);
 	},
 	
-	getContent: function(){
+	getContent() {
 		return _content; 
 	},
 	
-	getMenu: function(){
+	getMenu() {
 		return _content.menu;
 	},
 	
-	getCarousel: function(){
+	getCarousel() {
 		return _content.carousel;
 	},
 	
-	getServices: function(){
+	getServices() {
 		return _content.services;
 	},
 	
-	getTeam: function(){
+	getTeam() {
 		return _content.team;
 	}
 });

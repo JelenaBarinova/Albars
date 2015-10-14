@@ -1,31 +1,31 @@
 "use strict";
 let React = require('react');
-let MenuActions = require('../actions/menu-actions.js');
-let AppStore = require('../stores/app-store.js');
+let MenuActions = require('../actions/menu-actions');
+let AppStore = require('../stores/app-store');
 
 let TopMenuComponent = React.createClass ({
 
-  getInitialState: function() {
+  getInitialState() {
     return {    
        language: {key: 'en_US', value: 'English'},
        menuData: AppStore.getMenu()
     };
   },
   
-  componentWillMount: function() {
+  componentWillMount() {
     AppStore.addChangeListener(this._onChange); 
   },
   
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     AppStore.removeChangeListener(this._onChange); 
   },
   
-  _onChange: function() {
+  _onChange() {
     console.log('changing');
     this.setState({ menuData: AppStore.getMenu() });
   },
   
-  switchLanguage: function(key, event) {
+  switchLanguage(key, event) {
 	  event.preventDefault();
     MenuActions.switchLanguage(key);
     console.log('add ?lang=key to the path');
@@ -33,7 +33,7 @@ let TopMenuComponent = React.createClass ({
     console.log(key);
 	},
 
-  render: function() {
+  render() {
 
     return (
     <div>

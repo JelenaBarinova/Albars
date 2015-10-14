@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var plug = require('gulp-load-plugins')();
 var browserify = require('browserify');
-var reactify = require('reactify'); 
 var source = require('vinyl-source-stream'); 
+var babelify = require('babelify');
 
 var output_dir = '../gh-pages/';
 var src_dir = './src/';
@@ -15,21 +15,21 @@ gulp.task('clean', function () {
 */
 
 /* ------------ CODE & TESTS ------------ */
-
-gulp.task('browserify', function(){
-  browserify([src_dir + 'main.jsx'])
-		.transform(reactify)
-		.bundle()
-		.pipe(source('main.js'))
-		.pipe(gulp.dest(output_dir));   
-});
  
-gulp.task('es2015', ['browserify'], function () {  
-  return gulp.src(output_dir + '*.js')
-        .pipe(plug.babel())
-        //.pipe(plug.uglify())
-        .pipe(gulp.dest(output_dir));
+gulp.task('build', function() {
+    return browserify({
+        extensions: ['.js', '.jsx'],
+        entries: src_dir + 'main.jsx',
+    })
+    .transform(babelify.configure({
+        ignore: /(node_modules)/
+    }))
+    .bundle()
+    .on("error", function (err) { console.log("Error : " + err.message); })
+    .pipe(source('main.js'))
+    .pipe(gulp.dest(output_dir));
 });
+
 /*
 gulp.task('test', function () {
   return gulp.src('test', {read: false})
@@ -90,8 +90,4 @@ gulp.task('open', ['run_server'], function(){
 
 gulp.task('clean-build', function(cb){
   plug.runSequence('copy-files', 'build', 'open', cb);
-});
-
-gulp.task('build', function (cb) {
-  plug.runSequence('es2015', cb);
 });

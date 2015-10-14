@@ -3,7 +3,7 @@ let React = require('react');
 
 let PartnersComponent = React.createClass ({
 
-  render: function() {
+  render() {
     return (
     
      <div className="templatemo-partners" >

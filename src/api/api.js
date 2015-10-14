@@ -1,7 +1,7 @@
 "use strict";
 
 let Api = {
-	getData: function(language) {
+	getData(language) {
 		let _content = {};
 		if (language == 'ru_RU')
 		{

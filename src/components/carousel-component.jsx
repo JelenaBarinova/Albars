@@ -1,30 +1,30 @@
 "use strict";
 let React = require('react');
-let AppStore = require('../stores/app-store.js');
+let AppStore = require('../stores/app-store');
     
 let CarouselComponent = React.createClass ({
   
-  getInitialState: function() {
+  getInitialState() {
     return {    
        carouselData: AppStore.getCarousel()
     };
   },
-  componentWillMount: function() {
+  componentWillMount() {
     AppStore.addChangeListener(this._onChange); 
   },
  
   
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     AppStore.removeChangeListener(this._onChange); 
   },
   
-  _onChange: function() {
+  _onChange() {
     console.log('changing courasel component');
     this.setState({ 
       carouselData: AppStore.getCarousel() 
     });
   },
-  render: function() {
+  render() {
   
     return (
       <div>
@@ -41,7 +41,11 @@ let CarouselComponent = React.createClass ({
                   <h1>{this.state.carouselData.list[0].title}</h1>
                   <p>{this.state.carouselData.list[0].content}</p>
                   <p>
-                   <a className="btn btn-lg btn-blue" href={this.state.carouselData.list[0].url} role="button">{this.state.carouselData.list[0].more}</a>       
+                   {(() => {
+                      if (this.state.carouselData.list[0].url) {
+                        return <a className="btn btn-lg btn-blue" href={this.state.carouselData.list[0].url} role="button">{this.state.carouselData.list[0].more}</a>;
+                      }
+                    })()}       
                   </p> 
                 </div>
               </div>
@@ -52,7 +56,11 @@ let CarouselComponent = React.createClass ({
                   <h1>{this.state.carouselData.list[1].title}</h1>
                   <p>{this.state.carouselData.list[1].content}</p>
                   <p>
-                   <a className="btn btn-lg btn-blue" href={this.state.carouselData.list[1].url} role="button">{this.state.carouselData.list[1].more}</a>
+                   {(() => {
+                      if (this.state.carouselData.list[0].url) {
+                        return <a className="btn btn-lg btn-blue" href={this.state.carouselData.list[0].url} role="button">{this.state.carouselData.list[1].more}</a>;
+                      }
+                    })()}
                   </p> 
                 </div>
               </div>
@@ -63,7 +71,11 @@ let CarouselComponent = React.createClass ({
                   <h1>{this.state.carouselData.list[2].title}</h1>
                   <p>{this.state.carouselData.list[2].content}</p>
                   <p>
-                    <a className="btn btn-lg btn-blue" href={this.state.carouselData.list[2].url} role="button">{this.state.carouselData.list[2].more}</a>
+                    {(() => {
+                      if (this.state.carouselData.list[0].url) {
+                        return <a className="btn btn-lg btn-blue" href={this.state.carouselData.list[0].url} role="button">{this.state.carouselData.list[2].more}</a>;
+                      }
+                    })()}
                   </p>
                 </div>
               </div>

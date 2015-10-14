@@ -1,12 +1,12 @@
 "use strict";
 
-let Dispatcher = require('../dispatcher/dispatcher.js');
-let ActionTypes = require('../constants/action-types.js');
-let Api = require('../api/api.js');
+let Dispatcher = require('../dispatcher/dispatcher');
+let ActionTypes = require('../constants/action-types');
+let Api = require('../api/api');
 
 let InitializeActions = {
 	
-	initApp: function() {
+	initApp() {
 		Dispatcher.dispatch({
 			actionType: ActionTypes.INITIALIZE,
 			initialData: {

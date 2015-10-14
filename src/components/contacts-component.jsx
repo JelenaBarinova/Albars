@@ -3,7 +3,7 @@ let React = require('react');
 
 let ContactsComponent = React.createClass ({
 
-  render: function() {
+  render() {
     return (
     
 <div id="templatemo-contact">

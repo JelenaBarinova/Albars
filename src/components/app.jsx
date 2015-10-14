@@ -1,20 +1,20 @@
 "use strict";
 let React = require('react');
 
-let TopMenuComponent = require('./top-menu-component.jsx');
-let CarouselComponent = require('./carousel-component.jsx');
-let ServicesComponent = require('./services-component.jsx');
-let TeamComponent = require('./team-component.jsx');
-let BlogComponent = require('./blog-component.jsx');
+let TopMenuComponent = require('./top-menu-component');
+let CarouselComponent = require('./carousel-component');
+let ServicesComponent = require('./services-component');
+let TeamComponent = require('./team-component');
+let BlogComponent = require('./blog-component');
 
-let TweetsComponent = require('./tweets-component.jsx');
-let PartnersComponent = require('./partners-component.jsx');
-let FooterComponent = require('./footer-component.jsx');
+let TweetsComponent = require('./tweets-component');
+let PartnersComponent = require('./partners-component');
+let FooterComponent = require('./footer-component');
 
 let App = React.createClass ({
 
 
-  render: function() {
+  render() {
     return (
       <div>
 	  	  <TopMenuComponent />

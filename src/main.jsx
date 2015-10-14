@@ -1,9 +1,9 @@
 "use strict";
 
 let React   = require('react');
-let App = require('./components/app.jsx');
+let App = require('./components/app');
 
-let InitializeActions = require('./actions/initialize-actions.js');
+let InitializeActions = require('./actions/initialize-actions');
 
 InitializeActions.initApp();
 

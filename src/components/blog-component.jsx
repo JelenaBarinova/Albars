@@ -3,7 +3,7 @@ let React = require('react');
 
 let BlogComponent = React.createClass ({
 
-  render: function() {
+  render() {
     return (
     
 <div id="templatemo-blog">
@@ -80,7 +80,7 @@ let BlogComponent = React.createClass ({
                                 </div>
                                 <div className="clearfix"> </div>
                                 <p className="blog_text">
-                                        Fusce molestie tellus risus, id commodo turpis convallis id. Morbi mattis sapien sapien, vitae lacinia ante interdum sit amet. Praesent eget varius diam, ac tempor est. Mauris at scelerisque magna [...]
+                                        Fusce molestie tellus risus, id commodo turpis convallis id. Morbi mattis sapien sapien, vitae lacinia ante interdum sit amet. Praesent eget letius diam, ac tempor est. Mauris at scelerisque magna [...]
                                 </p>
                             </li>
                         </ul>	

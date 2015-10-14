@@ -1,9 +1,9 @@
 "use strict";
 let React = require('react');
-let AppStore = require('../stores/app-store.js');
+let AppStore = require('../stores/app-store');
 
 let TeamMember = React.createClass ({
-  render: function() {
+  render() {
     return (
       <li className="col-lg-3 col-md-3 col-sm-6 ">
         <div className="text-center">
@@ -29,28 +29,28 @@ let TeamMember = React.createClass ({
 
 let TeamComponent = React.createClass ({
 
-  getInitialState: function() {
+  getInitialState() {
     return {    
        teamData: AppStore.getTeam()
     };
   },
-  componentWillMount: function() {
+  componentWillMount() {
     AppStore.addChangeListener(this._onChange); 
   },
  
   
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     AppStore.removeChangeListener(this._onChange); 
   },
   
-  _onChange: function() {
+  _onChange() {
     console.log('changing services componenet');
     this.setState({ 
       teamData: AppStore.getTeam() 
     });
   },
   
-  render: function() {
+  render() {
   
     let teamMembers = this.state.teamData.list.map(function(member) {    
       return (

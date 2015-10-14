@@ -1,9 +1,9 @@
 "use strict";
 let React = require('react');
-let AppStore = require('../stores/app-store.js');
+let AppStore = require('../stores/app-store');
 
 let ServiceItem = React.createClass({
-  render: function() {
+  render() {
     return (
       <div className="col-md-4">
         <div className="templatemo-service-item">
@@ -25,28 +25,28 @@ let ServiceItem = React.createClass({
 });
 let ServicesComponent = React.createClass ({
 
-  getInitialState: function() {
+  getInitialState() {
     return {    
        servicesData: AppStore.getServices()
     };
   },
-  componentWillMount: function() {
+  componentWillMount() {
     AppStore.addChangeListener(this._onChange); 
   },
  
   
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     AppStore.removeChangeListener(this._onChange); 
   },
   
-  _onChange: function() {
+  _onChange() {
     console.log('changing services componenet');
     this.setState({ 
       servicesData: AppStore.getServices() 
     });
   },
   
-  render: function() {
+  render() {
   
     let serviceItems = this.state.servicesData.list.map(function(service) {
     
