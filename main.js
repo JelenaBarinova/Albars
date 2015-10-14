@@ -29863,7 +29863,24 @@ let InitializeActions = {
 
 module.exports = InitializeActions;
 
-},{"../api/api.js":165,"../constants/action-types.js":168,"../dispatcher/dispatcher.js":169}],165:[function(require,module,exports){
+},{"../api/api.js":166,"../constants/action-types.js":169,"../dispatcher/dispatcher.js":170}],165:[function(require,module,exports){
+"use strict";
+
+let Dispatcher = require('../dispatcher/dispatcher.js');
+let ActionTypes = require('../constants/action-types.js');
+
+let MenuActions = {
+	switchLanguage: function(language) {
+		Dispatcher.dispatch({
+			actionType: ActionTypes.SWITCH_LANGUAGE,
+			language: language
+		});
+	}
+};
+
+module.exports = MenuActions;
+
+},{"../constants/action-types.js":169,"../dispatcher/dispatcher.js":170}],166:[function(require,module,exports){
 "use strict";
 
 let $ = require('jquery');
@@ -29884,13 +29901,13 @@ let Api = {
 
 module.exports = Api;
 
-},{"../../data/en_US.json":1,"../../data/ru_RU.json":2,"jquery":8}],166:[function(require,module,exports){
+},{"../../data/en_US.json":1,"../../data/ru_RU.json":2,"jquery":8}],167:[function(require,module,exports){
 "use strict";
 let React = require('react');
 
-//let TopMenuComponent = require('./top-menu-component.jsx');
-let CarouselComponent = require('./carousel-component.jsx');
-/*let ServicesComponent = require('./services-component.jsx');
+let TopMenuComponent = require('./top-menu-component.jsx');
+/*let CarouselComponent = require('./carousel-component.jsx');
+let ServicesComponent = require('./services-component.jsx');
 let TeamComponent = require('./team-component.jsx');
 let BlogComponent = require('./blog-component.jsx');
 
@@ -29912,101 +29929,91 @@ let App = React.createClass ({displayName: "App",
 
 module.exports = App;
 
-},{"./carousel-component.jsx":167,"react":163}],167:[function(require,module,exports){
+},{"./top-menu-component.jsx":168,"react":163}],168:[function(require,module,exports){
 "use strict";
 let React = require('react');
+let MenuActions = require('../actions/menu-actions.js');
 let AppStore = require('../stores/app-store.js');
-    
-let CarouselComponent = React.createClass ({displayName: "CarouselComponent",
-  
+
+let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
+
   getInitialState: function() {
     return {    
-       carouselData: AppStore.getCarousel()
+       language: {key: 'en_US', value: 'English'},
+       menuData: AppStore.getMenu()
     };
   },
+  
   componentWillMount: function() {
     AppStore.addChangeListener(this._onChange); 
   },
- 
   
   componentWillUnmount: function() {
     AppStore.removeChangeListener(this._onChange); 
   },
   
-  _onChange() {
-    console.log('changing courasel component');
-    this.setState({ 
-      carouselData: AppStore.getCarousel() 
-    });
+  _onChange: function() {
+    console.log('changing');
+    this.setState({ menuData: AppStore.getMenu() });
   },
-  render: function() {
   
+  switchLanguage: function(key, event) {
+	  event.preventDefault();
+    MenuActions.switchLanguage(key);
+    console.log('add ?lang=key to the path');
+    console.log('stitchLangugae called');
+    console.log(key);
+	},
+
+  render: function() {
+
     return (
-      React.createElement("div", null, 
-        React.createElement("div", {id: "templatemo-carousel", className: "carousel slide", "data-ride": "carousel"}, 
-          React.createElement("ol", {className: "carousel-indicators"}, 
-            React.createElement("li", {"data-target": "#templatemo-carousel", "data-slide-to": "0", className: "active"}), 
-            React.createElement("li", {"data-target": "#templatemo-carousel", "data-slide-to": "1"}), 
-            React.createElement("li", {"data-target": "#templatemo-carousel", "data-slide-to": "2"})
-          ), 
-          React.createElement("div", {className: "carousel-inner"}, 
-            React.createElement("div", {className: "item active"}, 
-              React.createElement("div", {className: "container"}, 
-                React.createElement("div", {className: "carousel-caption"}, 
-                  React.createElement("h1", null, this.state.carouselData.list[0].title), 
-                  React.createElement("p", null, this.state.carouselData.list[0].content), 
-                  React.createElement("p", null, 
-                  (() => {
-                      if (this.state.carouselData.list[0].url) {
-                        return React.createElement("a", {className: "btn btn-lg btn-blue", href: this.state.carouselData.list[0].url, role: "button"}, this.state.carouselData.list[0].more);
-                      }
-                    })()
-                  )
+    React.createElement("div", null, 
+      React.createElement("div", {className: "templatemo-top-bar", id: "templatemo-top"}
+              
+      ), 
+      React.createElement("div", {className: "templatemo-top-menu"}, 
+        React.createElement("div", {className: "container"}, 
+          React.createElement("div", {className: "navbar navbar-default", role: "navigation"}, 
+            React.createElement("div", {className: "container"}, 
+              React.createElement("div", {className: "navbar-header"}, 
+                React.createElement("button", {type: "button", className: "navbar-toggle", "data-toggle": "collapse", "data-target": ".navbar-collapse"}, 
+                  React.createElement("span", {className: "sr-only"}, "Toggle navigation"), 
+                  React.createElement("span", {className: "icon-bar"}), 
+                  React.createElement("span", {className: "icon-bar"}), 
+                  React.createElement("span", {className: "icon-bar"})
+                ), 
+                
+                React.createElement("a", {href: "#", className: "navbar-brand"}, React.createElement("img", {src: "images/albars_logo.png", alt: "Albars", title: "Albars"}))
+              ), 
+              React.createElement("div", {className: "navbar-collapse collapse", id: "templatemo-nav-bar"}, 
+               
+                React.createElement("ul", {className: "nav navbar-nav navbar-right", style: {marginTop: '40px'}}, 
+                  React.createElement("li", {className: "active"}, React.createElement("a", {href: "#templatemo-top"}, this.state.menuData.home.toUpperCase())), 
+                  React.createElement("li", null, React.createElement("a", {href: "#templatemo-about"}, this.state.menuData.team.toUpperCase())), 
+                  React.createElement("li", null, React.createElement("a", {href: "#templatemo-portfolio"}, this.state.menuData.services.toUpperCase())), 
+                  React.createElement("li", null, React.createElement("a", {href: "#templatemo-blog"}, this.state.menuData.blog.toUpperCase())), 
+                  React.createElement("li", null, React.createElement("a", {href: "#templatemo-blog"}, this.state.menuData.clients.toUpperCase())), 
+                  React.createElement("li", null, React.createElement("a", {href: "#templatemo-contact"}, this.state.menuData.contact.toUpperCase())), 
+
+                  React.createElement("li", null, React.createElement("a", {rel: "nofollow", href: "/en", className: "external-link", onClick: this.switchLanguage.bind(this,'en_US')}, React.createElement("img", {src: "images/flags/us.png", alt: "en_US", title: "English"}))), 
+                  React.createElement("li", null, React.createElement("a", {rel: "nofollow", href: "/ru", className: "external-link", onClick: this.switchLanguage.bind(this,'ru_RU')}, React.createElement("img", {src: "images/flags/ru.png", alt: "ru_RU", title: "Русский"})))
+                                                          
                 )
-              )
-            ), 
-            React.createElement("div", {className: "item"}, 
-              React.createElement("div", {className: "container"}, 
-                React.createElement("div", {className: "carousel-caption"}, 
-                  React.createElement("h1", null, this.state.carouselData.list[1].title), 
-                  React.createElement("p", null, this.state.carouselData.list[1].content), 
-                  React.createElement("p", null, 
-                    (() => {
-                      if (this.state.carouselData.list[1].url) {
-                        return React.createElement("a", {className: "btn btn-lg btn-blue", href: this.state.carouselData.list[1].url, role: "button"}, this.state.carouselData.list[1].more);
-                      }
-                    })()
-                  )
-                )
-              )
-            ), 
-            React.createElement("div", {className: "item active"}, 
-              React.createElement("div", {className: "container"}, 
-                React.createElement("div", {className: "carousel-caption"}, 
-                  React.createElement("h1", null, this.state.carouselData.list[2].title), 
-                  React.createElement("p", null, this.state.carouselData.list[2].content), 
-                  React.createElement("p", null, 
-                    (() => {
-                      if (this.state.carouselData.list[2].url) {
-                        return React.createElement("a", {className: "btn btn-lg btn-blue", href: this.state.carouselData.list[2].url, role: "button"}, this.state.carouselData.list[2].more);
-                      }
-                    })()
-                  )
-                )
+                               
               )
             )
-          ), 
-          React.createElement("a", {className: "left carousel-control", href: "#templatemo-carousel", "data-slide": "prev"}, React.createElement("span", {className: "glyphicon glyphicon-chevron-left"})), 
-          React.createElement("a", {className: "right carousel-control", href: "#templatemo-carousel", "data-slide": "next"}, React.createElement("span", {className: "glyphicon glyphicon-chevron-right"}))
+          )
         )
       )
+      ) 
     );
   }
 });
 
-module.exports = CarouselComponent;
+module.exports = TopMenuComponent;
 
-},{"../stores/app-store.js":171,"react":163}],168:[function(require,module,exports){
+},{"../actions/menu-actions.js":165,"../stores/app-store.js":172,"react":163}],169:[function(require,module,exports){
 "use strict";
 
 let keyMirror = require('react/lib/keyMirror');
@@ -30016,14 +30023,14 @@ module.exports = keyMirror({
 	SWITCH_LANGUAGE: null
 });
 
-},{"react/lib/keyMirror":148}],169:[function(require,module,exports){
+},{"react/lib/keyMirror":148}],170:[function(require,module,exports){
 "use strict";
 
 let Dispatcher = require('flux').Dispatcher;
 
 module.exports = new Dispatcher();
 
-},{"flux":5}],170:[function(require,module,exports){
+},{"flux":5}],171:[function(require,module,exports){
 "use strict";
 
 let React   = require('react');
@@ -30035,7 +30042,7 @@ InitializeActions.initApp();
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
-},{"./actions/initialize-actions.js":164,"./components/app.jsx":166,"react":163}],171:[function(require,module,exports){
+},{"./actions/initialize-actions.js":164,"./components/app.jsx":167,"react":163}],172:[function(require,module,exports){
 "use strict";
 
 
@@ -30098,4 +30105,4 @@ Dispatcher.register(function(action){
 
 module.exports = AppStore;
 
-},{"../api/api.js":165,"../constants/action-types.js":168,"../dispatcher/dispatcher.js":169,"events":3}]},{},[170]);
+},{"../api/api.js":166,"../constants/action-types.js":169,"../dispatcher/dispatcher.js":170,"events":3}]},{},[171]);
