@@ -20695,10 +20695,10 @@ module.exports = InitializeActions;
 },{"../api/api.js":166,"../constants/action-types.js":176,"../dispatcher/dispatcher.js":177}],165:[function(require,module,exports){
 "use strict";
 
-let Dispatcher = require('../dispatcher/dispatcher.js');
-let ActionTypes = require('../constants/action-types.js');
+var Dispatcher = require('../dispatcher/dispatcher.js');
+var ActionTypes = require('../constants/action-types.js');
 
-let MenuActions = {
+var MenuActions = {
 	
 	switchLanguage: function(language) {
 		Dispatcher.dispatch({
