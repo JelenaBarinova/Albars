@@ -20750,7 +20750,7 @@ let App = React.createClass ({displayName: "App",
   render: function() {
     return (
       React.createElement("div", null, 
-      React.createElement("h1", null, "Services + Team"), 
+      React.createElement("h1", null, "Function declarations changed"), 
 	  	  React.createElement(TopMenuComponent, null), 
         React.createElement(CarouselComponent, null), 
         React.createElement(ServicesComponent, null), 
@@ -20886,7 +20886,7 @@ let ServicesComponent = React.createClass ({displayName: "ServicesComponent",
     AppStore.removeChangeListener(this._onChange); 
   },
   
-  _onChange() {
+  _onChange: function() {
     console.log('changing services componenet');
     this.setState({ 
       servicesData: AppStore.getServices() 
