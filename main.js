@@ -20692,7 +20692,7 @@ let InitializeActions = {
 
 module.exports = InitializeActions;
 
-},{"../api/api.js":166,"../constants/action-types.js":172,"../dispatcher/dispatcher.js":173}],165:[function(require,module,exports){
+},{"../api/api.js":166,"../constants/action-types.js":176,"../dispatcher/dispatcher.js":177}],165:[function(require,module,exports){
 "use strict";
 
 let Dispatcher = require('../dispatcher/dispatcher.js');
@@ -20711,7 +20711,7 @@ let MenuActions = {
 
 module.exports = MenuActions;
 
-},{"../constants/action-types.js":172,"../dispatcher/dispatcher.js":173}],166:[function(require,module,exports){
+},{"../constants/action-types.js":176,"../dispatcher/dispatcher.js":177}],166:[function(require,module,exports){
 "use strict";
 
 let Api = {
@@ -20738,23 +20738,26 @@ let TopMenuComponent = require('./top-menu-component.jsx');
 let CarouselComponent = require('./carousel-component.jsx');
 let ServicesComponent = require('./services-component.jsx');
 let TeamComponent = require('./team-component.jsx');
-/*let BlogComponent = require('./blog-component.jsx');
+let BlogComponent = require('./blog-component.jsx');
 
 let TweetsComponent = require('./tweets-component.jsx');
 let PartnersComponent = require('./partners-component.jsx');
 let FooterComponent = require('./footer-component.jsx');
-*/
+
 let App = React.createClass ({displayName: "App",
 
 
   render: function() {
     return (
       React.createElement("div", null, 
-      React.createElement("h1", null, "Function declarations changed"), 
 	  	  React.createElement(TopMenuComponent, null), 
         React.createElement(CarouselComponent, null), 
         React.createElement(ServicesComponent, null), 
-        React.createElement(TeamComponent, null)
+        React.createElement(TeamComponent, null), 
+        React.createElement(BlogComponent, null), 
+        React.createElement(TweetsComponent, null), 
+        React.createElement(PartnersComponent, null), 
+        React.createElement(FooterComponent, null)
 	    )
     );
   }
@@ -20762,7 +20765,128 @@ let App = React.createClass ({displayName: "App",
 
 module.exports = App;
 
-},{"./carousel-component.jsx":168,"./services-component.jsx":169,"./team-component.jsx":170,"./top-menu-component.jsx":171,"react":163}],168:[function(require,module,exports){
+},{"./blog-component.jsx":168,"./carousel-component.jsx":169,"./footer-component.jsx":170,"./partners-component.jsx":171,"./services-component.jsx":172,"./team-component.jsx":173,"./top-menu-component.jsx":174,"./tweets-component.jsx":175,"react":163}],168:[function(require,module,exports){
+"use strict";
+let React = require('react');
+
+let BlogComponent = React.createClass ({displayName: "BlogComponent",
+
+  render: function() {
+    return (
+    
+React.createElement("div", {id: "templatemo-blog"}, 
+            React.createElement("div", {className: "container"}, 
+                React.createElement("div", {className: "row", style: {marginTop: '70px'}}, 
+                    React.createElement("div", {className: "templatemo-line-header", style: {marginTop: '0px'}}, 
+                        React.createElement("div", {className: "text-center"}, 
+                            React.createElement("hr", {className: "team_hr team_hr_left hr_gray"}), React.createElement("span", {className: "span_blog txt_darkgrey"}, "BLOG POSTS"), 
+                            React.createElement("hr", {className: "team_hr team_hr_right hr_gray"})
+                        )
+                    ), 
+                    React.createElement("br", {className: "clearfix"})
+                ), 
+                
+                React.createElement("div", {className: "blog_box"}, 
+                    React.createElement("div", {className: "col-sm-5 col-md-6 blog_post"}, 
+                        React.createElement("ul", {className: "list-inline"}, 
+                            React.createElement("li", {className: "col-md-4"}, 
+                                React.createElement("a", {href: "#"}, 
+                                    React.createElement("img", {className: "img-responsive", src: "images/blog-image-1.jpg", alt: "gallery 1"})
+                                )
+                            ), 
+                            React.createElement("li", {className: "col-md-8"}, 
+                                React.createElement("div", {className: "pull-left"}, 
+                                    React.createElement("span", {className: "blog_header"}, "GRAPHIC DESIGN"), React.createElement("br", null), 
+                                    React.createElement("span", null, "Posted by : ", React.createElement("a", {className: "link_blue", href: "#"}, React.createElement("span", {className: "txt_blue"}, "Tracy")))
+                                ), 
+                                React.createElement("div", {className: "pull-right"}, 
+                                    React.createElement("a", {className: "btn btn-blue", href: "#", role: "button"}, "18 January 2084")
+                                ), 
+                                React.createElement("div", {className: "clearfix"}, " "), 
+                                React.createElement("p", {className: "blog_text"}, 
+                                    "Aliquam quis rutrum risus, ut condimentum ipsum. Nullam aliquet libero augue, eget auctor felis vulputate id. Proin a enim eu libero ornare malesuada. Sed iaculis fringilla lacinia. Sed laoreet lectus vitae [...]"
+                                )
+                            )
+                        )
+                    ), 
+                    
+                    React.createElement("div", {className: "col-sm-5 col-md-6 blog_post"}, 
+                        React.createElement("ul", {className: "list-inline"}, 
+                            React.createElement("li", {className: "col-md-4"}, React.createElement("a", {href: "#"}, 
+                                React.createElement("img", {className: "img-responsive", src: "images/blog-image-2.jpg", alt: "gallery 2"}))
+                            ), 
+                            React.createElement("li", {className: "col-md-8"}, 
+                                React.createElement("div", {className: "pull-left"}, 
+                                    React.createElement("span", {className: "blog_header"}, "WEBSITE TEMPLATE"), React.createElement("br", null), 
+                                    React.createElement("span", null, "Posted by : ", React.createElement("a", {className: "link_blue", href: "#"}, React.createElement("span", {className: "txt_blue"}, "Mary")))
+                                ), 
+                                React.createElement("div", {className: "pull-right"}, 
+                                    React.createElement("a", {className: "btn btn-blue", href: "#", role: "button"}, "16 January 2084")
+                                ), 
+                                React.createElement("div", {className: "clearfix"}, " "), 
+                                React.createElement("p", {className: "blog_text"}, 
+                                        "Morbi imperdiet ipsum sit amet dui pharetra, vulputate porta neque tristique. Quisque id turpis tristique, venenatis erat sit amet, venenatis turpis. Ut tellus ipsum, posuere bibendum [...]"
+                                )
+                            )
+                        )	
+                    ), 
+                    
+                    React.createElement("div", {className: "templatemo_clear"}), 
+                    
+                    React.createElement("div", {className: "col-sm-5 col-md-6 blog_post"}, 
+                        React.createElement("ul", {className: "list-inline"}, 
+                            React.createElement("li", {className: "col-md-4"}, React.createElement("a", {href: "#"}, 
+                                React.createElement("img", {className: "img-responsive", src: "images/blog-image-2.jpg", alt: "gallery 3"}))
+                            ), 
+                            React.createElement("li", {className: "col-md-8"}, 
+                                React.createElement("div", {className: "pull-left"}, 
+                                    React.createElement("span", {className: "blog_header"}, "WEB DEVELOPMENT"), React.createElement("br", null), 
+                                    React.createElement("span", null, "Posted by : ", React.createElement("a", {className: "link_blue", href: "#"}, React.createElement("span", {className: "txt_blue"}, "Julia")))
+                                ), 
+                                React.createElement("div", {className: "pull-right"}, 
+                                    React.createElement("a", {className: "btn btn-blue", href: "#", role: "button"}, "12 January 2084")
+                                ), 
+                                React.createElement("div", {className: "clearfix"}, " "), 
+                                React.createElement("p", {className: "blog_text"}, 
+                                        "Fusce molestie tellus risus, id commodo turpis convallis id. Morbi mattis sapien sapien, vitae lacinia ante interdum sit amet. Praesent eget varius diam, ac tempor est. Mauris at scelerisque magna [...]"
+                                )
+                            )
+                        )	
+                    ), 
+                    
+                    React.createElement("div", {className: "col-sm-5 col-md-6 blog_post"}, 
+                        React.createElement("ul", {className: "list-inline"}, 
+                            React.createElement("li", {className: "col-md-4"}, 
+                                React.createElement("a", {href: "#"}, 
+                                    React.createElement("img", {className: "img-responsive", src: "images/blog-image-1.jpg", alt: "gallery 4"})
+                                )
+                            ), 
+                            React.createElement("li", {className: "col-md-8"}, 
+                                React.createElement("div", {className: "pull-left"}, 
+                                    React.createElement("span", {className: "blog_header"}, "NEW FLUID LAYOUT"), React.createElement("br", null), 
+                                    React.createElement("span", null, "Posted by : ", React.createElement("a", {className: "link_blue", href: "#"}, React.createElement("span", {className: "txt_blue"}, "Linda")))
+                                ), 
+                                React.createElement("div", {className: "pull-right"}, 
+                                    React.createElement("a", {className: "btn btn-blue", href: "#", role: "button"}, "10 January 2084")
+                                ), 
+                                React.createElement("div", {className: "clearfix"}, " "), 
+                                React.createElement("p", {className: "blog_text"}, 
+                                    "In venenatis sodales purus a cursus. Ut consectetur, libero ac elementum tristique, enim ante aliquet mauris, scelerisque congue magna neque ac purus. Aliquam facilisis volutpat odio [...]"
+                                )
+                            )
+                        )
+                    )
+                    
+                )
+            )
+        )
+    );
+  }
+});
+
+module.exports = BlogComponent;
+
+},{"react":163}],169:[function(require,module,exports){
 "use strict";
 let React = require('react');
 let AppStore = require('../stores/app-store.js');
@@ -20844,7 +20968,127 @@ let CarouselComponent = React.createClass ({displayName: "CarouselComponent",
 
 module.exports = CarouselComponent;
 
-},{"../stores/app-store.js":175,"react":163}],169:[function(require,module,exports){
+},{"../stores/app-store.js":179,"react":163}],170:[function(require,module,exports){
+"use strict";
+let React = require('react');
+
+let FooterComponent = React.createClass ({displayName: "FooterComponent",
+
+  render: function() {
+    return (
+    
+ React.createElement("div", {className: "templatemo-footer"}, 
+            React.createElement("div", {className: "container"}, 
+                React.createElement("div", {className: "row"}, 
+                    React.createElement("div", {className: "text-center"}, 
+
+                        React.createElement("div", {className: "footer_container"}, 
+                            React.createElement("ul", {className: "list-inline"}, 
+                                React.createElement("li", null, 
+                                    React.createElement("a", {href: "#"}, 
+                                        React.createElement("span", {className: "social-icon-fb"})
+                                    )
+                                ), 
+                                React.createElement("li", null, 
+                                    React.createElement("a", {href: "#"}, 
+                                        React.createElement("span", {className: "social-icon-rss"})
+                                    )
+                                ), 
+                                React.createElement("li", null, 
+                                    React.createElement("a", {href: "#"}, 
+                                        React.createElement("span", {className: "social-icon-twitter"})
+                                    )
+                                ), 
+                                React.createElement("li", null, 
+                                    React.createElement("a", {href: "#"}, 
+                                        React.createElement("span", {className: "social-icon-linkedin"})
+                                    )
+                                ), 
+                                React.createElement("li", null, 
+                                    React.createElement("a", {href: "#"}, 
+                                        React.createElement("span", {className: "social-icon-dribbble"})
+                                    )
+                                )
+                            ), 
+                            React.createElement("div", {className: "height30"}), 
+                            React.createElement("a", {className: "btn btn-lg btn-orange", href: "#", role: "button", id: "btn-back-to-top"}, "Back To Top"), 
+                            React.createElement("div", {className: "height30"})
+                        ), 
+                        React.createElement("div", {className: "footer_bottom_content"}, 
+                   			React.createElement("span", null, "Copyright © 2084 ", React.createElement("a", {href: "#"}, "Your Company Name"), 
+                             "- Design: ", React.createElement("a", {rel: "nofollow", href: "http://www.templatemo.com/free-website-templates/395-urbanic", target: "_parent"}, "Urbanic"))
+                        )
+                        
+                    )
+                )
+            )
+        ) 
+    );
+  }
+});
+
+module.exports = FooterComponent;
+
+},{"react":163}],171:[function(require,module,exports){
+"use strict";
+let React = require('react');
+
+let PartnersComponent = React.createClass ({displayName: "PartnersComponent",
+
+  render: function() {
+    return (
+    
+     React.createElement("div", {className: "templatemo-partners"}, 
+            React.createElement("div", {className: "container"}, 
+                React.createElement("div", {className: "row"}, 
+
+
+                    React.createElement("div", {className: "templatemo-line-header"}, 
+                        React.createElement("div", {className: "text-center"}, 
+                            React.createElement("hr", {className: "team_hr team_hr_left hr_gray"}), React.createElement("span", {className: "txt_darkgrey"}, "OUR PARTNERS"), 
+                            React.createElement("hr", {className: "team_hr team_hr_right hr_gray"})
+                        )
+                    ), 
+                    React.createElement("div", {className: "clearfix"}), 
+
+
+                    React.createElement("div", {className: "text-center"}, 
+
+                        React.createElement("div", {style: {marginTop: '60px'}}, 
+                            React.createElement("ul", {className: "list-inline"}, 
+                                React.createElement("li", {className: "col-sm-2 col-md-2 templatemo-partner-item"}, 
+                                    React.createElement("a", {href: "#"}, React.createElement("img", {src: "images/partner1.jpg", className: "img-responsive", alt: "partner 1"}))
+                                ), 
+                                React.createElement("li", {className: "col-sm-2 col-md-2 templatemo-partner-item"}, 
+                                    React.createElement("a", {href: "#"}, React.createElement("img", {src: "images/partner2.jpg", className: "img-responsive", alt: "partner 2"}))
+                                ), 
+                                React.createElement("li", {className: "col-sm-2 col-md-2 templatemo-partner-item"}, 
+                                    React.createElement("a", {href: "#"}, React.createElement("img", {src: "images/partner3.jpg", className: "img-responsive", alt: "partner 3"}))
+                                ), 
+                                React.createElement("li", {className: "col-sm-2 col-md-2 templatemo-partner-item"}, 
+                                    React.createElement("a", {href: "#"}, React.createElement("img", {src: "images/partner4.jpg", className: "img-responsive", alt: "partner 4"}))
+                                ), 
+                                React.createElement("li", {className: "col-sm-2 col-md-2 templatemo-partner-item"}, 
+                                    React.createElement("a", {href: "#"}, React.createElement("img", {src: "images/partner5.jpg", className: "img-responsive", alt: "partner 5"}))
+                                ), 
+                                React.createElement("li", {className: "col-sm-2 col-md-2 templatemo-partner-item"}, 
+                                    React.createElement("a", {href: "#"}, React.createElement("img", {src: "images/partner6.jpg", className: "img-responsive", alt: "partner 6"}))
+                                )
+                            )
+
+                        )
+
+                    )
+                )
+            )
+        ) 
+    );
+  }
+});
+
+module.exports = PartnersComponent;
+
+},{"react":163}],172:[function(require,module,exports){
 "use strict";
 let React = require('react');
 let AppStore = require('../stores/app-store.js');
@@ -20928,7 +21172,7 @@ let ServicesComponent = React.createClass ({displayName: "ServicesComponent",
 
 module.exports = ServicesComponent;
 
-},{"../stores/app-store.js":175,"react":163}],170:[function(require,module,exports){
+},{"../stores/app-store.js":179,"react":163}],173:[function(require,module,exports){
 "use strict";
 let React = require('react');
 let AppStore = require('../stores/app-store.js');
@@ -21012,7 +21256,7 @@ let TeamComponent = React.createClass ({displayName: "TeamComponent",
 
 module.exports = TeamComponent;
 
-},{"../stores/app-store.js":175,"react":163}],171:[function(require,module,exports){
+},{"../stores/app-store.js":179,"react":163}],174:[function(require,module,exports){
 "use strict";
 let React = require('react');
 let MenuActions = require('../actions/menu-actions.js');
@@ -21096,7 +21340,40 @@ let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
 
 module.exports = TopMenuComponent;
 
-},{"../actions/menu-actions.js":165,"../stores/app-store.js":175,"react":163}],172:[function(require,module,exports){
+},{"../actions/menu-actions.js":165,"../stores/app-store.js":179,"react":163}],175:[function(require,module,exports){
+"use strict";
+let React = require('react');
+
+let TweetsComponent = React.createClass ({displayName: "TweetsComponent",
+
+  render: function() {
+    return (
+    
+React.createElement("div", {className: "templatemo-tweets"}, 
+            React.createElement("div", {className: "container"}, 
+                React.createElement("div", {className: "row", style: {marginTop: '20px'}}, 
+                        React.createElement("div", {className: "col-md-2"}
+                        ), 
+                        React.createElement("div", {className: "col-md-1"}, 
+                                React.createElement("img", {src: "images/quote.png", alt: "icon"})
+                        ), 
+                        React.createElement("div", {className: "col-md-7 tweet_txt"}, 
+                                React.createElement("span", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit suspendiise as a molesti neque vestibulum,  persiutsor de andues mare fricilus ipsum dolor sit amet cons forukus."), 
+                                React.createElement("br", null), 
+                                React.createElement("span", {className: "twitter_user"}, "Moe Moe, Yangon")
+                        ), 
+                        React.createElement("div", {className: "col-md-2"}
+                        )
+                 )
+            )
+        ) 
+    );
+  }
+});
+
+module.exports = TweetsComponent;
+
+},{"react":163}],176:[function(require,module,exports){
 "use strict";
 
 let keyMirror = require('react/lib/keyMirror');
@@ -21106,14 +21383,14 @@ module.exports = keyMirror({
 	SWITCH_LANGUAGE: null
 });
 
-},{"react/lib/keyMirror":148}],173:[function(require,module,exports){
+},{"react/lib/keyMirror":148}],177:[function(require,module,exports){
 "use strict";
 
 let Dispatcher = require('flux').Dispatcher;
 
 module.exports = new Dispatcher();
 
-},{"flux":5}],174:[function(require,module,exports){
+},{"flux":5}],178:[function(require,module,exports){
 "use strict";
 
 let React   = require('react');
@@ -21125,7 +21402,7 @@ InitializeActions.initApp();
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
-},{"./actions/initialize-actions.js":164,"./components/app.jsx":167,"react":163}],175:[function(require,module,exports){
+},{"./actions/initialize-actions.js":164,"./components/app.jsx":167,"react":163}],179:[function(require,module,exports){
 "use strict";
 
 let Dispatcher = require('../dispatcher/dispatcher.js');
@@ -21191,4 +21468,4 @@ Dispatcher.register(function(action){
 
 module.exports = AppStore;
 
-},{"../api/api.js":166,"../constants/action-types.js":172,"../dispatcher/dispatcher.js":173,"events":3,"object-assign":8}]},{},[174]);
+},{"../api/api.js":166,"../constants/action-types.js":176,"../dispatcher/dispatcher.js":177,"events":3,"object-assign":8}]},{},[178]);
