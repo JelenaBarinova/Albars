@@ -20714,9 +20714,9 @@ module.exports = MenuActions;
 },{"../constants/action-types.js":176,"../dispatcher/dispatcher.js":177}],166:[function(require,module,exports){
 "use strict";
 
-let Api = {
+var Api = {
 	getData: function(language) {
-		let _content = {};
+		var _content = {};
 		if (language == 'ru_RU')
 		{
 			_content = require('../../data/ru_RU.json');
@@ -20732,19 +20732,19 @@ module.exports = Api;
 
 },{"../../data/en_US.json":1,"../../data/ru_RU.json":2}],167:[function(require,module,exports){
 "use strict";
-let React = require('react');
+var React = require('react');
 
-let TopMenuComponent = require('./top-menu-component.jsx');
-let CarouselComponent = require('./carousel-component.jsx');
-let ServicesComponent = require('./services-component.jsx');
-let TeamComponent = require('./team-component.jsx');
-let BlogComponent = require('./blog-component.jsx');
+var TopMenuComponent = require('./top-menu-component.jsx');
+var CarouselComponent = require('./carousel-component.jsx');
+var ServicesComponent = require('./services-component.jsx');
+var TeamComponent = require('./team-component.jsx');
+var BlogComponent = require('./blog-component.jsx');
 
-let TweetsComponent = require('./tweets-component.jsx');
-let PartnersComponent = require('./partners-component.jsx');
-let FooterComponent = require('./footer-component.jsx');
+var TweetsComponent = require('./tweets-component.jsx');
+var PartnersComponent = require('./partners-component.jsx');
+var FooterComponent = require('./footer-component.jsx');
 
-let App = React.createClass ({displayName: "App",
+var App = React.createClass ({displayName: "App",
 
 
   render: function() {
@@ -20767,9 +20767,9 @@ module.exports = App;
 
 },{"./blog-component.jsx":168,"./carousel-component.jsx":169,"./footer-component.jsx":170,"./partners-component.jsx":171,"./services-component.jsx":172,"./team-component.jsx":173,"./top-menu-component.jsx":174,"./tweets-component.jsx":175,"react":163}],168:[function(require,module,exports){
 "use strict";
-let React = require('react');
+var React = require('react');
 
-let BlogComponent = React.createClass ({displayName: "BlogComponent",
+var BlogComponent = React.createClass ({displayName: "BlogComponent",
 
   render: function() {
     return (
@@ -20888,10 +20888,10 @@ module.exports = BlogComponent;
 
 },{"react":163}],169:[function(require,module,exports){
 "use strict";
-let React = require('react');
-let AppStore = require('../stores/app-store.js');
+var React = require('react');
+var AppStore = require('../stores/app-store.js');
     
-let CarouselComponent = React.createClass ({displayName: "CarouselComponent",
+var CarouselComponent = React.createClass ({displayName: "CarouselComponent",
   
   getInitialState: function() {
     return {    
@@ -20970,9 +20970,9 @@ module.exports = CarouselComponent;
 
 },{"../stores/app-store.js":179,"react":163}],170:[function(require,module,exports){
 "use strict";
-let React = require('react');
+var React = require('react');
 
-let FooterComponent = React.createClass ({displayName: "FooterComponent",
+var FooterComponent = React.createClass ({displayName: "FooterComponent",
 
   render: function() {
     return (
@@ -21031,9 +21031,9 @@ module.exports = FooterComponent;
 
 },{"react":163}],171:[function(require,module,exports){
 "use strict";
-let React = require('react');
+var React = require('react');
 
-let PartnersComponent = React.createClass ({displayName: "PartnersComponent",
+var PartnersComponent = React.createClass ({displayName: "PartnersComponent",
 
   render: function() {
     return (
@@ -21090,10 +21090,10 @@ module.exports = PartnersComponent;
 
 },{"react":163}],172:[function(require,module,exports){
 "use strict";
-let React = require('react');
-let AppStore = require('../stores/app-store.js');
+var React = require('react');
+var AppStore = require('../stores/app-store.js');
 
-let ServiceItem = React.createClass({displayName: "ServiceItem",
+var ServiceItem = React.createClass({displayName: "ServiceItem",
   render: function() {
     return (
       React.createElement("div", {className: "col-md-4"}, 
@@ -21114,7 +21114,7 @@ let ServiceItem = React.createClass({displayName: "ServiceItem",
     ); 
   }
 });
-let ServicesComponent = React.createClass ({displayName: "ServicesComponent",
+var ServicesComponent = React.createClass ({displayName: "ServicesComponent",
 
   getInitialState: function() {
     return {    
@@ -21139,7 +21139,7 @@ let ServicesComponent = React.createClass ({displayName: "ServicesComponent",
   
   render: function() {
   
-    let serviceItems = this.state.servicesData.list.map(function(service) {
+    var serviceItems = this.state.servicesData.list.map(function(service) {
     
       return (
         React.createElement(ServiceItem, {service: service, key: service.id})
@@ -21174,10 +21174,10 @@ module.exports = ServicesComponent;
 
 },{"../stores/app-store.js":179,"react":163}],173:[function(require,module,exports){
 "use strict";
-let React = require('react');
-let AppStore = require('../stores/app-store.js');
+var React = require('react');
+var AppStore = require('../stores/app-store.js');
 
-let TeamMember = React.createClass ({displayName: "TeamMember",
+var TeamMember = React.createClass ({displayName: "TeamMember",
   render: function() {
     return (
       React.createElement("li", {className: "col-lg-3 col-md-3 col-sm-6 "}, 
@@ -21202,7 +21202,7 @@ let TeamMember = React.createClass ({displayName: "TeamMember",
 
 });
 
-let TeamComponent = React.createClass ({displayName: "TeamComponent",
+var TeamComponent = React.createClass ({displayName: "TeamComponent",
 
   getInitialState: function() {
     return {    
@@ -21227,7 +21227,7 @@ let TeamComponent = React.createClass ({displayName: "TeamComponent",
   
   render: function() {
   
-    let teamMembers = this.state.teamData.list.map(function(member) {    
+    var teamMembers = this.state.teamData.list.map(function(member) {    
       return (
         React.createElement(TeamMember, {member: member, key: member.id})
       );
@@ -21258,11 +21258,11 @@ module.exports = TeamComponent;
 
 },{"../stores/app-store.js":179,"react":163}],174:[function(require,module,exports){
 "use strict";
-let React = require('react');
-let MenuActions = require('../actions/menu-actions.js');
-let AppStore = require('../stores/app-store.js');
+var React = require('react');
+var MenuActions = require('../actions/menu-actions.js');
+var AppStore = require('../stores/app-store.js');
 
-let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
+var TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
 
   getInitialState: function() {
     return {    
@@ -21342,9 +21342,9 @@ module.exports = TopMenuComponent;
 
 },{"../actions/menu-actions.js":165,"../stores/app-store.js":179,"react":163}],175:[function(require,module,exports){
 "use strict";
-let React = require('react');
+var React = require('react');
 
-let TweetsComponent = React.createClass ({displayName: "TweetsComponent",
+var TweetsComponent = React.createClass ({displayName: "TweetsComponent",
 
   render: function() {
     return (
@@ -21376,7 +21376,7 @@ module.exports = TweetsComponent;
 },{"react":163}],176:[function(require,module,exports){
 "use strict";
 
-let keyMirror = require('react/lib/keyMirror');
+var keyMirror = require('react/lib/keyMirror');
 
 module.exports = keyMirror({
 	INITIALIZE: null,
@@ -21386,17 +21386,17 @@ module.exports = keyMirror({
 },{"react/lib/keyMirror":148}],177:[function(require,module,exports){
 "use strict";
 
-let Dispatcher = require('flux').Dispatcher;
+var Dispatcher = require('flux').Dispatcher;
 
 module.exports = new Dispatcher();
 
 },{"flux":5}],178:[function(require,module,exports){
 "use strict";
 
-let React   = require('react');
-let App = require('./components/app.jsx');
+var React   = require('react');
+var App = require('./components/app.jsx');
 
-let InitializeActions = require('./actions/initialize-actions.js');
+var InitializeActions = require('./actions/initialize-actions.js');
 
 InitializeActions.initApp();
 
@@ -21405,17 +21405,17 @@ React.render(React.createElement(App, null), document.getElementById('HomePage')
 },{"./actions/initialize-actions.js":164,"./components/app.jsx":167,"react":163}],179:[function(require,module,exports){
 "use strict";
 
-let Dispatcher = require('../dispatcher/dispatcher.js');
-let ActionTypes = require('../constants/action-types.js');
-let EventEmitter = require('events').EventEmitter;
-let assign = require('object-assign');
-let Api =  require('../api/api.js');
-let CHANGE_EVENT = 'change';
+var Dispatcher = require('../dispatcher/dispatcher.js');
+var ActionTypes = require('../constants/action-types.js');
+var EventEmitter = require('events').EventEmitter;
+var assign = require('object-assign');
+var Api =  require('../api/api.js');
+var CHANGE_EVENT = 'change';
 
-let _content, _menu;
+var _content, _menu;
 
-//let AppStore =Object.assign({}, EventEmitter.prototype, {
-let AppStore = assign({}, EventEmitter.prototype, {
+//var AppStore =Object.assign({}, EventEmitter.prototype, {
+var AppStore = assign({}, EventEmitter.prototype, {
 	
 	addChangeListener: function(callback){
 		this.on(CHANGE_EVENT, callback)
