@@ -29560,7 +29560,7 @@ let InitializeActions = {
 
 module.exports = InitializeActions;
 
-},{"../api/api.js":164,"../constants/action-types.js":166,"../dispatcher/dispatcher.js":167}],164:[function(require,module,exports){
+},{"../api/api.js":164,"../constants/action-types.js":167,"../dispatcher/dispatcher.js":168}],164:[function(require,module,exports){
 "use strict";
 
 let $ = require('jquery');
@@ -29585,7 +29585,7 @@ module.exports = Api;
 "use strict";
 let React = require('react');
 
-//let TopMenuComponent = require('./top-menu-component.jsx');
+let TopMenuComponent = require('./top-menu-component.jsx');
 /*let CarouselComponent = require('./carousel-component.jsx');
 let ServicesComponent = require('./services-component.jsx');
 let TeamComponent = require('./team-component.jsx');
@@ -29609,7 +29609,92 @@ let App = React.createClass ({displayName: "App",
 
 module.exports = App;
 
-},{"react":162}],166:[function(require,module,exports){
+},{"./top-menu-component.jsx":166,"react":162}],166:[function(require,module,exports){
+"use strict";
+let React = require('react');
+//let MenuActions = require('../actions/menu-actions.js');
+//let AppStore = require('../stores/app-store.js');
+
+let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
+/*
+  getInitialState: function() {
+    return {    
+       language: {key: 'en_US', value: 'English'},
+       menuData: AppStore.getMenu()
+    };
+  },
+  
+  componentWillMount: function() {
+    AppStore.addChangeListener(this._onChange); 
+  },
+  
+  componentWillUnmount: function() {
+    AppStore.removeChangeListener(this._onChange); 
+  },
+  
+  _onChange: function() {
+    console.log('changing');
+    this.setState({ menuData: AppStore.getMenu() });
+  },
+  
+  switchLanguage: function(key, event) {
+	  event.preventDefault();
+    MenuActions.switchLanguage(key);
+    console.log('add ?lang=key to the path');
+    console.log('stitchLangugae called');
+    console.log(key);
+	},
+*/
+  render: function() {
+
+    return (/*
+    <div>
+      <div className="templatemo-top-bar" id="templatemo-top">
+              
+      </div>
+      <div className="templatemo-top-menu">
+        <div className="container">
+          <div className="navbar navbar-default" role="navigation">
+            <div className="container">
+              <div className="navbar-header">
+                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span className="sr-only">Toggle navigation</span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                </button>
+                
+                <a href="#" className="navbar-brand"><img src="images/albars_logo.png" alt="Albars" title="Albars" /></a>
+              </div>
+              <div className="navbar-collapse collapse" id="templatemo-nav-bar">                
+               
+                <ul className="nav navbar-nav navbar-right" style={{marginTop: '40px'}}>
+                  <li className="active"><a href="#templatemo-top">{this.state.menuData.home.toUpperCase()}</a></li>
+                  <li><a href="#templatemo-about">{this.state.menuData.team.toUpperCase()}</a></li>
+                  <li><a href="#templatemo-portfolio">{this.state.menuData.services.toUpperCase()}</a></li>
+                  <li><a href="#templatemo-blog">{this.state.menuData.blog.toUpperCase()}</a></li>
+                  <li><a href="#templatemo-blog">{this.state.menuData.clients.toUpperCase()}</a></li>
+                  <li><a href="#templatemo-contact">{this.state.menuData.contact.toUpperCase()}</a></li> 
+
+                  <li><a rel="nofollow" href="/en" className="external-link" onClick={this.switchLanguage.bind(this,'en_US')}><img src="images/flags/us.png" alt="en_US" title="English" /></a></li>
+                  <li><a rel="nofollow" href="/ru" className="external-link" onClick={this.switchLanguage.bind(this,'ru_RU')}><img src="images/flags/ru.png" alt="ru_RU" title="Русский" /></a></li>
+                                                          
+                </ul>  
+                               
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div> 
+      </div> */
+      React.createElement("p", null, "Oh my!")
+    );
+  }
+});
+
+module.exports = TopMenuComponent;
+
+},{"react":162}],167:[function(require,module,exports){
 "use strict";
 
 let keyMirror = require('react/lib/keyMirror');
@@ -29619,14 +29704,14 @@ module.exports = keyMirror({
 	SWITCH_LANGUAGE: null
 });
 
-},{"react/lib/keyMirror":147}],167:[function(require,module,exports){
+},{"react/lib/keyMirror":147}],168:[function(require,module,exports){
 "use strict";
 
 let Dispatcher = require('flux').Dispatcher;
 
 module.exports = new Dispatcher();
 
-},{"flux":4}],168:[function(require,module,exports){
+},{"flux":4}],169:[function(require,module,exports){
 "use strict";
 
 let React   = require('react');
@@ -29638,4 +29723,4 @@ InitializeActions.initApp();
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
-},{"./actions/initialize-actions.js":163,"./components/app.jsx":165,"react":162}]},{},[168]);
+},{"./actions/initialize-actions.js":163,"./components/app.jsx":165,"react":162}]},{},[169]);
