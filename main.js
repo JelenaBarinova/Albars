@@ -20692,7 +20692,7 @@ let InitializeActions = {
 
 module.exports = InitializeActions;
 
-},{"../api/api.js":166,"../constants/action-types.js":170,"../dispatcher/dispatcher.js":171}],165:[function(require,module,exports){
+},{"../api/api.js":166,"../constants/action-types.js":172,"../dispatcher/dispatcher.js":173}],165:[function(require,module,exports){
 "use strict";
 
 let Dispatcher = require('../dispatcher/dispatcher.js');
@@ -20711,7 +20711,7 @@ let MenuActions = {
 
 module.exports = MenuActions;
 
-},{"../constants/action-types.js":170,"../dispatcher/dispatcher.js":171}],166:[function(require,module,exports){
+},{"../constants/action-types.js":172,"../dispatcher/dispatcher.js":173}],166:[function(require,module,exports){
 "use strict";
 
 let Api = {
@@ -20736,9 +20736,9 @@ let React = require('react');
 
 let TopMenuComponent = require('./top-menu-component.jsx');
 let CarouselComponent = require('./carousel-component.jsx');
-/*let ServicesComponent = require('./services-component.jsx');
+let ServicesComponent = require('./services-component.jsx');
 let TeamComponent = require('./team-component.jsx');
-let BlogComponent = require('./blog-component.jsx');
+/*let BlogComponent = require('./blog-component.jsx');
 
 let TweetsComponent = require('./tweets-component.jsx');
 let PartnersComponent = require('./partners-component.jsx');
@@ -20750,9 +20750,11 @@ let App = React.createClass ({displayName: "App",
   render: function() {
     return (
       React.createElement("div", null, 
-      React.createElement("h1", null, "Only top + emty carousel"), 
+      React.createElement("h1", null, "Services + Team"), 
 	  	  React.createElement(TopMenuComponent, null), 
-        React.createElement(CarouselComponent, null)
+        React.createElement(CarouselComponent, null), 
+        React.createElement(ServicesComponent, null), 
+        React.createElement(TeamComponent, null)
 	    )
     );
   }
@@ -20760,7 +20762,7 @@ let App = React.createClass ({displayName: "App",
 
 module.exports = App;
 
-},{"./carousel-component.jsx":168,"./top-menu-component.jsx":169,"react":163}],168:[function(require,module,exports){
+},{"./carousel-component.jsx":168,"./services-component.jsx":169,"./team-component.jsx":170,"./top-menu-component.jsx":171,"react":163}],168:[function(require,module,exports){
 "use strict";
 let React = require('react');
 let AppStore = require('../stores/app-store.js');
@@ -20816,7 +20818,6 @@ let CarouselComponent = React.createClass ({displayName: "CarouselComponent",
                   React.createElement("p", null, this.state.carouselData.list[1].content), 
                   React.createElement("p", null, 
                    React.createElement("a", {className: "btn btn-lg btn-blue", href: this.state.carouselData.list[1].url, role: "button"}, this.state.carouselData.list[1].more)
-
                   )
                 )
               )
@@ -20827,8 +20828,7 @@ let CarouselComponent = React.createClass ({displayName: "CarouselComponent",
                   React.createElement("h1", null, this.state.carouselData.list[2].title), 
                   React.createElement("p", null, this.state.carouselData.list[2].content), 
                   React.createElement("p", null, 
-React.createElement("a", {className: "btn btn-lg btn-blue", href: this.state.carouselData.list[2].url, role: "button"}, this.state.carouselData.list[2].more)
-                
+                    React.createElement("a", {className: "btn btn-lg btn-blue", href: this.state.carouselData.list[2].url, role: "button"}, this.state.carouselData.list[2].more)
                   )
                 )
               )
@@ -20844,7 +20844,175 @@ React.createElement("a", {className: "btn btn-lg btn-blue", href: this.state.car
 
 module.exports = CarouselComponent;
 
-},{"../stores/app-store.js":173,"react":163}],169:[function(require,module,exports){
+},{"../stores/app-store.js":175,"react":163}],169:[function(require,module,exports){
+"use strict";
+let React = require('react');
+let AppStore = require('../stores/app-store.js');
+
+let ServiceItem = React.createClass({displayName: "ServiceItem",
+  render: function() {
+    return (
+      React.createElement("div", {className: "col-md-4"}, 
+        React.createElement("div", {className: "templatemo-service-item"}, 
+          React.createElement("div", null, 
+            React.createElement("div", {className: "col-xs-2"}, 
+              React.createElement("img", {src: "images/leaf.png", alt: "icon", style: {float: 'left'}})
+            ), 
+            React.createElement("div", {className: "col-xs-10"}, 
+              React.createElement("span", {className: "templatemo-service-item-header"}, this.props.service.title.toUpperCase())
+            )
+          ), 
+          React.createElement("p", null, this.props.service.description), 
+          React.createElement("br", {className: "clearfix"})
+        ), 
+        React.createElement("div", {className: "clearfix"})
+      )
+    ); 
+  }
+});
+let ServicesComponent = React.createClass ({displayName: "ServicesComponent",
+
+  getInitialState: function() {
+    return {    
+       servicesData: AppStore.getServices()
+    };
+  },
+  componentWillMount: function() {
+    AppStore.addChangeListener(this._onChange); 
+  },
+ 
+  
+  componentWillUnmount: function() {
+    AppStore.removeChangeListener(this._onChange); 
+  },
+  
+  _onChange() {
+    console.log('changing services componenet');
+    this.setState({ 
+      servicesData: AppStore.getServices() 
+    });
+  },
+  
+  render: function() {
+  
+    let serviceItems = this.state.servicesData.list.map(function(service) {
+    
+      return (
+        React.createElement(ServiceItem, {service: service, key: service.id})
+      );
+    });
+    
+    return (
+      React.createElement("div", null, 
+        React.createElement("div", {className: "templatemo-welcome", id: "templatemo-welcome"}, 
+          React.createElement("div", {className: "container"}, 
+            React.createElement("div", {className: "templatemo-slogan text-center"}, 
+              React.createElement("span", {className: "txt_darkgrey"}), React.createElement("span", {className: "txt_blue"}, this.state.servicesData.title), 
+              React.createElement("p", {className: "txt_slogan"}, React.createElement("i", null, this.state.servicesData.description))
+            )	
+          )
+        ), 
+        React.createElement("div", {className: "templatemo-service"}, 
+          React.createElement("div", {className: "container"}, 
+            React.createElement("div", {className: "row"}, 
+      
+              serviceItems
+      
+            )
+          )
+        )
+      ) 
+    );
+  }
+});
+
+module.exports = ServicesComponent;
+
+},{"../stores/app-store.js":175,"react":163}],170:[function(require,module,exports){
+"use strict";
+let React = require('react');
+let AppStore = require('../stores/app-store.js');
+
+let TeamMember = React.createClass ({displayName: "TeamMember",
+  render: function() {
+    return (
+      React.createElement("li", {className: "col-lg-3 col-md-3 col-sm-6 "}, 
+        React.createElement("div", {className: "text-center"}, 
+          React.createElement("div", {className: "member-thumb"}, 
+            React.createElement("img", {src: this.props.member.photoUrl, className: "img-responsive", alt: this.props.member.name}), 
+            React.createElement("div", {className: "thumb-overlay"}, 
+              React.createElement("a", {href: "#"}, React.createElement("span", {className: "social-icon-fb"}, this.props.member.fbUrl)), 
+              React.createElement("a", {href: "#"}, React.createElement("span", {className: "social-icon-twitter"}, this.props.member.twitterUrl)), 
+              React.createElement("a", {href: "#"}, React.createElement("span", {className: "social-icon-linkedin"}, this.props.member.linkedinUrl))
+            )
+          ), 
+          React.createElement("div", {className: "team-inner"}, 
+            React.createElement("p", {className: "team-inner-header"}, this.props.member.name.toUpperCase()), 
+            React.createElement("p", {className: "team-inner-header"}, this.props.member.title), 
+            React.createElement("p", {className: "team-inner-subtext"}, this.props.member.bio)
+          )
+        )
+      )
+    )
+  }
+
+});
+
+let TeamComponent = React.createClass ({displayName: "TeamComponent",
+
+  getInitialState: function() {
+    return {    
+       teamData: AppStore.getTeam()
+    };
+  },
+  componentWillMount: function() {
+    AppStore.addChangeListener(this._onChange); 
+  },
+ 
+  
+  componentWillUnmount: function() {
+    AppStore.removeChangeListener(this._onChange); 
+  },
+  
+  _onChange() {
+    console.log('changing services componenet');
+    this.setState({ 
+      teamData: AppStore.getTeam() 
+    });
+  },
+  
+  render: function() {
+  
+    let teamMembers = this.state.teamData.list.map(function(member) {    
+      return (
+        React.createElement(TeamMember, {member: member, key: member.id})
+      );
+    });
+    return (
+    
+    React.createElement("div", {className: "templatemo-team", id: "templatemo-about"}, 
+            React.createElement("div", {className: "container"}, 
+                React.createElement("div", {className: "row"}, 
+                    React.createElement("div", {className: "templatemo-line-header"}, 
+                        React.createElement("div", {className: "text-center"}, 
+                            React.createElement("hr", {className: "team_hr team_hr_left"}), React.createElement("span", null, this.state.teamData.title.toUpperCase()), 
+                            React.createElement("hr", {className: "team_hr team_hr_right"})
+                        )
+                    )
+                ), 
+                React.createElement("div", {className: "clearfix"}, " "), 
+                    React.createElement("ul", {className: "row row_team"}, 
+                      teamMembers
+                    )
+            )
+        )
+    );
+  }
+});
+
+module.exports = TeamComponent;
+
+},{"../stores/app-store.js":175,"react":163}],171:[function(require,module,exports){
 "use strict";
 let React = require('react');
 let MenuActions = require('../actions/menu-actions.js');
@@ -20928,7 +21096,7 @@ let TopMenuComponent = React.createClass ({displayName: "TopMenuComponent",
 
 module.exports = TopMenuComponent;
 
-},{"../actions/menu-actions.js":165,"../stores/app-store.js":173,"react":163}],170:[function(require,module,exports){
+},{"../actions/menu-actions.js":165,"../stores/app-store.js":175,"react":163}],172:[function(require,module,exports){
 "use strict";
 
 let keyMirror = require('react/lib/keyMirror');
@@ -20938,14 +21106,14 @@ module.exports = keyMirror({
 	SWITCH_LANGUAGE: null
 });
 
-},{"react/lib/keyMirror":148}],171:[function(require,module,exports){
+},{"react/lib/keyMirror":148}],173:[function(require,module,exports){
 "use strict";
 
 let Dispatcher = require('flux').Dispatcher;
 
 module.exports = new Dispatcher();
 
-},{"flux":5}],172:[function(require,module,exports){
+},{"flux":5}],174:[function(require,module,exports){
 "use strict";
 
 let React   = require('react');
@@ -20957,7 +21125,7 @@ InitializeActions.initApp();
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
-},{"./actions/initialize-actions.js":164,"./components/app.jsx":167,"react":163}],173:[function(require,module,exports){
+},{"./actions/initialize-actions.js":164,"./components/app.jsx":167,"react":163}],175:[function(require,module,exports){
 "use strict";
 
 let Dispatcher = require('../dispatcher/dispatcher.js');
@@ -21023,4 +21191,4 @@ Dispatcher.register(function(action){
 
 module.exports = AppStore;
 
-},{"../api/api.js":166,"../constants/action-types.js":170,"../dispatcher/dispatcher.js":171,"events":3,"object-assign":8}]},{},[172]);
+},{"../api/api.js":166,"../constants/action-types.js":172,"../dispatcher/dispatcher.js":173,"events":3,"object-assign":8}]},{},[174]);
