@@ -96,6 +96,15 @@ let CarouselComponent = React.createClass ({
           <a className="left carousel-control" href="#templatemo-carousel" data-slide="prev"><span className="glyphicon glyphicon-chevron-left"></span></a>
           <a className="right carousel-control" href="#templatemo-carousel" data-slide="next"><span className="glyphicon glyphicon-chevron-right"></span></a>
         </div>
+        <div className="templatemo-welcome" id="templatemo-welcome">
+          <div className="container">
+            <div className="templatemo-slogan text-center">
+              <span className="txt_darkgrey"></span><span className="txt_blue">{this.state.carouselData.title}</span>
+              <p className="txt_slogan"><i>{this.state.carouselData.description}</i></p>
+              
+            </div>	
+          </div>
+        </div>
       </div>
     );
   }

@@ -58,8 +58,8 @@ let TopMenuComponent = React.createClass ({
                
                 <ul className="nav navbar-nav navbar-right" style={{marginTop: '40px'}}>
                   <li className="active"><a href="#templatemo-top">{this.state.menuData.home.toUpperCase()}</a></li>
-                  <li><a href="#templatemo-about">{this.state.menuData.team.toUpperCase()}</a></li>
                   <li><a href="#templatemo-portfolio">{this.state.menuData.services.toUpperCase()}</a></li>
+                  <li><a href="#templatemo-about">{this.state.menuData.team.toUpperCase()}</a></li>                  
                   <li><a href="#templatemo-blog">{this.state.menuData.blog.toUpperCase()}</a></li>
                   <li><a href="#templatemo-blog">{this.state.menuData.clients.toUpperCase()}</a></li>
                   <li><a href="#templatemo-contact">{this.state.menuData.contact.toUpperCase()}</a></li> 

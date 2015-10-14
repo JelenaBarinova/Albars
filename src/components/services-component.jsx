@@ -4,17 +4,23 @@ let AppStore = require('../stores/app-store');
 
 let ServiceItem = React.createClass({
   render() {
+  let icon = 'fa ' + this.props.service.icon + ' fa-stack-1x';
     return (
       <div className="col-md-4">
         <div className="templatemo-service-item">
+        
           <div>
             <div className="col-xs-2">
-              <img src="images/leaf.png" alt="icon" style={{float: 'left'}}/>
+              <span className="fa-stack fa-lg">
+                <i className="fa fa-square-o fa-stack-2x"></i>
+                <i className={icon}></i>
+              </span>
             </div>
             <div className="col-xs-10">
               <span className="templatemo-service-item-header">{this.props.service.title.toUpperCase()}</span>
             </div>
           </div>
+          <p></p><p></p>
           <p>{this.props.service.description}</p>
           <br className="clearfix"/>
         </div>
@@ -56,17 +62,17 @@ let ServicesComponent = React.createClass ({
     });
     
     return (
-      <div>
-        <div className="templatemo-welcome" id="templatemo-welcome">
+        <div className="templatemo-service" id="templatemo-portfolio">
           <div className="container">
-            <div className="templatemo-slogan text-center">
-              <span className="txt_darkgrey"></span><span className="txt_blue">{this.state.servicesData.title}</span>
-              <p className="txt_slogan"><i>{this.state.servicesData.description}</i></p>
-            </div>	
-          </div>
-        </div>
-        <div className="templatemo-service">
-          <div className="container">
+            <div className="row" style={{marginTop: '70px'}}>
+              <div className="templatemo-line-header" style={{marginTop: '0px'}} >
+                <div className="text-center">
+                  <hr className="team_hr team_hr_left hr_gray"/><span className="span_blog txt_darkgrey">{this.state.servicesData.title.toUpperCase()}</span>
+                  <hr className="team_hr team_hr_right hr_gray" />
+                </div>
+              </div>
+              <br className="clearfix"/>
+            </div>
             <div className="row">
       
               {serviceItems} 
@@ -74,7 +80,6 @@ let ServicesComponent = React.createClass ({
             </div>
           </div>
         </div>
-      </div> 
     );
   }
 });

@@ -40,6 +40,10 @@ let AppStore =Object.assign({}, EventEmitter.prototype, {
 	
 	getTeam() {
 		return _content.team;
+	},
+
+	getPartners() {
+		return _content.partners;
 	}
 });
 

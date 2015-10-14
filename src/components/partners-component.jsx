@@ -1,8 +1,30 @@
 "use strict";
 let React = require('react');
+let AppStore = require('../stores/app-store');
 
 let PartnersComponent = React.createClass ({
-
+   
+   getInitialState() {
+    return {    
+       partnersData: AppStore.getPartners()
+    };
+  },
+  componentWillMount() {
+    AppStore.addChangeListener(this._onChange); 
+  },
+ 
+  
+  componentWillUnmount() {
+    AppStore.removeChangeListener(this._onChange); 
+  },
+  
+  _onChange() {
+    console.log('changing services componenet');
+    this.setState({ 
+      partnersData: AppStore.getPartners() 
+    });
+  },
+  
   render() {
     return (
     
@@ -13,7 +35,7 @@ let PartnersComponent = React.createClass ({
 
                     <div className="templatemo-line-header" >
                         <div className="text-center">
-                            <hr className="team_hr team_hr_left hr_gray"/><span className="txt_darkgrey">OUR PARTNERS</span>
+                            <hr className="team_hr team_hr_left hr_gray"/><span className="txt_darkgrey">{this.state.partnersData.title.toUpperCase()}</span>
                             <hr className="team_hr team_hr_right hr_gray" />
                         </div>
                     </div>
@@ -24,24 +46,18 @@ let PartnersComponent = React.createClass ({
 
                         <div style={{marginTop: '60px'}}>
                             <ul className="list-inline">
-                                <li className="col-sm-2 col-md-2 templatemo-partner-item">
-                                    <a href="#"><img src="images/partner1.jpg" className="img-responsive" alt="partner 1" /></a>
+                                <li className="col-sm-3 col-md-3 templatemo-partner-item">
+                                    <a href="#"><img src="images/partners/kelprojektas.jpg" className="img-responsive" alt="partner 1" /></a>
                                 </li>
-                                <li className="col-sm-2 col-md-2 templatemo-partner-item">
-                                    <a href="#"><img src="images/partner2.jpg" className="img-responsive" alt="partner 2" /></a>
+                                <li className="col-sm-3 col-md-3 templatemo-partner-item">
+                                    <a href="#"><img src="images/partners/kv.jpg" className="img-responsive" alt="partner 2" /></a>
                                 </li>
-                                <li className="col-sm-2 col-md-2 templatemo-partner-item">
-                                    <a href="#"><img src="images/partner3.jpg" className="img-responsive" alt="partner 3" /></a>
+                                <li className="col-sm-3 col-md-3 templatemo-partner-item">
+                                    <a href="#"><img src="images/partners/placeilive.jpg" className="img-responsive" alt="partner 3" /></a>
                                 </li>
-                                <li className="col-sm-2 col-md-2 templatemo-partner-item">
-                                    <a href="#"><img src="images/partner4.jpg" className="img-responsive" alt="partner 4" /></a>
-                                </li>
-                                <li className="col-sm-2 col-md-2 templatemo-partner-item">
-                                    <a href="#"><img src="images/partner5.jpg" className="img-responsive" alt="partner 5" /></a>
-                                </li>
-                                <li className="col-sm-2 col-md-2 templatemo-partner-item">
-                                    <a href="#"><img src="images/partner6.jpg" className="img-responsive" alt="partner 6" /></a>
-                                </li>
+                                <li className="col-sm-3 col-md-3 templatemo-partner-item">
+                                    <a href="#"><img src="images/partners/venipak.jpg" className="img-responsive" alt="partner 4" /></a>
+                                </li>                                
                             </ul>
 
                         </div>
