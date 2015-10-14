@@ -20673,9 +20673,9 @@ module.exports = require('./lib/React');
 },{"./lib/React":36}],164:[function(require,module,exports){
 "use strict";
 
-const Dispatcher = require('../dispatcher/dispatcher.js');
-const ActionTypes = require('../constants/action-types.js');
-const Api = require('../api/api.js');
+var Dispatcher = require('../dispatcher/dispatcher.js');
+var ActionTypes = require('../constants/action-types.js');
+var Api = require('../api/api.js');
 
 var InitializeActions = {
 	
