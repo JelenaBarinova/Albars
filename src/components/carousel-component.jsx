@@ -2,6 +2,43 @@
 let React = require('react');
 let AppStore = require('../stores/app-store');
     
+    
+    
+    
+let CarouselItem = React.createClass ({
+  
+  render() {
+   let className = this.props.item.id == 1 ? "item active" : "item";
+      
+   return (
+      <div className={className}>
+        <div className="container">
+          <div className="carousel-caption">
+            <h1>{this.props.item.title}</h1>
+            <p>{this.props.item.content}</p>
+            <p>
+              {(() => {
+                if (this.props.item.url) {
+                  return <a className="btn btn-lg btn-blue" href={this.props.item.url} role="button">{this.props.item.more}</a>;
+                }
+              })()}       
+            </p> 
+          </div>
+        </div>
+      </div>
+    );  
+  }
+});   
+
+let CarouselSlide = React.createClass ({
+  render() {
+    let className = this.props.slide.id == 1 ? "active" : "";
+    return (         
+      <li data-target="#templatemo-carousel" data-slide-to={this.props.slide.id} className={className}></li>         
+    )
+  }
+});
+ 
 let CarouselComponent = React.createClass ({
   
   getInitialState() {
@@ -11,6 +48,10 @@ let CarouselComponent = React.createClass ({
   },
   componentWillMount() {
     AppStore.addChangeListener(this._onChange); 
+    
+    console.log($("[data-slide-to='0']"));
+    $("[data-slide-to='0']").addClass("active");
+    console.log($("[data-slide-to='0']"));
   },
  
   
@@ -26,60 +67,31 @@ let CarouselComponent = React.createClass ({
   },
   render() {
   
+    let carouselItems = this.state.carouselData.list.map(function(item) {    
+      return (
+        <CarouselItem item={item} key={item.id} />
+      );
+    });
+    
+    let carouselSlides = this.state.carouselData.list.map(function(item) {
+      return (
+        <CarouselSlide slide={item} key={item.id} />
+      );
+    });
+    
     return (
       <div>
         <div id="templatemo-carousel" className="carousel slide" data-ride="carousel">          
           <ol className="carousel-indicators">
-            <li data-target="#templatemo-carousel" data-slide-to="0" className="active"></li>
-            <li data-target="#templatemo-carousel" data-slide-to="1"></li>
-            <li data-target="#templatemo-carousel" data-slide-to="2"></li>
-          </ol>
+            
+            {carouselSlides}
+          
+          </ol>          
+
           <div className="carousel-inner">
-            <div className="item active">
-              <div className="container">
-                <div className="carousel-caption">
-                  <h1>{this.state.carouselData.list[0].title}</h1>
-                  <p>{this.state.carouselData.list[0].content}</p>
-                  <p>
-                   {(() => {
-                      if (this.state.carouselData.list[0].url) {
-                        return <a className="btn btn-lg btn-blue" href={this.state.carouselData.list[0].url} role="button">{this.state.carouselData.list[0].more}</a>;
-                      }
-                    })()}       
-                  </p> 
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="container">
-                <div className="carousel-caption">
-                  <h1>{this.state.carouselData.list[1].title}</h1>
-                  <p>{this.state.carouselData.list[1].content}</p>
-                  <p>
-                   {(() => {
-                      if (this.state.carouselData.list[0].url) {
-                        return <a className="btn btn-lg btn-blue" href={this.state.carouselData.list[0].url} role="button">{this.state.carouselData.list[1].more}</a>;
-                      }
-                    })()}
-                  </p> 
-                </div>
-              </div>
-            </div>
-            <div className="item active">
-              <div className="container">
-                <div className="carousel-caption">
-                  <h1>{this.state.carouselData.list[2].title}</h1>
-                  <p>{this.state.carouselData.list[2].content}</p>
-                  <p>
-                    {(() => {
-                      if (this.state.carouselData.list[0].url) {
-                        return <a className="btn btn-lg btn-blue" href={this.state.carouselData.list[0].url} role="button">{this.state.carouselData.list[2].more}</a>;
-                      }
-                    })()}
-                  </p>
-                </div>
-              </div>
-            </div>
+                    
+            {carouselItems}
+          
           </div>
           <a className="left carousel-control" href="#templatemo-carousel" data-slide="prev"><span className="glyphicon glyphicon-chevron-left"></span></a>
           <a className="right carousel-control" href="#templatemo-carousel" data-slide="next"><span className="glyphicon glyphicon-chevron-right"></span></a>
