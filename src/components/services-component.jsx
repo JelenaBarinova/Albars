@@ -3,7 +3,7 @@ let React = require('react');
 let AppStore = require('../stores/app-store.js');
 
 let ServiceItem = React.createClass({
-  render() {
+  render: function() {
     return (
       <div className="col-md-4">
         <div className="templatemo-service-item">
@@ -39,14 +39,14 @@ let ServicesComponent = React.createClass ({
     AppStore.removeChangeListener(this._onChange); 
   },
   
-  _onChange() {
+  _onChange: function() {
     console.log('changing services componenet');
     this.setState({ 
       servicesData: AppStore.getServices() 
     });
   },
   
-  render() {
+  render: function() {
   
     let serviceItems = this.state.servicesData.list.map(function(service) {
     

@@ -14,15 +14,14 @@ let FooterComponent = require('./footer-component.jsx');
 let App = React.createClass ({
 
 
-  render() {
+  render: function() {
     return (
       <div>
 	  	  <TopMenuComponent />
-        <CarouselComponent />        
+        <CarouselComponent />
         <ServicesComponent />
         <TeamComponent />
         <BlogComponent />
-        
         <TweetsComponent />
         <PartnersComponent />
         <FooterComponent />

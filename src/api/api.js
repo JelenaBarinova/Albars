@@ -1,7 +1,5 @@
 "use strict";
 
-let $ = require('jquery');
-
 let Api = {
 	getData: function(language) {
 		let _content = {};

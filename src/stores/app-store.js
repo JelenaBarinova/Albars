@@ -1,16 +1,17 @@
 "use strict";
 
-
 let Dispatcher = require('../dispatcher/dispatcher.js');
 let ActionTypes = require('../constants/action-types.js');
 let EventEmitter = require('events').EventEmitter;
+let assign = require('object-assign');
 let Api =  require('../api/api.js');
 let CHANGE_EVENT = 'change';
 
-
 let _content, _menu;
 
-let AppStore = Object.assign({}, EventEmitter.prototype, {
+//let AppStore =Object.assign({}, EventEmitter.prototype, {
+let AppStore = assign({}, EventEmitter.prototype, {
+	
 	addChangeListener: function(callback){
 		this.on(CHANGE_EVENT, callback)
 	},
@@ -45,6 +46,7 @@ let AppStore = Object.assign({}, EventEmitter.prototype, {
 });
 
 Dispatcher.register(function(action){
+	
 	switch(action.actionType) {
 		case ActionTypes.INITIALIZE:
 			_content = action.initialData.content;
@@ -56,6 +58,7 @@ Dispatcher.register(function(action){
 			break;
 		default:
 	}
+	
 });
 
 module.exports = AppStore;

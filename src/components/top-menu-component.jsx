@@ -20,7 +20,7 @@ let TopMenuComponent = React.createClass ({
     AppStore.removeChangeListener(this._onChange); 
   },
   
-  _onChange() {
+  _onChange: function() {
     console.log('changing');
     this.setState({ menuData: AppStore.getMenu() });
   },
@@ -33,7 +33,7 @@ let TopMenuComponent = React.createClass ({
     console.log(key);
 	},
 
-  render() {
+  render: function() {
 
     return (
     <div>

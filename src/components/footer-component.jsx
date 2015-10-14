@@ -3,7 +3,7 @@ let React = require('react');
 
 let FooterComponent = React.createClass ({
 
-  render() {
+  render: function() {
     return (
     
  <div className="templatemo-footer" >

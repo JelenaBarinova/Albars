@@ -3,7 +3,7 @@ let React = require('react');
 
 let TweetsComponent = React.createClass ({
 
-  render() {
+  render: function() {
     return (
     
 <div className="templatemo-tweets">

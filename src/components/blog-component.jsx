@@ -3,7 +3,7 @@ let React = require('react');
 
 let BlogComponent = React.createClass ({
 
-  render() {
+  render: function() {
     return (
     
 <div id="templatemo-blog">

@@ -3,7 +3,7 @@ let React = require('react');
 let AppStore = require('../stores/app-store.js');
 
 let TeamMember = React.createClass ({
-  render() {
+  render: function() {
     return (
       <li className="col-lg-3 col-md-3 col-sm-6 ">
         <div className="text-center">
@@ -43,14 +43,14 @@ let TeamComponent = React.createClass ({
     AppStore.removeChangeListener(this._onChange); 
   },
   
-  _onChange() {
+  _onChange: function() {
     console.log('changing services componenet');
     this.setState({ 
       teamData: AppStore.getTeam() 
     });
   },
   
-  render() {
+  render: function() {
   
     let teamMembers = this.state.teamData.list.map(function(member) {    
       return (
