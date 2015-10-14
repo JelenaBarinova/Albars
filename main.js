@@ -20673,11 +20673,11 @@ module.exports = require('./lib/React');
 },{"./lib/React":36}],164:[function(require,module,exports){
 "use strict";
 
-let Dispatcher = require('../dispatcher/dispatcher.js');
-let ActionTypes = require('../constants/action-types.js');
-let Api = require('../api/api.js');
+const Dispatcher = require('../dispatcher/dispatcher.js');
+const ActionTypes = require('../constants/action-types.js');
+const Api = require('../api/api.js');
 
-let InitializeActions = {
+var InitializeActions = {
 	
 	initApp: function() {
 		Dispatcher.dispatch({
