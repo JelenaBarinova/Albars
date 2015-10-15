@@ -37,7 +37,15 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 .templatemo-top-bar {
     min-height: 40px;
-    background-color:#eeeeee;
+    background-color:#f5f5f5;
+    
+}
+.templatemo-top-bar .subheader {
+  font-size: 16px;
+  font-weight: 600;
+}
+.templatemo-top-bar .subheader > i {
+   font-size: 20px;
 }
 
 .templatemo-top-menu {
@@ -150,7 +158,6 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
     font-weight: bold;
     display: inline-block;
     font-size: 16px;
-   
 }
 #service-logo {
     margin-left: -15px;

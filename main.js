@@ -20812,7 +20812,7 @@ var InitializeActions = {
 
 module.exports = InitializeActions;
 
-},{"../api/api":166,"../constants/action-types":176,"../dispatcher/dispatcher":177}],165:[function(require,module,exports){
+},{"../api/api":166,"../constants/action-types":177,"../dispatcher/dispatcher":178}],165:[function(require,module,exports){
 "use strict";
 
 var Dispatcher = require('../dispatcher/dispatcher');
@@ -20831,7 +20831,7 @@ var MenuActions = {
 
 module.exports = MenuActions;
 
-},{"../constants/action-types":176,"../dispatcher/dispatcher":177}],166:[function(require,module,exports){
+},{"../constants/action-types":177,"../dispatcher/dispatcher":178}],166:[function(require,module,exports){
 "use strict";
 
 var Api = {
@@ -20852,6 +20852,7 @@ module.exports = Api;
 "use strict";
 var React = require('react');
 
+var TopHeaderComponent = require('./top-header-component');
 var TopMenuComponent = require('./top-menu-component');
 var CarouselComponent = require('./carousel-component');
 var ServicesComponent = require('./services-component');
@@ -20869,6 +20870,7 @@ var App = React.createClass({
     return React.createElement(
       'div',
       null,
+      React.createElement(TopHeaderComponent, null),
       React.createElement(TopMenuComponent, null),
       React.createElement(CarouselComponent, null),
       React.createElement(ServicesComponent, null),
@@ -20883,7 +20885,7 @@ var App = React.createClass({
 
 module.exports = App;
 
-},{"./blog-component":168,"./carousel-component":169,"./clients-component":170,"./footer-component":171,"./services-component":172,"./team-component":173,"./top-menu-component":174,"./tweets-component":175,"react":163}],168:[function(require,module,exports){
+},{"./blog-component":168,"./carousel-component":169,"./clients-component":170,"./footer-component":171,"./services-component":172,"./team-component":173,"./top-header-component":174,"./top-menu-component":175,"./tweets-component":176,"react":163}],168:[function(require,module,exports){
 "use strict";
 var React = require('react');
 
@@ -21336,7 +21338,7 @@ var CarouselComponent = React.createClass({
 
 module.exports = CarouselComponent;
 
-},{"../stores/app-store":179,"react":163}],170:[function(require,module,exports){
+},{"../stores/app-store":180,"react":163}],170:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var AppStore = require('../stores/app-store');
@@ -21444,7 +21446,7 @@ var clientsComponent = React.createClass({
 
 module.exports = clientsComponent;
 
-},{"../stores/app-store":179,"react":163}],171:[function(require,module,exports){
+},{"../stores/app-store":180,"react":163}],171:[function(require,module,exports){
 "use strict";
 var React = require('react');
 
@@ -21672,7 +21674,7 @@ var ServicesComponent = React.createClass({
 
 module.exports = ServicesComponent;
 
-},{"../stores/app-store":179,"react":163}],173:[function(require,module,exports){
+},{"../stores/app-store":180,"react":163}],173:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var AppStore = require('../stores/app-store');
@@ -21817,7 +21819,45 @@ var TeamComponent = React.createClass({
 
 module.exports = TeamComponent;
 
-},{"../stores/app-store":179,"react":163}],174:[function(require,module,exports){
+},{"../stores/app-store":180,"react":163}],174:[function(require,module,exports){
+"use strict";
+var React = require('react');
+
+var TopHeaderComponent = React.createClass({
+  displayName: "TopHeaderComponent",
+
+  render: function render() {
+
+    return React.createElement(
+      "div",
+      { className: "templatemo-top-bar", id: "templatemo-top" },
+      React.createElement(
+        "div",
+        { className: "container" },
+        React.createElement(
+          "div",
+          { className: "subheader" },
+          React.createElement(
+            "div",
+            { id: "phone", className: "pull-left" },
+            React.createElement("i", { className: "fa fa-phone" }),
+            "  206-111-1112"
+          ),
+          React.createElement(
+            "div",
+            { id: "email", className: "pull-right" },
+            React.createElement("i", { className: "fa fa-envelope-o" }),
+            "  info@albars.com"
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = TopHeaderComponent;
+
+},{"react":163}],175:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var MenuActions = require('../actions/menu-actions');
@@ -21855,7 +21895,6 @@ var TopMenuComponent = React.createClass({
     return React.createElement(
       'div',
       null,
-      React.createElement('div', { className: 'templatemo-top-bar', id: 'templatemo-top' }),
       React.createElement(
         'div',
         { className: 'templatemo-top-menu' },
@@ -21879,6 +21918,7 @@ var TopMenuComponent = React.createClass({
                     { className: 'sr-only' },
                     'Toggle navigation'
                   ),
+                  React.createElement('span', { className: 'icon-bar' }),
                   React.createElement('span', { className: 'icon-bar' }),
                   React.createElement('span', { className: 'icon-bar' }),
                   React.createElement('span', { className: 'icon-bar' })
@@ -21979,7 +22019,7 @@ var TopMenuComponent = React.createClass({
 
 module.exports = TopMenuComponent;
 
-},{"../actions/menu-actions":165,"../stores/app-store":179,"react":163}],175:[function(require,module,exports){
+},{"../actions/menu-actions":165,"../stores/app-store":180,"react":163}],176:[function(require,module,exports){
 "use strict";
 var React = require('react');
 
@@ -22026,7 +22066,7 @@ var TweetsComponent = React.createClass({
 
 module.exports = TweetsComponent;
 
-},{"react":163}],176:[function(require,module,exports){
+},{"react":163}],177:[function(require,module,exports){
 "use strict";
 
 var keyMirror = require('react/lib/keyMirror');
@@ -22036,14 +22076,14 @@ module.exports = keyMirror({
 	SWITCH_LANGUAGE: null
 });
 
-},{"react/lib/keyMirror":148}],177:[function(require,module,exports){
+},{"react/lib/keyMirror":148}],178:[function(require,module,exports){
 "use strict";
 
 var Dispatcher = require('flux').Dispatcher;
 
 module.exports = new Dispatcher();
 
-},{"flux":5}],178:[function(require,module,exports){
+},{"flux":5}],179:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -22055,7 +22095,7 @@ InitializeActions.initApp();
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
-},{"./actions/initialize-actions":164,"./components/app":167,"react":163}],179:[function(require,module,exports){
+},{"./actions/initialize-actions":164,"./components/app":167,"react":163}],180:[function(require,module,exports){
 "use strict";
 
 var Dispatcher = require('../dispatcher/dispatcher');
@@ -22126,4 +22166,4 @@ Dispatcher.register(function (action) {
 
 module.exports = AppStore;
 
-},{"../api/api":166,"../constants/action-types":176,"../dispatcher/dispatcher":177,"events":3,"object-assign":8}]},{},[178]);
+},{"../api/api":166,"../constants/action-types":177,"../dispatcher/dispatcher":178,"events":3,"object-assign":8}]},{},[179]);
