@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 }
 
 .templatemo-top-menu {
-    min-height:110px;
+    min-height:100px;
     background-color:#ffffff;
     z-index: 5000;
     width:100%;
@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 @media (min-width: 768px) {
     #templatemo-carousel .carousel-caption p {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         line-height: 1.4;
         font-size: 21px;
         font-weight: 400;
@@ -135,23 +135,36 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 }
 
 .templatemo-service {
-    margin-bottom: 100px;
-    margin-top: 100px;
+    /*margin-bottom: 100px;
+    margin-top: 100px;*/
+    min-height:590px;
 }
 
 .templatemo-service-item {
     font-family:  'Open Sans', sans-serif;
-    margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 22px;
+}
+.templatemo-service-item-header {
+    
+    padding: 5px 0px 10px 10px; 
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+   
+}
+#service-logo {
+    margin-left: -15px;
 }
 
-
 .templatemo-service-item p {
-    font-weight: lighter; 
+    font-weight: normal; 
     text-align: justify; 
     margin-top: 25px;
     font-size: 14px;
     color: #929292;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 6px;
 }
 
 .subheader {
@@ -194,6 +207,11 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
     padding: 10px 20px;
 }
 
+.nav > li > a > img {
+  padding: 0px 0px;
+  height: 19px;
+}
+
 .nav > li > a:hover,
 .nav > li > a:focus {
     background-color: #35A2D8;
@@ -229,12 +247,6 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
     margin-bottom: 0px;
 }
 
-.templatemo-service-item-header {
-    margin-left: -10px; 
-    padding: 16px 20px 20px; 
-    font-weight: bold;
-    display: inline-block;
-}
 
 .templatemo-header-blue {
     background-color:#60C0E6;
@@ -451,12 +463,28 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 	float: right;
 }
 
-.templatemo-partners {
+.templatemo-clients {
 	border-top: 2px solid #cccccc;
 }
 
-.templatemo-partners .templatemo-partner-item {
+.templatemo-clients .templatemo-client-item {
     margin-bottom: 5px;
+}
+.templatemo-clients .templatemo-client-item p {
+    font-weight: normal; 
+    text-align: justify; 
+    margin-top: 25px;
+    font-size: 14px;
+    color: #929292;
+    margin-left: 2px;
+    margin-right: 2px;
+    
+}
+.templatemo-client-item-header{
+    padding: 5px 5px 0px 10px; 
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .templatemo-footer {
@@ -609,7 +637,7 @@ ul.templatemo-project-gallery  li  a img:hover {
     }
 
     .templatemo-service-item-header {
-        padding: 16px 10px 20px;
+        padding: 5px 10px 10px 10px;
     }
 
     .templatemo-header-blue {
@@ -683,7 +711,7 @@ ul.templatemo-project-gallery  li  a img:hover {
 	.templatemo-service-item-header {
 		font-size: 16px;
 		
-		padding: 23px 10px 22px;
+		
 	}
 	.templatemo-header-blue {
 		min-width: 0px;

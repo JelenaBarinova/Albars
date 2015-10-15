@@ -9,7 +9,8 @@ module.exports={
 		"contact": "contact"
 	},
 	"carousel":{
-		"title": "",
+		"title": "ALBARS - Innovative IT solutions for you business",
+		"description": "At ALBARS we believe in a quality, pragmatic, fast IT is possible in every and each business. We work with startup to enterprise companies bringing them to higher level by providing best in class IT consultations.",
 		"list": [
 			{
 				"id": 1,
@@ -41,23 +42,39 @@ module.exports={
 			{
 				"id": 1,
 				"title": "Desktop and devices infrastructure",
-				"description": "We develop a corporate management system, install, configure and conduct employee training. We offer design, implementation and training services; update the existing systems; automate processes; accompany IT-system; advise on security issues; realize 'Bring Your Own Device'."
+				"description": "We develop management systems, install, configure and conduct employee training. We offer design, implementation and training services; update the existing systems; automate processes; accompany IT-system; advise on security issues.",
+				"icon": "fa-laptop"
 			},
 			{
 				"id": 2,
 				"title": "Server infrastructure",
-				"description": "We provide reliability, rapid performance and security of server infrastructure of your company. We carry out an audit of information security. We offer contemporary solutions to improve rapid performance and resilience of your IT-infrastructure."
+				"description": "We provide reliability, rapid performance and security of server infrastructure of your company. We carry out an audit of information security. We offer contemporary solutions to improve rapid performance and resilience of your IT-infrastructure.",
+				"icon": "fa-hdd-o"
 			},
 			{
 				"id": 3,
 				"title": "Cloud and services infrastructure",
-				"description": "We offer expansion and growth of the performance of your IT infrastructure due to cloud technologies. We will help you to determine a common approach that is optimal for your company and integrate the local infrastructure with cloud solutions."
+				"description": "We offer expansion and growth of the performance of your IT infrastructure due to cloud technologies. We will help you to determine a common approach that is optimal for your company and integrate the local infrastructure with cloud solutions.",
+				"icon": "fa-cloud-upload"
 			},
 			{
 				"id": 4,
-				"title": "Cloud and services infrastructure",
-				"description": "We offer expansion and growth of the performance of your IT infrastructure due to cloud technologies. We will help you to determine a common approach that is optimal for your company and integrate the local infrastructure with cloud solutions."
-			}
+				"title": "Application And Productivity Services",
+				"description": "We expertise in creating and deploying modern web applications and services. Unified communication & collaboration; Load balancing; Web servers; Databases.",
+				"icon": "fa-cogs"
+			},
+			{
+				"id": 5,
+				"title": "IT Trainings",
+				"description": "ALBARS is Certified Learning Partner. Certified Partner status ensures that ALBARS equipment and specialists' qualification meet the global requirements of the Microsoft Company. We have tremendous hands-on experience in the use of Microsoft Solutions - a guarantee that students will receive in-depth technical expertise.",
+				"icon": "fa-book"
+			},
+			{
+				"id": 6,
+				"title": "IT Security",
+				"description": "We will ensure entire information security in your corporate system based on Active Directory rights: Public key infrastructure (PKI); Active Directory Rights Management Services.",
+				"icon": "fa-lock"
+			}			
 		]
 	},
 	"team": {
@@ -69,7 +86,7 @@ module.exports={
 				"title": "Solutions architect, founder",
 				"bio": "Microsoft Certified Trainer and has Microsoft Most Valuable Professional (MVP) Award. More recently he has become a Microsoft Private Cloud Facilitator and Microsoft vTSP. He has several Bachelor Degrees of IT and also graduated from Military Academy where he was awarded with the Lieutenant’s rank.",
 				"interests": ["IT", "virtualization", "big data"],
-				"photoUrl": "images/jevgenijus.jpg",
+				"photoUrl": "images/team/jevgenijus.jpg",
 				"fbUrl": "",
 				"twitterUrl": "",
 				"linkedinUrl": "http://lt.linkedin.com/pub/jevgenijus-vinochodovas/23/587/345"
@@ -80,7 +97,7 @@ module.exports={
 				"title": "Head of Communications",
 				"bio": "Advertisement/Marketing Project Manager, Real Estate/Construction Development Coordinator experience. Diplomated specialist of electrical equipment of industry. Master of Psychology (specialize in Cognitive, Management fields). Organizational Climate and Culture Surveys. Personality assessment of employee by using projective and psychometric methods.",
 				"interests": ["Marketing", "development coordination", "project management"],
-				"photoUrl": "images/rimante.jpg",
+				"photoUrl": "images/team/rimante.jpg",
 				"fbUrl": "",
 				"twitterUrl": "",
 				"linkedinUrl": ""
@@ -91,7 +108,7 @@ module.exports={
 				"title": "Software engineering architect",
 				"bio": "Sergejus is a Software Architect. He is active community member in Lithuania, Microsoft Most Valuable Professional (MVP), blogger (http://sergejus.blogas.lt) and Lithuanian .NET User Group lead.",
 				"interests": ["scalability", "high load systems", "big data"],
-				"photoUrl": "images/sergey.jpg",
+				"photoUrl": "images/team/sergey.jpg",
 				"fbUrl": "",
 				"twitterUrl": "",
 				"linkedinUrl": "https://www.linkedin.com/in/sergejus"
@@ -102,10 +119,51 @@ module.exports={
 				"title": "The Business Development Manager",
 				"bio": "Microsoft Certified Professional, web-developer, programmer, social media administrator. Works in the IT industry for nearly a decade and constantly working on improving her IT skills.",
 				"interests": ["scalability", "high load systems", "big data"],
-				"photoUrl": "images/jekaterina.jpg",
+				"photoUrl": "images/team/jekaterina.jpg",
 				"fbUrl": "",
 				"twitterUrl": "",
 				"linkedinUrl": "https://www.linkedin.com/in/sergejus"
+			}
+		]
+	},
+	"clients": {
+		"title": "Our clients",
+		"list": [
+			{
+				"id": 1,
+				"name": "UAB 'Kelprojektas'",
+				"logo": "images/clients/kelprojektas.jpg",
+				"website": "http://www.kelprojektas.lt",
+				"case": "Kelprojektas wanted to strengthen its IT infrastructure and moved from an unreliable on-premise solution to a cloud-based infrastructure based around Windows Azure and Office 365 which provides it with great reliability, unbeatable cost savings and enviable flexibility.",
+				"readMore": "Read more",
+				"url": ""		
+			},
+			{
+				"id": 2,
+				"name": "Place I Live",
+				"logo": "images/clients/placeilive.jpg",
+				"website": "http://www.placeilive.com",
+				"case": "Place I Live’s business is built on delivering open data that provides information about living conditions and services in major global cities. When it piloted the service it used a local website hosting provider but soon discovered the service wasn’t robust and flexible enough to scale out to many cities. Consequently, it turned to Microsoft Azure which allows it confidently reach around the world with a cloud-based infrastructure that is reliable and flexible, and one that performs powerfully.",
+				"readMore": "Read more",
+				"url": ""
+			},
+			{
+				"id": 3,
+				"name": "Venipak",
+				"logo": "images/clients/venipak.jpg",
+				"website": "http://www.venipak.lt",
+				"case": "Productivity solutions to improve the efficiency of the company: Office 365 + Windows Azure + Microsoft Dynamics CRM Online.",
+				"readMore": "Read more",
+				"url": ""
+			},
+			{
+				"id": 4,
+				"name": "Kauno vandenys",
+				"logo": "images/clients/kv.jpg",
+				"website": "http://www.kaunovandenys.lt",
+				"case": "ALBARS recovered UAB “Kauno vandenys” critical data after disaster occurred and helped the organization better understand and move toward a more secure, well-managed IT infrastructure that will help reduce overall IT costs, make better use of IT resources, and make IT a strategic asset for the business, helped eliminate unnecessary cost and complexity, ensured that the business will be always up and running.",
+				"readMore": "Read more",
+				"url": ""
 			}
 		]
 	}
@@ -121,7 +179,8 @@ module.exports={
 		"contact": "контакты"
 	},
 	"carousel":{
-		"title": "",
+		"title": "ALBARS - Инновационные ИТ решения для вашего бизнеса",
+		"description": "В ALBARS мы верим в качество, прагматичная, быстро это возможно в каждый и каждый бизнес. Мы работаем с запуска для корпоративных компаний доведение их до более высокого уровня, обеспечивая лучшие в своем классе ИТ-консультаций.",		
 		"list": [
 			{
 				"id": 1,
@@ -153,17 +212,38 @@ module.exports={
 			{
 				"id": 1,
 				"title": "Настольный и устройства инфраструктуры",
-				"description": "Мы разрабатываем систему корпоративного управления, установить, настроить и провести обучение персонала. Мы предлагаем проектирование, внедрение и услуги по обучению; обновить существующие системы; автоматизировать процессы; сопровождать IT-системы; консультации по вопросам безопасности; реализовать 'Bring Your Own Device '."
+				"description": "Мы разрабатываем системы управления, установить, настроить и провести обучение персонала. Мы предлагаем проектирование, внедрение и услуги по обучению; обновить существующие системы; автоматизировать процессы; сопровождать IT-системы; консультации по вопросам безопасности.",
+				"icon": "fa-laptop"
 			},
 			{
 				"id": 2,
 				"title": "Инфтраструктура серверов",
-				"description": "Мы предоставляем надежность, быстрое производительность и безопасность серверной инфраструктуры Вашей компании. Мы осуществляем аудит информационной безопасности. Мы предлагаем современные решения для повышения производительности и быстрого устойчивости ИТ-инфраструктуры."
+				"description": "Мы предоставляем надежность, быстрое производительность и безопасность серверной инфраструктуры Вашей компании. Мы осуществляем аудит информационной безопасности. Мы предлагаем современные решения для повышения производительности и быстрого устойчивости ИТ-инфраструктуры.",
+				"icon": "fa-hdd-o"
 			},
 			{
 				"id": 3,
 				"title": "Инфраструктура облаков и услуг",
-				"description": "Мы предлагаем расширение и рост производительности ИТ-инфраструктуры за счет облачных технологий. Мы поможем Вам определить общий подход, что является оптимальным для Вашей компании и интегрировать местную инфраструктуру с облачных решений."
+				"description": "Мы предлагаем расширение и рост производительности ИТ-инфраструктуры за счет облачных технологий. Мы поможем Вам определить общий подход, что является оптимальным для Вашей компании и интегрировать местную инфраструктуру с облачных решений.",
+				"icon": "fa-cloud-upload"
+			},
+			{
+				"id": 4,
+				"title": "Применение и производительности Услуги",
+				"description": "Мы опыт в создании и развертывании современных веб-приложений и услуг. Единая система обмена и сотрудничества; Балансировка нагрузки; Веб-серверы; Базы данных.",
+				"icon": "fa-cogs"
+			},
+			{
+				"id": 5,
+				"title": "IT Тренинг",
+				"description": "ALBARS является сертифицированным партнером обучение. Сертифицированный партнер статус гарантирует, что ALBARS Оборудование и квалификация специалистов удовлетворения глобальных требований компании Microsoft. Наша компания имеет огромный практический опыт в использовании Microsoft Solutions - гарантия того, что студенты будут получать детальный технический опыт.",
+				"icon": "fa-book"
+			},
+			{
+				"id": 6,
+				"title": "Безопасность IT",
+				"description": "Мы будем обеспечивать всю информационную безопасность в корпоративном системы, основанной на правах Active Directory: инфраструктура открытых ключей (PKI); Управления правами Active Directory. Услуги",
+				"icon": "fa-lock"
 			}
 		]
 	},
@@ -176,7 +256,7 @@ module.exports={
 				"title": "Aрхитектор по инфраструктурне, основатель",
 				"bio": "Microsoft Certified Trainer и имеет Microsoft Самое ценное Professional (MVP) Award. Совсем недавно он стал Microsoft Частное облако Ведущий и Microsoft ВЦП. Он имеет несколько степеней бакалавра ИТ, а также окончил Военную академию, где он был удостоен звания с лейтенанта.",
 				"interests": ["IT", "виртуализация", "большие данные"],
-				"photoUrl": "images/jevgenijus.jpg",
+				"photoUrl": "images/team/jevgenijus.jpg",
 				"fbUrl": "",
 				"twitterUrl": "",
 				"linkedinUrl": "http://lt.linkedin.com/pub/jevgenijus-vinochodovas/23/587/345"
@@ -187,7 +267,7 @@ module.exports={
 				"title": "Глава коммуникаций",
 				"bio": "Реклама / Маркетинг Менеджер проекта, Недвижимость / Строительство опыт координатор развития. Дипломированный специалист электротехнического оборудования промышленности. Магистр психологии (специализируется на когнитивной, поля управления). Организационные климат и культура опросы. Оценка личности работника, используя проективные методы и психометрических.",
 				"interests": ["маркетинг", "координация разработки", "управление проектоми"],
-				"photoUrl": "images/rimante.jpg",
+				"photoUrl": "images/team/rimante.jpg",
 				"fbUrl": "",
 				"twitterUrl": "",
 				"linkedinUrl": ""
@@ -198,7 +278,7 @@ module.exports={
 				"title": "Архитектор по разработке программного обеспечения",
 				"bio": "Сергей является архитектором программного. Он активный член сообщества в Литве, Microsoft Самое ценное Профессиональный (MVP), блоггер (http://sergejus.blogas.lt) и Литвы ведущий .NET User Group.",
 				"interests": ["масштабируемость", "высоко нагруженные системы", "большие данные"],
-				"photoUrl": "images/sergey.jpg",
+				"photoUrl": "images/team/sergey.jpg",
 				"fbUrl": "",
 				"twitterUrl": "",
 				"linkedinUrl": "https://www.linkedin.com/in/sergejus"
@@ -209,10 +289,51 @@ module.exports={
 				"title": "Менеджер по развитию бизнеса",
 				"bio": "Microsoft Certified Professional, веб-разработчик, программист, администратор социальной информации. Работает в ИТ-индустрии в течение почти десяти лет и постоянно работает над улучшением своих навыков в области ИТ.",
 				"interests": ["масштабируемость", "высоко нагруженные системы"],
-				"photoUrl": "images/jekaterina.jpg",
+				"photoUrl": "images/team/jekaterina.jpg",
 				"fbUrl": "",
 				"twitterUrl": "",
 				"linkedinUrl": "https://www.linkedin.com/in/sergejus"
+			}
+		]
+	},
+	"clients": {
+		"title": "наши клиенты",
+		"list": [
+			{
+				"id": 1,
+				"name": "UAB 'Kelprojektas'",
+				"logo": "images/clients/kelprojektas.jpg",
+				"website": "http://www.kelprojektas.lt",
+				"case": "Kelprojektas хотел укрепить свою ИТ-инфраструктуру и переехал из ненадежного на предпосылке решения инфраструктуры облачных основе вокруг Windows Azure и Office 365, который обеспечивает его с большой надежностью, непревзойденным экономии и завидной гибкостью.",
+				"readMore": "Прочитайте больше",
+				"url": ""		
+			},
+			{
+				"id": 2,
+				"name": "Place I Live",
+				"logo": "images/clients/placeilive.jpg",
+				"website": "http://www.placeilive.com",
+				"case": "Place I Live бизнес строится на предоставлении открытых данных, который предоставляет информацию о условиях жизни и услуг в основных мировых городах. Когда пилотировал услуги он использовал местному поставщику сайт хостинг, но вскоре обнаружил, что служба была не прочная и достаточно гибкой, чтобы масштабировать по многим городам. Следовательно, она обратилась к Microsoft Azure, которая позволяет уверенно достичь по всему миру с инфраструктурой на основе облака, которая является надежной и гибкой, и тот, который выполняет мощно.",
+				"readMore": "Прочитайте больше",
+				"url": ""
+			},
+			{
+				"id": 3,
+				"name": "Venipak",
+				"logo": "images/clients/venipak.jpg",
+				"website": "http://www.venipak.lt",
+				"case": "Производительность решений для повышения эффективности компании: Офис 365 + Windows Azure + Microsoft Dynamics CRM Online.",
+				"readMore": "Прочитайте больше",
+				"url": ""
+			},
+			{
+				"id": 4,
+				"name": "Kauno vandenys",
+				"logo": "images/clients/kv.jpg",
+				"website": "http://www.kaunovandenys.lt",
+				"case": "ALBARS восстановлены важные данные ЗАО 'Kauno VANDENYS' после возникновения стихийных бедствий и помог в организации лучше понять и перейти к более безопасной, хорошо управляемой ИТ-инфраструктуры, что поможет снизить общие расходы на ИТ, более эффективно использовать ИТ-ресурсы, и сделать это стратегический активов для бизнеса, помог устранить ненужные затраты и сложность, заверил, что бизнес будет всегда и работает.",
+				"readMore": "Прочитайте больше",
+				"url": ""
 			}
 		]
 	}
@@ -20697,7 +20818,7 @@ var TeamComponent = require('./team-component');
 var BlogComponent = require('./blog-component');
 
 var TweetsComponent = require('./tweets-component');
-var PartnersComponent = require('./partners-component');
+var ClientsComponent = require('./clients-component');
 var FooterComponent = require('./footer-component');
 
 var App = React.createClass({
@@ -20713,7 +20834,7 @@ var App = React.createClass({
       React.createElement(TeamComponent, null),
       React.createElement(BlogComponent, null),
       React.createElement(TweetsComponent, null),
-      React.createElement(PartnersComponent, null),
+      React.createElement(ClientsComponent, null),
       React.createElement(FooterComponent, null)
     );
   }
@@ -20721,7 +20842,7 @@ var App = React.createClass({
 
 module.exports = App;
 
-},{"./blog-component":167,"./carousel-component":168,"./footer-component":169,"./partners-component":170,"./services-component":171,"./team-component":172,"./top-menu-component":173,"./tweets-component":174,"react":162}],167:[function(require,module,exports){
+},{"./blog-component":167,"./carousel-component":168,"./clients-component":169,"./footer-component":170,"./services-component":171,"./team-component":172,"./top-menu-component":173,"./tweets-component":174,"react":162}],167:[function(require,module,exports){
 "use strict";
 var React = require('react');
 
@@ -21028,6 +21149,61 @@ module.exports = BlogComponent;
 var React = require('react');
 var AppStore = require('../stores/app-store');
 
+var CarouselItem = React.createClass({
+  displayName: 'CarouselItem',
+
+  render: function render() {
+    var _this = this;
+
+    var className = this.props.item.id == 1 ? "item active" : "item";
+
+    return React.createElement(
+      'div',
+      { className: className },
+      React.createElement(
+        'div',
+        { className: 'container' },
+        React.createElement(
+          'div',
+          { className: 'carousel-caption' },
+          React.createElement(
+            'h1',
+            null,
+            this.props.item.title
+          ),
+          React.createElement(
+            'p',
+            null,
+            this.props.item.content
+          ),
+          React.createElement(
+            'p',
+            null,
+            (function () {
+              if (_this.props.item.url) {
+                return React.createElement(
+                  'a',
+                  { className: 'btn btn-lg btn-blue', href: _this.props.item.url, role: 'button' },
+                  _this.props.item.more
+                );
+              }
+            })()
+          )
+        )
+      )
+    );
+  }
+});
+
+var CarouselSlide = React.createClass({
+  displayName: 'CarouselSlide',
+
+  render: function render() {
+    var className = this.props.slide.id == 1 ? "active" : "";
+    return React.createElement('li', { 'data-target': '#templatemo-carousel', 'data-slide-to': this.props.slide.id, className: className });
+  }
+});
+
 var CarouselComponent = React.createClass({
   displayName: 'CarouselComponent',
 
@@ -21045,135 +21221,35 @@ var CarouselComponent = React.createClass({
   },
 
   _onChange: function _onChange() {
-    console.log('changing courasel component');
     this.setState({
       carouselData: AppStore.getCarousel()
     });
   },
   render: function render() {
-    var _this = this;
+
+    var carouselItems = this.state.carouselData.list.map(function (item) {
+      return React.createElement(CarouselItem, { item: item, key: item.id });
+    });
+
+    var carouselSlides = this.state.carouselData.list.map(function (item) {
+      return React.createElement(CarouselSlide, { slide: item, key: item.id });
+    });
 
     return React.createElement(
       'div',
-      null,
+      { style: { minHeight: '690px' } },
       React.createElement(
         'div',
         { id: 'templatemo-carousel', className: 'carousel slide', 'data-ride': 'carousel' },
         React.createElement(
           'ol',
           { className: 'carousel-indicators' },
-          React.createElement('li', { 'data-target': '#templatemo-carousel', 'data-slide-to': '0', className: 'active' }),
-          React.createElement('li', { 'data-target': '#templatemo-carousel', 'data-slide-to': '1' }),
-          React.createElement('li', { 'data-target': '#templatemo-carousel', 'data-slide-to': '2' })
+          carouselSlides
         ),
         React.createElement(
           'div',
           { className: 'carousel-inner' },
-          React.createElement(
-            'div',
-            { className: 'item active' },
-            React.createElement(
-              'div',
-              { className: 'container' },
-              React.createElement(
-                'div',
-                { className: 'carousel-caption' },
-                React.createElement(
-                  'h1',
-                  null,
-                  this.state.carouselData.list[0].title
-                ),
-                React.createElement(
-                  'p',
-                  null,
-                  this.state.carouselData.list[0].content
-                ),
-                React.createElement(
-                  'p',
-                  null,
-                  (function () {
-                    if (_this.state.carouselData.list[0].url) {
-                      return React.createElement(
-                        'a',
-                        { className: 'btn btn-lg btn-blue', href: _this.state.carouselData.list[0].url, role: 'button' },
-                        _this.state.carouselData.list[0].more
-                      );
-                    }
-                  })()
-                )
-              )
-            )
-          ),
-          React.createElement(
-            'div',
-            { className: 'item' },
-            React.createElement(
-              'div',
-              { className: 'container' },
-              React.createElement(
-                'div',
-                { className: 'carousel-caption' },
-                React.createElement(
-                  'h1',
-                  null,
-                  this.state.carouselData.list[1].title
-                ),
-                React.createElement(
-                  'p',
-                  null,
-                  this.state.carouselData.list[1].content
-                ),
-                React.createElement(
-                  'p',
-                  null,
-                  (function () {
-                    if (_this.state.carouselData.list[0].url) {
-                      return React.createElement(
-                        'a',
-                        { className: 'btn btn-lg btn-blue', href: _this.state.carouselData.list[0].url, role: 'button' },
-                        _this.state.carouselData.list[1].more
-                      );
-                    }
-                  })()
-                )
-              )
-            )
-          ),
-          React.createElement(
-            'div',
-            { className: 'item active' },
-            React.createElement(
-              'div',
-              { className: 'container' },
-              React.createElement(
-                'div',
-                { className: 'carousel-caption' },
-                React.createElement(
-                  'h1',
-                  null,
-                  this.state.carouselData.list[2].title
-                ),
-                React.createElement(
-                  'p',
-                  null,
-                  this.state.carouselData.list[2].content
-                ),
-                React.createElement(
-                  'p',
-                  null,
-                  (function () {
-                    if (_this.state.carouselData.list[0].url) {
-                      return React.createElement(
-                        'a',
-                        { className: 'btn btn-lg btn-blue', href: _this.state.carouselData.list[0].url, role: 'button' },
-                        _this.state.carouselData.list[2].more
-                      );
-                    }
-                  })()
-                )
-              )
-            )
-          )
+          carouselItems
         ),
         React.createElement(
           'a',
@@ -21185,6 +21261,33 @@ var CarouselComponent = React.createClass({
           { className: 'right carousel-control', href: '#templatemo-carousel', 'data-slide': 'next' },
           React.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
         )
+      ),
+      React.createElement(
+        'div',
+        { className: 'templatemo-welcome', id: 'templatemo-welcome' },
+        React.createElement(
+          'div',
+          { className: 'container' },
+          React.createElement(
+            'div',
+            { className: 'templatemo-slogan text-center' },
+            React.createElement('span', { className: 'txt_darkgrey' }),
+            React.createElement(
+              'span',
+              { className: 'txt_blue' },
+              this.state.carouselData.title
+            ),
+            React.createElement(
+              'p',
+              { className: 'txt_slogan' },
+              React.createElement(
+                'i',
+                null,
+                this.state.carouselData.description
+              )
+            )
+          )
+        )
       )
     );
   }
@@ -21195,6 +21298,114 @@ module.exports = CarouselComponent;
 },{"../stores/app-store":178,"react":162}],169:[function(require,module,exports){
 "use strict";
 var React = require('react');
+var AppStore = require('../stores/app-store');
+
+var ClientItem = React.createClass({
+  displayName: 'ClientItem',
+
+  render: function render() {
+    return React.createElement(
+      'li',
+      { className: 'col-sm-3 col-md-3 templatemo-client-item' },
+      React.createElement(
+        'a',
+        { href: this.props.client.website },
+        React.createElement('img', { src: this.props.client.logo, className: 'img-responsive', alt: this.props.client.name })
+      ),
+      React.createElement(
+        'span',
+        { className: 'templatemo-client-item-header' },
+        React.createElement(
+          'a',
+          { href: this.props.client.website },
+          this.props.client.name
+        )
+      ),
+      React.createElement(
+        'p',
+        null,
+        this.props.client['case']
+      )
+    );
+  }
+});
+
+var clientsComponent = React.createClass({
+  displayName: 'clientsComponent',
+
+  getInitialState: function getInitialState() {
+    return {
+      clientsData: AppStore.getClients()
+    };
+  },
+  componentWillMount: function componentWillMount() {
+    AppStore.addChangeListener(this._onChange);
+  },
+
+  componentWillUnmount: function componentWillUnmount() {
+    AppStore.removeChangeListener(this._onChange);
+  },
+
+  _onChange: function _onChange() {
+    this.setState({
+      clientsData: AppStore.getClients()
+    });
+  },
+
+  render: function render() {
+    var clientItems = this.state.clientsData.list.map(function (client) {
+      return React.createElement(ClientItem, { client: client, key: client.id });
+    });
+
+    return React.createElement(
+      'div',
+      { className: 'templatemo-clients', id: 'templatemo-clients' },
+      React.createElement(
+        'div',
+        { className: 'container' },
+        React.createElement(
+          'div',
+          { className: 'row' },
+          React.createElement(
+            'div',
+            { className: 'templatemo-line-header' },
+            React.createElement(
+              'div',
+              { className: 'text-center' },
+              React.createElement('hr', { className: 'team_hr team_hr_left hr_gray' }),
+              React.createElement(
+                'span',
+                { className: 'txt_darkgrey' },
+                this.state.clientsData.title.toUpperCase()
+              ),
+              React.createElement('hr', { className: 'team_hr team_hr_right hr_gray' })
+            )
+          ),
+          React.createElement('div', { className: 'clearfix' }),
+          React.createElement(
+            'div',
+            { className: 'text-center' },
+            React.createElement(
+              'div',
+              { style: { marginTop: '60px' } },
+              React.createElement(
+                'ul',
+                { className: 'list-inline' },
+                clientItems
+              )
+            )
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = clientsComponent;
+
+},{"../stores/app-store":178,"react":162}],170:[function(require,module,exports){
+"use strict";
+var React = require('react');
 
 var FooterComponent = React.createClass({
     displayName: "FooterComponent",
@@ -21202,7 +21413,7 @@ var FooterComponent = React.createClass({
     render: function render() {
         return React.createElement(
             "div",
-            { className: "templatemo-footer" },
+            { className: "templatemo-footer", id: "templatemo-footer" },
             React.createElement(
                 "div",
                 { className: "container" },
@@ -21301,113 +21512,6 @@ var FooterComponent = React.createClass({
 
 module.exports = FooterComponent;
 
-},{"react":162}],170:[function(require,module,exports){
-"use strict";
-var React = require('react');
-
-var PartnersComponent = React.createClass({
-    displayName: "PartnersComponent",
-
-    render: function render() {
-        return React.createElement(
-            "div",
-            { className: "templatemo-partners" },
-            React.createElement(
-                "div",
-                { className: "container" },
-                React.createElement(
-                    "div",
-                    { className: "row" },
-                    React.createElement(
-                        "div",
-                        { className: "templatemo-line-header" },
-                        React.createElement(
-                            "div",
-                            { className: "text-center" },
-                            React.createElement("hr", { className: "team_hr team_hr_left hr_gray" }),
-                            React.createElement(
-                                "span",
-                                { className: "txt_darkgrey" },
-                                "OUR PARTNERS"
-                            ),
-                            React.createElement("hr", { className: "team_hr team_hr_right hr_gray" })
-                        )
-                    ),
-                    React.createElement("div", { className: "clearfix" }),
-                    React.createElement(
-                        "div",
-                        { className: "text-center" },
-                        React.createElement(
-                            "div",
-                            { style: { marginTop: '60px' } },
-                            React.createElement(
-                                "ul",
-                                { className: "list-inline" },
-                                React.createElement(
-                                    "li",
-                                    { className: "col-sm-2 col-md-2 templatemo-partner-item" },
-                                    React.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        React.createElement("img", { src: "images/partner1.jpg", className: "img-responsive", alt: "partner 1" })
-                                    )
-                                ),
-                                React.createElement(
-                                    "li",
-                                    { className: "col-sm-2 col-md-2 templatemo-partner-item" },
-                                    React.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        React.createElement("img", { src: "images/partner2.jpg", className: "img-responsive", alt: "partner 2" })
-                                    )
-                                ),
-                                React.createElement(
-                                    "li",
-                                    { className: "col-sm-2 col-md-2 templatemo-partner-item" },
-                                    React.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        React.createElement("img", { src: "images/partner3.jpg", className: "img-responsive", alt: "partner 3" })
-                                    )
-                                ),
-                                React.createElement(
-                                    "li",
-                                    { className: "col-sm-2 col-md-2 templatemo-partner-item" },
-                                    React.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        React.createElement("img", { src: "images/partner4.jpg", className: "img-responsive", alt: "partner 4" })
-                                    )
-                                ),
-                                React.createElement(
-                                    "li",
-                                    { className: "col-sm-2 col-md-2 templatemo-partner-item" },
-                                    React.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        React.createElement("img", { src: "images/partner5.jpg", className: "img-responsive", alt: "partner 5" })
-                                    )
-                                ),
-                                React.createElement(
-                                    "li",
-                                    { className: "col-sm-2 col-md-2 templatemo-partner-item" },
-                                    React.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        React.createElement("img", { src: "images/partner6.jpg", className: "img-responsive", alt: "partner 6" })
-                                    )
-                                )
-                            )
-                        )
-                    )
-                )
-            )
-        );
-    }
-});
-
-module.exports = PartnersComponent;
-
 },{"react":162}],171:[function(require,module,exports){
 "use strict";
 var React = require('react');
@@ -21417,6 +21521,7 @@ var ServiceItem = React.createClass({
   displayName: 'ServiceItem',
 
   render: function render() {
+    var icon = 'fa ' + this.props.service.icon + ' fa-stack-1x';
     return React.createElement(
       'div',
       { className: 'col-md-4' },
@@ -21428,8 +21533,13 @@ var ServiceItem = React.createClass({
           null,
           React.createElement(
             'div',
-            { className: 'col-xs-2' },
-            React.createElement('img', { src: 'images/leaf.png', alt: 'icon', style: { float: 'left' } })
+            { className: 'col-xs-2', id: 'service-logo' },
+            React.createElement(
+              'span',
+              { className: 'fa-stack fa-lg' },
+              React.createElement('i', { className: 'fa fa-square-o fa-stack-2x' }),
+              React.createElement('i', { className: icon })
+            )
           ),
           React.createElement(
             'div',
@@ -21441,6 +21551,8 @@ var ServiceItem = React.createClass({
             )
           )
         ),
+        React.createElement('p', null),
+        React.createElement('p', null),
         React.createElement(
           'p',
           null,
@@ -21469,7 +21581,6 @@ var ServicesComponent = React.createClass({
   },
 
   _onChange: function _onChange() {
-    console.log('changing services componenet');
     this.setState({
       servicesData: AppStore.getServices()
     });
@@ -21484,45 +21595,34 @@ var ServicesComponent = React.createClass({
 
     return React.createElement(
       'div',
-      null,
+      { className: 'templatemo-service', id: 'templatemo-service' },
       React.createElement(
         'div',
-        { className: 'templatemo-welcome', id: 'templatemo-welcome' },
+        { className: 'container' },
         React.createElement(
           'div',
-          { className: 'container' },
+          { className: 'row', style: { marginTop: '70px' } },
           React.createElement(
             'div',
-            { className: 'templatemo-slogan text-center' },
-            React.createElement('span', { className: 'txt_darkgrey' }),
+            { className: 'templatemo-line-header', style: { marginTop: '0px' } },
             React.createElement(
-              'span',
-              { className: 'txt_blue' },
-              this.state.servicesData.title
-            ),
-            React.createElement(
-              'p',
-              { className: 'txt_slogan' },
+              'div',
+              { className: 'text-center' },
+              React.createElement('hr', { className: 'team_hr team_hr_left hr_gray' }),
               React.createElement(
-                'i',
-                null,
-                this.state.servicesData.description
-              )
+                'span',
+                { className: 'span_blog txt_darkgrey' },
+                this.state.servicesData.title.toUpperCase()
+              ),
+              React.createElement('hr', { className: 'team_hr team_hr_right hr_gray' })
             )
-          )
-        )
-      ),
-      React.createElement(
-        'div',
-        { className: 'templatemo-service' },
+          ),
+          React.createElement('br', { className: 'clearfix' })
+        ),
         React.createElement(
           'div',
-          { className: 'container' },
-          React.createElement(
-            'div',
-            { className: 'row' },
-            serviceItems
-          )
+          { className: 'row' },
+          serviceItems
         )
       )
     );
@@ -21624,7 +21724,6 @@ var TeamComponent = React.createClass({
   },
 
   _onChange: function _onChange() {
-    console.log('changing services componenet');
     this.setState({
       teamData: AppStore.getTeam()
     });
@@ -21702,16 +21801,12 @@ var TopMenuComponent = React.createClass({
   },
 
   _onChange: function _onChange() {
-    console.log('changing');
     this.setState({ menuData: AppStore.getMenu() });
   },
 
   switchLanguage: function switchLanguage(key, event) {
     event.preventDefault();
     MenuActions.switchLanguage(key);
-    console.log('add ?lang=key to the path');
-    console.log('stitchLangugae called');
-    console.log(key);
   },
 
   render: function render() {
@@ -21773,8 +21868,8 @@ var TopMenuComponent = React.createClass({
                     null,
                     React.createElement(
                       'a',
-                      { href: '#templatemo-about' },
-                      this.state.menuData.team.toUpperCase()
+                      { href: '#templatemo-service' },
+                      this.state.menuData.services.toUpperCase()
                     )
                   ),
                   React.createElement(
@@ -21782,8 +21877,8 @@ var TopMenuComponent = React.createClass({
                     null,
                     React.createElement(
                       'a',
-                      { href: '#templatemo-portfolio' },
-                      this.state.menuData.services.toUpperCase()
+                      { href: '#templatemo-about' },
+                      this.state.menuData.team.toUpperCase()
                     )
                   ),
                   React.createElement(
@@ -21800,7 +21895,7 @@ var TopMenuComponent = React.createClass({
                     null,
                     React.createElement(
                       'a',
-                      { href: '#templatemo-blog' },
+                      { href: '#templatemo-clients' },
                       this.state.menuData.clients.toUpperCase()
                     )
                   ),
@@ -21809,7 +21904,7 @@ var TopMenuComponent = React.createClass({
                     null,
                     React.createElement(
                       'a',
-                      { href: '#templatemo-contact' },
+                      { href: '#templatemo-footer' },
                       this.state.menuData.contact.toUpperCase()
                     )
                   ),
@@ -21963,6 +22058,10 @@ var AppStore = Object.assign({}, EventEmitter.prototype, {
 
 	getTeam: function getTeam() {
 		return _content.team;
+	},
+
+	getClients: function getClients() {
+		return _content.clients;
 	}
 });
 
