@@ -48,10 +48,6 @@ let CarouselComponent = React.createClass ({
   },
   componentWillMount() {
     AppStore.addChangeListener(this._onChange); 
-    
-    console.log($("[data-slide-to='0']"));
-    $("[data-slide-to='0']").addClass("active");
-    console.log($("[data-slide-to='0']"));
   },
  
   
@@ -60,7 +56,6 @@ let CarouselComponent = React.createClass ({
   },
   
   _onChange() {
-    console.log('changing courasel component');
     this.setState({ 
       carouselData: AppStore.getCarousel() 
     });
@@ -80,7 +75,7 @@ let CarouselComponent = React.createClass ({
     });
     
     return (
-      <div>
+      <div style={{minHeight:'690px'}}>
         <div id="templatemo-carousel" className="carousel slide" data-ride="carousel">          
           <ol className="carousel-indicators">
             

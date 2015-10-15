@@ -18,3 +18,5 @@ Done in React.js, using Flux, react-router and gulp. Beatiful design taken from 
 5. Center line between components
 
 6. Minify external libs + css
+
+http://www.softicons.com/web-icons/flags-flat-icons-by-gosquared/

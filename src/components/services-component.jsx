@@ -10,7 +10,7 @@ let ServiceItem = React.createClass({
         <div className="templatemo-service-item">
         
           <div>
-            <div className="col-xs-2">
+            <div className="col-xs-2" id="service-logo">
               <span className="fa-stack fa-lg">
                 <i className="fa fa-square-o fa-stack-2x"></i>
                 <i className={icon}></i>
@@ -45,8 +45,7 @@ let ServicesComponent = React.createClass ({
     AppStore.removeChangeListener(this._onChange); 
   },
   
-  _onChange() {
-    console.log('changing services componenet');
+  _onChange() {    
     this.setState({ 
       servicesData: AppStore.getServices() 
     });
@@ -62,7 +61,7 @@ let ServicesComponent = React.createClass ({
     });
     
     return (
-        <div className="templatemo-service" id="templatemo-portfolio">
+        <div className="templatemo-service" id="templatemo-service">
           <div className="container">
             <div className="row" style={{marginTop: '70px'}}>
               <div className="templatemo-line-header" style={{marginTop: '0px'}} >

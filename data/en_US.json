@@ -125,13 +125,13 @@
 			}
 		]
 	},
-	"partners": {
-		"title": "Our partners",
+	"clients": {
+		"title": "Our clients",
 		"list": [
 			{
 				"id": 1,
 				"name": "UAB 'Kelprojektas'",
-				"logo": "images/partners/kelprojektas.jpg",
+				"logo": "images/clients/kelprojektas.jpg",
 				"website": "http://www.kelprojektas.lt",
 				"case": "Kelprojektas wanted to strengthen its IT infrastructure and moved from an unreliable on-premise solution to a cloud-based infrastructure based around Windows Azure and Office 365 which provides it with great reliability, unbeatable cost savings and enviable flexibility.",
 				"readMore": "Read more",
@@ -140,7 +140,7 @@
 			{
 				"id": 2,
 				"name": "Place I Live",
-				"logo": "images/partners/placeilive.jpg",
+				"logo": "images/clients/placeilive.jpg",
 				"website": "http://www.placeilive.com",
 				"case": "Place I Live’s business is built on delivering open data that provides information about living conditions and services in major global cities. When it piloted the service it used a local website hosting provider but soon discovered the service wasn’t robust and flexible enough to scale out to many cities. Consequently, it turned to Microsoft Azure which allows it confidently reach around the world with a cloud-based infrastructure that is reliable and flexible, and one that performs powerfully.",
 				"readMore": "Read more",
@@ -149,7 +149,7 @@
 			{
 				"id": 3,
 				"name": "Venipak",
-				"logo": "images/partners/venipak.jpg",
+				"logo": "images/clients/venipak.jpg",
 				"website": "http://www.venipak.lt",
 				"case": "Productivity solutions to improve the efficiency of the company: Office 365 + Windows Azure + Microsoft Dynamics CRM Online.",
 				"readMore": "Read more",
@@ -158,7 +158,7 @@
 			{
 				"id": 4,
 				"name": "Kauno vandenys",
-				"logo": "images/partners/kv.jpg",
+				"logo": "images/clients/kv.jpg",
 				"website": "http://www.kaunovandenys.lt",
 				"case": "ALBARS recovered UAB “Kauno vandenys” critical data after disaster occurred and helped the organization better understand and move toward a more secure, well-managed IT infrastructure that will help reduce overall IT costs, make better use of IT resources, and make IT a strategic asset for the business, helped eliminate unnecessary cost and complexity, ensured that the business will be always up and running.",
 				"readMore": "Read more",

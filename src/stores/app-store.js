@@ -3,12 +3,15 @@
 let Dispatcher = require('../dispatcher/dispatcher');
 let ActionTypes = require('../constants/action-types');
 let EventEmitter = require('events').EventEmitter;
+var assign = require('object-assign');
 let Api =  require('../api/api');
+
 let CHANGE_EVENT = 'change';
 
 let _content, _menu;
 
-let AppStore =Object.assign({}, EventEmitter.prototype, {
+let AppStore = assign({}, EventEmitter.prototype, {
+//let AppStore = Object.assign({}, EventEmitter.prototype, {
 	
 	addChangeListener(callback) {
 		this.on(CHANGE_EVENT, callback)
@@ -42,8 +45,8 @@ let AppStore =Object.assign({}, EventEmitter.prototype, {
 		return _content.team;
 	},
 
-	getPartners() {
-		return _content.partners;
+	getClients() {
+		return _content.clients;
 	}
 });
 

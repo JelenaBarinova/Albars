@@ -37,7 +37,15 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 .templatemo-top-bar {
     min-height: 40px;
-    background-color:#eeeeee;
+    background-color:#f5f5f5;
+    
+}
+.templatemo-top-bar .subheader {
+  font-size: 16px;
+  font-weight: 600;
+}
+.templatemo-top-bar .subheader > i {
+   font-size: 20px;
 }
 
 .templatemo-top-menu {
@@ -137,6 +145,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 .templatemo-service {
     /*margin-bottom: 100px;
     margin-top: 100px;*/
+    min-height:590px;
 }
 
 .templatemo-service-item {
@@ -145,11 +154,13 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 }
 .templatemo-service-item-header {
     
-    padding: 5px 10px 10px 10px; 
+    padding: 5px 0px 10px 10px; 
     font-weight: bold;
     display: inline-block;
     font-size: 16px;
-    vertical-align: middle;
+}
+#service-logo {
+    margin-left: -15px;
 }
 
 .templatemo-service-item p {
@@ -201,6 +212,11 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 .nav > li > a {
     padding: 10px 20px;
+}
+
+.nav > li > a > img {
+  padding: 0px 0px;
+  height: 19px;
 }
 
 .nav > li > a:hover,
@@ -454,12 +470,28 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 	float: right;
 }
 
-.templatemo-partners {
+.templatemo-clients {
 	border-top: 2px solid #cccccc;
 }
 
-.templatemo-partners .templatemo-partner-item {
+.templatemo-clients .templatemo-client-item {
     margin-bottom: 5px;
+}
+.templatemo-clients .templatemo-client-item p {
+    font-weight: normal; 
+    text-align: justify; 
+    margin-top: 25px;
+    font-size: 14px;
+    color: #929292;
+    margin-left: 2px;
+    margin-right: 2px;
+    
+}
+.templatemo-client-item-header{
+    padding: 5px 5px 0px 10px; 
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .templatemo-footer {
@@ -686,7 +718,7 @@ ul.templatemo-project-gallery  li  a img:hover {
 	.templatemo-service-item-header {
 		font-size: 16px;
 		
-		padding: 23px 10px 22px;
+		
 	}
 	.templatemo-header-blue {
 		min-width: 0px;

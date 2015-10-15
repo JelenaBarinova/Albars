@@ -44,7 +44,6 @@ let TeamComponent = React.createClass ({
   },
   
   _onChange() {
-    console.log('changing services componenet');
     this.setState({ 
       teamData: AppStore.getTeam() 
     });
