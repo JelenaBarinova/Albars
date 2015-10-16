@@ -21280,7 +21280,7 @@ var CarouselComponent = React.createClass({
 
     return React.createElement(
       'div',
-      { style: { minHeight: '690px' } },
+      { style: { minHeight: '590px' } },
       React.createElement(
         'div',
         { id: 'templatemo-carousel', className: 'carousel slide', 'data-ride': 'carousel' },
@@ -21532,17 +21532,11 @@ var FooterComponent = React.createClass({
                             React.createElement(
                                 "span",
                                 null,
-                                "Copyright © 2084 ",
+                                "Copyright © 2015 ",
                                 React.createElement(
                                     "a",
                                     { href: "#" },
-                                    "Your Company Name"
-                                ),
-                                "- Design: ",
-                                React.createElement(
-                                    "a",
-                                    { rel: "nofollow", href: "http://www.templatemo.com/free-website-templates/395-urbanic", target: "_parent" },
-                                    "Urbanic"
+                                    "Albars"
                                 )
                             )
                         )
@@ -21567,13 +21561,13 @@ var ServiceItem = React.createClass({
     var icon = 'fa ' + this.props.service.icon + ' fa-stack-1x';
     return React.createElement(
       'div',
-      { className: 'col-md-4' },
+      { className: 'col-md-4 col-sm-6 col-xs-12', style: { minHeight: '225px' } },
       React.createElement(
         'div',
         { className: 'templatemo-service-item' },
         React.createElement(
           'div',
-          null,
+          { className: 'row' },
           React.createElement(
             'div',
             { className: 'col-xs-2', id: 'service-logo' },
@@ -21594,8 +21588,6 @@ var ServiceItem = React.createClass({
             )
           )
         ),
-        React.createElement('p', null),
-        React.createElement('p', null),
         React.createElement(
           'p',
           null,
@@ -21638,7 +21630,7 @@ var ServicesComponent = React.createClass({
 
     return React.createElement(
       'div',
-      { className: 'templatemo-service', id: 'templatemo-service' },
+      { className: 'templatemo-service', id: 'templatemo-services' },
       React.createElement(
         'div',
         { className: 'container' },
@@ -21919,8 +21911,6 @@ var TopMenuComponent = React.createClass({
                     'Toggle navigation'
                   ),
                   React.createElement('span', { className: 'icon-bar' }),
-                  React.createElement('span', { className: 'icon-bar' }),
-                  React.createElement('span', { className: 'icon-bar' }),
                   React.createElement('span', { className: 'icon-bar' })
                 ),
                 React.createElement(
@@ -21937,7 +21927,7 @@ var TopMenuComponent = React.createClass({
                   { className: 'nav navbar-nav navbar-right', style: { marginTop: '40px' } },
                   React.createElement(
                     'li',
-                    { className: 'active' },
+                    null,
                     React.createElement(
                       'a',
                       { href: '#templatemo-top' },
@@ -21949,7 +21939,7 @@ var TopMenuComponent = React.createClass({
                     null,
                     React.createElement(
                       'a',
-                      { href: '#templatemo-service' },
+                      { href: '#templatemo-services' },
                       this.state.menuData.services.toUpperCase()
                     )
                   ),
@@ -21994,8 +21984,8 @@ var TopMenuComponent = React.createClass({
                     null,
                     React.createElement(
                       'a',
-                      { rel: 'nofollow', href: '/en', className: 'external-link', onClick: this.switchLanguage.bind(this, 'en_US') },
-                      React.createElement('img', { src: 'images/flags/us.png', alt: 'en_US', title: 'English' })
+                      { rel: 'nofollow', href: '/ru', className: 'external-link', onClick: this.switchLanguage.bind(this, 'ru_RU') },
+                      React.createElement('img', { src: 'images/flags/ru.png', alt: 'ru_RU', title: 'Русский' })
                     )
                   ),
                   React.createElement(
@@ -22003,8 +21993,8 @@ var TopMenuComponent = React.createClass({
                     null,
                     React.createElement(
                       'a',
-                      { rel: 'nofollow', href: '/ru', className: 'external-link', onClick: this.switchLanguage.bind(this, 'ru_RU') },
-                      React.createElement('img', { src: 'images/flags/ru.png', alt: 'ru_RU', title: 'Русский' })
+                      { rel: 'nofollow', href: '/en', className: 'external-link', onClick: this.switchLanguage.bind(this, 'en_US') },
+                      React.createElement('img', { src: 'images/flags/us.png', alt: 'en_US', title: 'English' })
                     )
                   )
                 )
