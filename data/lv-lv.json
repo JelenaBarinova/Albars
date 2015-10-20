@@ -1,0 +1,169 @@
+{
+	"menu": {
+		"home": "home",
+		"team": "team",
+		"services": "services",
+		"blog": "blog",
+		"clients": "clients",
+		"contact": "contact"
+	},
+	"carousel":{
+		"title": "ALBARS - Innovative IT solutions for you business",
+		"description": "At ALBARS we believe in a quality, pragmatic, fast IT is possible in every and each business. We work with startup to enterprise companies bringing them to higher level by providing best in class IT consultations.",
+		"list": [
+			{
+				"id": 1,
+				"title": "Welcome to ALBARS",
+				"content": "We are very awesome team or young energetic smart and pragmatic people, who always looks how to make the best for the customer. We are really strong in informational technologies: both hardware and software wise. We provide a wide range of different services for small to enterprise level companies.",
+				"url": "#/services",
+				"more": "Read more"
+			},
+			{
+				"id": 2,
+				"title": "Meet our new team member Rimante!",
+				"content": "As a head of communications - Rimante is the one you want to conact if any questions!",
+				"url": "#/team",
+				"more": "Albars team"
+			},
+			{
+				"id": 3,
+				"title": "ALBARS at a biggest IT conference in Europe",
+				"content": "Recently our the one and only Jevgenij gave a talk at Powered by MVP conference.",
+				"url": "http://www.bebetterdeveloper.com",
+				"more": "Read more"
+			}
+		]
+	},
+	"services": {
+		"title": "Our services",
+		"description": "At ALBARS we believe in ellegant and fast IT, that really helps and improves your work. We can help you solve all the IT issues you have and prepare your infrastructure fro growth. We are the best for these services:",
+		"list": [
+			{
+				"id": 1,
+				"title": "Desktop and devices infrastructure",
+				"description": "We develop management systems, install, configure and conduct employee training. We offer design, implementation and training services; update the existing systems; automate processes; accompany IT-system; advise on security issues.",
+				"icon": "fa-laptop"
+			},
+			{
+				"id": 2,
+				"title": "Server infrastructure",
+				"description": "We provide reliability, rapid performance and security of server infrastructure of your company. We carry out an audit of information security. We offer contemporary solutions to improve rapid performance and resilience of your IT-infrastructure.",
+				"icon": "fa-hdd-o"
+			},
+			{
+				"id": 3,
+				"title": "Cloud and services infrastructure",
+				"description": "We offer expansion and growth of the performance of your IT infrastructure due to cloud technologies. We will help you to determine a common approach that is optimal for your company and integrate the local infrastructure with cloud solutions.",
+				"icon": "fa-cloud-upload"
+			},
+			{
+				"id": 4,
+				"title": "Application And Productivity Services",
+				"description": "We expertise in creating and deploying modern web applications and services. Unified communication & collaboration; Load balancing; Web servers; Databases.",
+				"icon": "fa-cogs"
+			},
+			{
+				"id": 5,
+				"title": "IT Trainings",
+				"description": "ALBARS is Certified Learning Partner. Certified Partner status ensures that ALBARS equipment and specialists' qualification meet the global requirements of the Microsoft Company. We have tremendous hands-on experience in the use of Microsoft Solutions - a guarantee that students will receive in-depth technical expertise.",
+				"icon": "fa-book"
+			},
+			{
+				"id": 6,
+				"title": "IT Security",
+				"description": "We will ensure entire information security in your corporate system based on Active Directory rights: Public key infrastructure (PKI); Active Directory Rights Management Services.",
+				"icon": "fa-lock"
+			}			
+		]
+	},
+	"team": {
+		"title": "Our team",
+		"list": [
+			{
+				"id": 1,
+				"name": "Jevgenijus Vinochodovas",
+				"title": "Solutions architect, founder",
+				"bio": "Microsoft Certified Trainer and has Microsoft Most Valuable Professional (MVP) Award. More recently he has become a Microsoft Private Cloud Facilitator and Microsoft vTSP. He has several Bachelor Degrees of IT and also graduated from Military Academy where he was awarded with the Lieutenant’s rank.",
+				"interests": ["IT", "virtualization", "big data"],
+				"photoUrl": "images/team/jevgenijus.jpg",
+				"fbUrl": "",
+				"twitterUrl": "",
+				"linkedinUrl": "http://lt.linkedin.com/pub/jevgenijus-vinochodovas/23/587/345"
+			},
+			{
+				"id": 2,
+				"name": "Rimantė Šilauskienė",
+				"title": "Head of Communications",
+				"bio": "Advertisement/Marketing Project Manager, Real Estate/Construction Development Coordinator experience. Diplomated specialist of electrical equipment of industry. Master of Psychology (specialize in Cognitive, Management fields). Organizational Climate and Culture Surveys. Personality assessment of employee by using projective and psychometric methods.",
+				"interests": ["Marketing", "development coordination", "project management"],
+				"photoUrl": "images/team/rimante.jpg",
+				"fbUrl": "",
+				"twitterUrl": "",
+				"linkedinUrl": ""
+			},
+			{
+				"id": 3,
+				"name": "Sergejus Barinovas",
+				"title": "Software engineering architect",
+				"bio": "Sergejus is a Software Architect. He is active community member in Lithuania, Microsoft Most Valuable Professional (MVP), blogger (http://sergejus.blogas.lt) and Lithuanian .NET User Group lead.",
+				"interests": ["scalability", "high load systems", "big data"],
+				"photoUrl": "images/team/sergey.jpg",
+				"fbUrl": "",
+				"twitterUrl": "",
+				"linkedinUrl": "https://www.linkedin.com/in/sergejus"
+			},
+			{
+				"id": 4,
+				"name": "Ekaterina Osipova",
+				"title": "The Business Development Manager",
+				"bio": "Microsoft Certified Professional, web-developer, programmer, social media administrator. Works in the IT industry for nearly a decade and constantly working on improving her IT skills.",
+				"interests": ["scalability", "high load systems", "big data"],
+				"photoUrl": "images/team/jekaterina.jpg",
+				"fbUrl": "",
+				"twitterUrl": "",
+				"linkedinUrl": "https://www.linkedin.com/in/sergejus"
+			}
+		]
+	},
+	"clients": {
+		"title": "Our clients",
+		"list": [
+			{
+				"id": 1,
+				"name": "UAB 'Kelprojektas'",
+				"logo": "images/clients/kelprojektas.jpg",
+				"website": "http://www.kelprojektas.lt",
+				"case": "Kelprojektas wanted to strengthen its IT infrastructure and moved from an unreliable on-premise solution to a cloud-based infrastructure based around Windows Azure and Office 365 which provides it with great reliability, unbeatable cost savings and enviable flexibility.",
+				"readMore": "Read more",
+				"url": ""		
+			},
+			{
+				"id": 2,
+				"name": "Place I Live",
+				"logo": "images/clients/placeilive.jpg",
+				"website": "http://www.placeilive.com",
+				"case": "Place I Live’s business is built on delivering open data that provides information about living conditions and services in major global cities. When it piloted the service it used a local website hosting provider but soon discovered the service wasn’t robust and flexible enough to scale out to many cities. Consequently, it turned to Microsoft Azure which allows it confidently reach around the world with a cloud-based infrastructure that is reliable and flexible, and one that performs powerfully.",
+				"readMore": "Read more",
+				"url": ""
+			},
+			{
+				"id": 3,
+				"name": "Venipak",
+				"logo": "images/clients/venipak.jpg",
+				"website": "http://www.venipak.lt",
+				"case": "Productivity solutions to improve the efficiency of the company: Office 365 + Windows Azure + Microsoft Dynamics CRM Online.",
+				"readMore": "Read more",
+				"url": ""
+			},
+			{
+				"id": 4,
+				"name": "Kauno vandenys",
+				"logo": "images/clients/kv.jpg",
+				"website": "http://www.kaunovandenys.lt",
+				"case": "ALBARS recovered UAB “Kauno vandenys” critical data after disaster occurred and helped the organization better understand and move toward a more secure, well-managed IT infrastructure that will help reduce overall IT costs, make better use of IT resources, and make IT a strategic asset for the business, helped eliminate unnecessary cost and complexity, ensured that the business will be always up and running.",
+				"readMore": "Read more",
+				"url": ""
+			}
+		]
+	}
+}
