@@ -44,8 +44,7 @@ let FooterComponent = React.createClass ({
                             <div className="height30"></div>
                         </div>
                         <div className="footer_bottom_content">
-                   			<span>Copyright © 2084 <a href="#">Your Company Name</a>
-                             - Design: <a rel="nofollow" href="http://www.templatemo.com/free-website-templates/395-urbanic" target="_parent">Urbanic</a></span>
+                   			  <span>Copyright © 2015 <a href="#">Albars</a></span>
                         </div>
                         
                     </div>

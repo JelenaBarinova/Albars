@@ -75,7 +75,7 @@ let CarouselComponent = React.createClass ({
     });
     
     return (
-      <div style={{minHeight:'690px'}}>
+      <div style={{minHeight:'590px'}}>
         <div id="templatemo-carousel" className="carousel slide" data-ride="carousel">          
           <ol className="carousel-indicators">
             

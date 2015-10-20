@@ -6,10 +6,9 @@ let ServiceItem = React.createClass({
   render() {
   let icon = 'fa ' + this.props.service.icon + ' fa-stack-1x';
     return (
-      <div className="col-md-4">
+      <div className="col-md-4 col-sm-6 col-xs-12" style={{minHeight:'225px'}}>
         <div className="templatemo-service-item">
-        
-          <div>
+          <div className="row" >
             <div className="col-xs-2" id="service-logo">
               <span className="fa-stack fa-lg">
                 <i className="fa fa-square-o fa-stack-2x"></i>
@@ -20,7 +19,6 @@ let ServiceItem = React.createClass({
               <span className="templatemo-service-item-header">{this.props.service.title.toUpperCase()}</span>
             </div>
           </div>
-          <p></p><p></p>
           <p>{this.props.service.description}</p>
           <br className="clearfix"/>
         </div>
@@ -61,7 +59,7 @@ let ServicesComponent = React.createClass ({
     });
     
     return (
-        <div className="templatemo-service" id="templatemo-service">
+        <div className="templatemo-service" id="templatemo-services">
           <div className="container">
             <div className="row" style={{marginTop: '70px'}}>
               <div className="templatemo-line-header" style={{marginTop: '0px'}} >
@@ -73,9 +71,7 @@ let ServicesComponent = React.createClass ({
               <br className="clearfix"/>
             </div>
             <div className="row">
-      
-              {serviceItems} 
-      
+              {serviceItems}
             </div>
           </div>
         </div>

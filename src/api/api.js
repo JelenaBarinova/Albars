@@ -3,12 +3,21 @@
 let Api = {
 	getData(language) {
 		let _content = {};
-		if (language == 'ru_RU')
-		{
-			_content = require('../../data/ru_RU.json');
-		}
-		else{
-			_content = require('../../data/en_US.json');
+		switch(language) {
+			case 'ru':
+					_content = require('../../data/ru.json');
+					break;
+			case 'en':
+					_content = require('../../data/en.json');
+					break;
+			case 'lt':
+					_content = require('../../data/lt.json');
+					break;
+			case 'lv':
+					_content = require('../../data/lv.json');
+					break;
+			default:
+					_content = require('../../data/en.json');
 		}
 		return _content;
 	}

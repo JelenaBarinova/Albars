@@ -6,6 +6,9 @@ let AppStore = require('../stores/app-store');
 let TopMenuComponent = React.createClass ({
 
   getInitialState() {
+    if (window.location.search) {
+      
+    }
     return {    
        language: {key: 'en_US', value: 'English'},
        menuData: AppStore.getMenu()
@@ -25,12 +28,13 @@ let TopMenuComponent = React.createClass ({
   },
   
   switchLanguage(key, event) {
-	  event.preventDefault();
+	  //event.preventDefault();
+    //window.location.search = '?lang=en';
     MenuActions.switchLanguage(key);
 	},
 
   render() {
-
+   
     return (
     <div>
       <div className="templatemo-top-menu">
@@ -42,8 +46,6 @@ let TopMenuComponent = React.createClass ({
                   <span className="sr-only">Toggle navigation</span>
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
                 </button>
                 
                 <a href="#" className="navbar-brand"><img src="images/albars_logo.png" alt="Albars" title="Albars" /></a>
@@ -51,16 +53,17 @@ let TopMenuComponent = React.createClass ({
               <div className="navbar-collapse collapse" id="templatemo-nav-bar">                
                
                 <ul className="nav navbar-nav navbar-right" style={{marginTop: '40px'}}>
-                  <li className="active"><a href="#templatemo-top">{this.state.menuData.home.toUpperCase()}</a></li>
-                  <li><a href="#templatemo-service">{this.state.menuData.services.toUpperCase()}</a></li>
+                  <li><a href="#templatemo-top" data-target="#top">{this.state.menuData.home.toUpperCase()}</a></li>
+                  <li><a href="#templatemo-services" data-target="#services">{this.state.menuData.services.toUpperCase()}</a></li>
                   <li><a href="#templatemo-about">{this.state.menuData.team.toUpperCase()}</a></li>                  
                   <li><a href="#templatemo-blog">{this.state.menuData.blog.toUpperCase()}</a></li>
                   <li><a href="#templatemo-clients">{this.state.menuData.clients.toUpperCase()}</a></li>
                   <li><a href="#templatemo-footer">{this.state.menuData.contact.toUpperCase()}</a></li> 
 
-                  <li><a rel="nofollow" href="/en" className="external-link" onClick={this.switchLanguage.bind(this,'en_US')}><img src="images/flags/us.png" alt="en_US" title="English" /></a></li>
-                  <li><a rel="nofollow" href="/ru" className="external-link" onClick={this.switchLanguage.bind(this,'ru_RU')}><img src="images/flags/ru.png" alt="ru_RU" title="Русский" /></a></li>
-                                                          
+                  <li><a rel="nofollow" href="#/?lang=ru" data-target="#" className="external-link" onClick={this.switchLanguage.bind(this,'ru')}><img src="images/flags/ru.png" alt="ru" title="По-русски" /></a></li>
+                  <li><a rel="nofollow" href="#/?lang=en" data-target="#" className="external-link" onClick={this.switchLanguage.bind(this,'en')}><img src="images/flags/en.png" alt="en" title="English" /></a></li>
+                  <li><a rel="nofollow" href="#/?lang=lt" data-target="#" className="external-link" onClick={this.switchLanguage.bind(this,'lt')}><img src="images/flags/lt.png" alt="lt" title="Lietuviškai" /></a></li>
+                  <li><a rel="nofollow" href="#/?lang=lv" data-target="#" className="external-link" onClick={this.switchLanguage.bind(this,'lv')}><img src="images/flags/lv.png" alt="lv" title="Latviešu" /></a></li>                                                          
                 </ul>  
                                
               </div>

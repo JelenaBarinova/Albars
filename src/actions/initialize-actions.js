@@ -6,11 +6,11 @@ let Api = require('../api/api');
 
 let InitializeActions = {
 	
-	initApp() {
+	initApp(lang) {
 		Dispatcher.dispatch({
 			actionType: ActionTypes.INITIALIZE,
 			initialData: {
-				content: Api.getData('en_US')
+				content: Api.getData(lang)
 			}
 		});
 	
