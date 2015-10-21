@@ -165,5 +165,9 @@
 				"url": ""
 			}
 		]
+	},
+	"footer": {
+		"backToTop": "Вернуться к началу",
+		"copyright": "Copyright"
 	}
 }

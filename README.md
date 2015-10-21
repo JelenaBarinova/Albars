@@ -14,4 +14,6 @@ Done in React.js, using Flux, react-router and gulp. Beatiful design taken from 
 6. Minify external libs + css
 
 7. Rename anchors
+
+ū.menu drop down doesn't dissappear on mobile
 http://www.softicons.com/web-icons/flags-flat-icons-by-gosquared/

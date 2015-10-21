@@ -1,8 +1,29 @@
 "use strict";
 let React = require('react');
+let AppStore = require('../stores/app-store');
+let SocialIcon = require('./social-icon');
 
 let FooterComponent = React.createClass ({
 
+  getInitialState() {
+    return {    
+       footerData: AppStore.getFooter()
+    };
+  },
+  componentWillMount() {
+    AppStore.addChangeListener(this._onChange); 
+  },
+ 
+  
+  componentWillUnmount() {
+    AppStore.removeChangeListener(this._onChange); 
+  },
+  
+  _onChange() {    
+    this.setState({ 
+      footerData: AppStore.getFooter() 
+    });
+  },
   render() {
     return (
     
@@ -14,33 +35,18 @@ let FooterComponent = React.createClass ({
                         <div className="footer_container">
                             <ul className="list-inline">
                                 <li>
-                                    <a href="#">
-                                        <span className="social-icon-fb"></span>
-                                    </a>
+                                    <SocialIcon social_network="facebook" url="https://www.facebook.com/albars.eu" />
+             
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <span className="social-icon-rss"></span>
-                                    </a>
+                                    <SocialIcon social_network="twitter" url="https://twitter.com/albars_eu" />
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <span className="social-icon-twitter"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span className="social-icon-linkedin"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span className="social-icon-dribbble"></span>
-                                    </a>
+                                     <SocialIcon social_network="linkedin" url="https://www.linkedin.com/company/5317006" />
                                 </li>
                             </ul>
                             <div className="height30"></div>
-                            <a className="btn btn-lg btn-orange" href="#" role="button" id="btn-back-to-top">Back To Top</a>
+                            <a className="btn btn-lg btn-orange" href="#" role="button" id="btn-back-to-top">{this.state.footerData.backToTop}</a>
                             <div className="height30"></div>
                         </div>
                         <div className="footer_bottom_content">

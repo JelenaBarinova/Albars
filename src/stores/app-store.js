@@ -8,7 +8,7 @@ let Api =  require('../api/api');
 
 let CHANGE_EVENT = 'change';
 
-let _content, _menu;
+let _content;
 
 let AppStore = assign({}, EventEmitter.prototype, {
 //let AppStore = Object.assign({}, EventEmitter.prototype, {
@@ -47,6 +47,10 @@ let AppStore = assign({}, EventEmitter.prototype, {
 
 	getClients() {
 		return _content.clients;
+	},
+	
+	getFooter() {
+		return _content.footer;
 	}
 });
 

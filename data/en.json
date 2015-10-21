@@ -86,8 +86,8 @@
 				"bio": "Microsoft Certified Trainer and has Microsoft Most Valuable Professional (MVP) Award. More recently he has become a Microsoft Private Cloud Facilitator and Microsoft vTSP. He has several Bachelor Degrees of IT and also graduated from Military Academy where he was awarded with the Lieutenant’s rank.",
 				"interests": ["IT", "virtualization", "big data"],
 				"photoUrl": "images/team/jevgenijus.jpg",
-				"fbUrl": "",
-				"twitterUrl": "",
+				"fbUrl": "http://facebook.com",
+				"twitterUrl": "https://twitter.com/jevgenijus",
 				"linkedinUrl": "http://lt.linkedin.com/pub/jevgenijus-vinochodovas/23/587/345"
 			},
 			{
@@ -165,5 +165,9 @@
 				"url": ""
 			}
 		]
+	},
+	"footer": {
+		"backToTop": "Back To Top",
+		"copyright": "Copyright"
 	}
 }

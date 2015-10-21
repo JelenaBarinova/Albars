@@ -165,5 +165,9 @@
 				"url": ""
 			}
 		]
+	},
+	"footer": {
+		"backToTop": "Grįžti į viršų",
+		"copyright": "Visos teisės saugomos"
 	}
 }

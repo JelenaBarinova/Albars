@@ -1,6 +1,7 @@
 "use strict";
 let React = require('react');
 let AppStore = require('../stores/app-store');
+let SocialIcon = require('./social-icon');
 
 let TeamMember = React.createClass ({
   render() {
@@ -10,9 +11,11 @@ let TeamMember = React.createClass ({
           <div className="member-thumb">
             <img src={this.props.member.photoUrl} className="img-responsive" alt={this.props.member.name}/>
             <div className="thumb-overlay">
-              <a href="#"><span className="social-icon-fb">{this.props.member.fbUrl}</span></a>
-              <a href="#"><span className="social-icon-twitter">{this.props.member.twitterUrl}</span></a>
-              <a href="#"><span className="social-icon-linkedin">{this.props.member.linkedinUrl}</span></a>
+            <div className="row">
+             <SocialIcon social_network="facebook" url={this.props.member.fbUrl} />
+             <SocialIcon social_network="twitter" url={this.props.member.twitterUrl} />
+             <SocialIcon social_network="linkedin" url={this.props.member.linkedinUrl} />
+             </div>                        
             </div>
           </div>
           <div className="team-inner">
@@ -24,7 +27,6 @@ let TeamMember = React.createClass ({
       </li>
     )
   }
-
 });
 
 let TeamComponent = React.createClass ({
@@ -37,7 +39,6 @@ let TeamComponent = React.createClass ({
   componentWillMount() {
     AppStore.addChangeListener(this._onChange); 
   },
- 
   
   componentWillUnmount() {
     AppStore.removeChangeListener(this._onChange); 
@@ -69,9 +70,9 @@ let TeamComponent = React.createClass ({
                     </div>
                 </div>
                 <div className="clearfix"> </div>
-                    <ul className="row row_team">
-                      {teamMembers}
-                    </ul>
+                <ul className="row row_team">
+                  {teamMembers}
+                </ul>
             </div>
         </div>
     );

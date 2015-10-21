@@ -165,5 +165,9 @@
 				"url": ""
 			}
 		]
+	},
+	"footer": {
+		"backToTop": "Atpakaļ uz augšu",
+		"copyright": "Copyright"
 	}
 }

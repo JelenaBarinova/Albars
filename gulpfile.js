@@ -81,9 +81,13 @@ gulp.task('run_server', plug.shell.task([
   'http-server ../gh-pages --cors -a localhost -p 8000'
   ]));
   
-gulp.task('open', ['run_server'], function(){
+gulp.task('open', /*['run_server'],*/ function(){
   return gulp.src('')
         .pipe(plug.open('', {url: 'http://localhost:8000/'}));
+});
+
+gulp.task('watch', function() {
+    gulp.watch('./src/**/*', ['build']);
 });
 
 /* ------------ TASKS ------------ */
