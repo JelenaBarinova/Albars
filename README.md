@@ -11,8 +11,8 @@ Done in React.js, using Flux, react-router and gulp. Beatiful design taken from 
 
 7. Rename anchors
 
-9. clean css
-
 10. refactor blog part
+
+11. Contacts componenet
 
 http://www.softicons.com/web-icons/flags-flat-icons-by-gosquared/

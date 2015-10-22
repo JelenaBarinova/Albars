@@ -43,34 +43,27 @@ let clientsComponent = React.createClass ({
       );
     });
     
-    return (
-    
-     <div className="templatemo-clients" id="templatemo-clients" >
-            <div className="container">
-                <div className="row">
-
-
-                    <div className="templatemo-line-header" >
-                        <div className="text-center">
-                            <hr className="team_hr team_hr_left hr_gray"/><span className="txt_darkgrey">{this.state.clientsData.title.toUpperCase()}</span>
-                            <hr className="team_hr team_hr_right hr_gray" />
-                        </div>
-                    </div>
-                    <div className="clearfix"></div>
-
-
-                    <div className="text-center">
-<div className="container">
-<div className="row">
-                                {clientItems}                   
-                     </div>
-                     
-                        </div>
-
-                    </div>
-                </div>
+    return (    
+      <div className="templatemo-clients" id="templatemo-clients" >
+        <div className="container">
+          <div className="row">
+            <div className="templatemo-line-header" >
+              <div className="text-center">
+                <hr className="team_hr team_hr_left hr_gray"/><span className="txt_darkgrey">{this.state.clientsData.title.toUpperCase()}</span>
+                <hr className="team_hr team_hr_right hr_gray" />
+              </div>
             </div>
-        </div> 
+            <div className="clearfix"></div>
+            <div className="text-center">
+              <div className="container">
+                <div className="row">
+                  {clientItems}                   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
     );
   }
 });
