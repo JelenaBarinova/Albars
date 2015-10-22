@@ -457,9 +457,10 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 }
 
 .twitter_user {
-	color: #FFFF33; 
+	color: #ffffff; 
 	font-size: 14px;
 	float: right;
+  font-weight: 600;
 }
 
 .templatemo-clients {
@@ -685,6 +686,7 @@ ul.templatemo-project-gallery  li  a img:hover {
 
 
 @media (min-width: 768px) {
+  
   .navbar-nav > li > a {
     padding-top: 9px;
     padding-bottom: 9px;

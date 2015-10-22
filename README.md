@@ -5,15 +5,14 @@ Done in React.js, using Flux, react-router and gulp. Beatiful design taken from 
 
 ## TODOs
 
-3. Social links as font awesome icons
-
-4. Partners
-
 5. Center line between components in mobile
 
 6. Minify external libs + css
 
 7. Rename anchors
 
-ū.menu drop down doesn't dissappear on mobile
+9. clean css
+
+10. refactor blog part
+
 http://www.softicons.com/web-icons/flags-flat-icons-by-gosquared/

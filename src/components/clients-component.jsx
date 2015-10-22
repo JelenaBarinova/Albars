@@ -5,11 +5,11 @@ let AppStore = require('../stores/app-store');
 let ClientItem = React.createClass({
   render() {
     return (
-      <li className="col-sm-3 col-md-3 templatemo-client-item">
-        <a href={this.props.client.website}><img src={this.props.client.logo} className="img-responsive" alt={this.props.client.name} /></a>
-        <span className="templatemo-client-item-header"><a href={this.props.client.website}>{this.props.client.name}</a></span>
+      <div className="col-lg-3 col-md-3 col-sm-6 templatemo-client-item">
+        <a href={this.props.client.website} target="_blank"><img src={this.props.client.logo} className="img-responsive" alt={this.props.client.name} style={{margin: "0 auto"}} /></a>
+        <span className="templatemo-client-item-header"><a href={this.props.client.website} target="_blank">{this.props.client.name}</a></span>
         <p>{this.props.client.case}</p>
-      </li>
+      </div>
     ); 
   }
 });
@@ -60,12 +60,11 @@ let clientsComponent = React.createClass ({
 
 
                     <div className="text-center">
-
-                        <div style={{marginTop: '60px'}}>
-                            <ul className="list-inline">
+<div className="container">
+<div className="row">
                                 {clientItems}                   
-                            </ul>
-
+                     </div>
+                     
                         </div>
 
                     </div>
