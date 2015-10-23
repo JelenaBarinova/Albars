@@ -37,7 +37,7 @@ module.exports={
 	},
 	"services": {
 		"title": "Our services",
-		"description": "At ALBARS we believe in ellegant and fast IT, that really helps and improves your work. We can help you solve all the IT issues you have and prepare your infrastructure fro growth. We are the best for these services:",
+		"description": "At ALBARS we believe in ellegant and fast IT, that really helps and improves your work. We can help you solve all the IT issues you have and prepare your infrastructure fro growth. We are the best for these services",
 		"list": [
 			{
 				"id": 1,
