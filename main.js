@@ -87,8 +87,8 @@ module.exports={
 				"bio": "Microsoft Certified Trainer and has Microsoft Most Valuable Professional (MVP) Award. More recently he has become a Microsoft Private Cloud Facilitator and Microsoft vTSP. He has several Bachelor Degrees of IT and also graduated from Military Academy where he was awarded with the Lieutenant’s rank.",
 				"interests": ["IT", "virtualization", "big data"],
 				"photoUrl": "images/team/jevgenijus.jpg",
-				"fbUrl": "",
-				"twitterUrl": "",
+				"fbUrl": "http://facebook.com",
+				"twitterUrl": "https://twitter.com/jevgenijus",
 				"linkedinUrl": "http://lt.linkedin.com/pub/jevgenijus-vinochodovas/23/587/345"
 			},
 			{
@@ -123,6 +123,32 @@ module.exports={
 				"fbUrl": "",
 				"twitterUrl": "",
 				"linkedinUrl": "https://www.linkedin.com/in/sergejus"
+			}
+		]
+	},
+	"testimonials": {
+		"title": "Testimonials",
+		"list": [
+			{
+			"id": 1,
+			"name": "Adas Keserauskas",
+			"title": "IT Manager",
+			"company": "Kelprojektas",
+			"description": "An important part of our critical infrastructure is now in the cloud. We are possibly one of the first companies in Lithuania to move infrastructure and software to the cloud, but given the benefits we won’t be the last for sure."
+			},
+			{
+			"id": 2,
+			"name": "Sarunas Legeckas",
+			"title": "COO",
+			"company": "Place I Live",
+			"description": "We asked […] ALBARS to find an alternative platform and they suggested Windows Azure. The cloud was an attractive option because we could scale with virtual machines easily and quickly as needed."			
+			},
+			{
+			"id": 3,
+			"name": "Sarunas Legeckas",
+			"title": "COO",
+			"company": "Place I Live",
+			"description": "We were really surprised to discover we could run Linux on Windows Azure. But it’s been a great discovery and one which is enabling us to take our business worldwide with confidence and success."			
 			}
 		]
 	},
@@ -166,6 +192,10 @@ module.exports={
 				"url": ""
 			}
 		]
+	},
+	"footer": {
+		"backToTop": "Back To Top",
+		"copyright": "Copyright"
 	}
 }
 },{}],2:[function(require,module,exports){
@@ -296,6 +326,32 @@ module.exports={
 			}
 		]
 	},
+	"testimonials": {
+		"title": "Testimonials",
+		"list": [
+			{
+			"id": 1,
+			"name": "Adas Keserauskas",
+			"title": "IT Manager",
+			"company": "Kelprojektas",
+			"description": "An important part of our critical infrastructure is now in the cloud. We are possibly one of the first companies in Lithuania to move infrastructure and software to the cloud, but given the benefits we won’t be the last for sure."
+			},
+			{
+			"id": 2,
+			"name": "Sarunas Legeckas",
+			"title": "COO",
+			"company": "Place I Live",
+			"description": "We asked […] ALBARS to find an alternative platform and they suggested Windows Azure. The cloud was an attractive option because we could scale with virtual machines easily and quickly as needed."			
+			},
+			{
+			"id": 3,
+			"name": "Sarunas Legeckas",
+			"title": "COO",
+			"company": "Place I Live",
+			"description": "We were really surprised to discover we could run Linux on Windows Azure. But it’s been a great discovery and one which is enabling us to take our business worldwide with confidence and success."			
+			}
+		]
+	},
 	"clients": {
 		"title": "Our clients",
 		"list": [
@@ -336,11 +392,213 @@ module.exports={
 				"url": ""
 			}
 		]
+	},
+	"footer": {
+		"backToTop": "Grįžti į viršų",
+		"copyright": "Visos teisės saugomos"
 	}
 }
 },{}],3:[function(require,module,exports){
-arguments[4][1][0].apply(exports,arguments)
-},{"dup":1}],4:[function(require,module,exports){
+module.exports={
+	"menu": {
+		"home": "home",
+		"team": "team",
+		"services": "services",
+		"blog": "blog",
+		"clients": "clients",
+		"contact": "contact"
+	},
+	"carousel":{
+		"title": "ALBARS - Innovative IT solutions for you business",
+		"description": "At ALBARS we believe in a quality, pragmatic, fast IT is possible in every and each business. We work with startup to enterprise companies bringing them to higher level by providing best in class IT consultations.",
+		"list": [
+			{
+				"id": 1,
+				"title": "Welcome to ALBARS",
+				"content": "We are very awesome team or young energetic smart and pragmatic people, who always looks how to make the best for the customer. We are really strong in informational technologies: both hardware and software wise. We provide a wide range of different services for small to enterprise level companies.",
+				"url": "#/services",
+				"more": "Read more"
+			},
+			{
+				"id": 2,
+				"title": "Meet our new team member Rimante!",
+				"content": "As a head of communications - Rimante is the one you want to conact if any questions!",
+				"url": "#/team",
+				"more": "Albars team"
+			},
+			{
+				"id": 3,
+				"title": "ALBARS at a biggest IT conference in Europe",
+				"content": "Recently our the one and only Jevgenij gave a talk at Powered by MVP conference.",
+				"url": "http://www.bebetterdeveloper.com",
+				"more": "Read more"
+			}
+		]
+	},
+	"services": {
+		"title": "Our services",
+		"description": "At ALBARS we believe in ellegant and fast IT, that really helps and improves your work. We can help you solve all the IT issues you have and prepare your infrastructure fro growth. We are the best for these services:",
+		"list": [
+			{
+				"id": 1,
+				"title": "Desktop and devices infrastructure",
+				"description": "We develop management systems, install, configure and conduct employee training. We offer design, implementation and training services; update the existing systems; automate processes; accompany IT-system; advise on security issues.",
+				"icon": "fa-laptop"
+			},
+			{
+				"id": 2,
+				"title": "Server infrastructure",
+				"description": "We provide reliability, rapid performance and security of server infrastructure of your company. We carry out an audit of information security. We offer contemporary solutions to improve rapid performance and resilience of your IT-infrastructure.",
+				"icon": "fa-hdd-o"
+			},
+			{
+				"id": 3,
+				"title": "Cloud and services infrastructure",
+				"description": "We offer expansion and growth of the performance of your IT infrastructure due to cloud technologies. We will help you to determine a common approach that is optimal for your company and integrate the local infrastructure with cloud solutions.",
+				"icon": "fa-cloud-upload"
+			},
+			{
+				"id": 4,
+				"title": "Application And Productivity Services",
+				"description": "We expertise in creating and deploying modern web applications and services. Unified communication & collaboration; Load balancing; Web servers; Databases.",
+				"icon": "fa-cogs"
+			},
+			{
+				"id": 5,
+				"title": "IT Trainings",
+				"description": "ALBARS is Certified Learning Partner. Certified Partner status ensures that ALBARS equipment and specialists' qualification meet the global requirements of the Microsoft Company. We have tremendous hands-on experience in the use of Microsoft Solutions - a guarantee that students will receive in-depth technical expertise.",
+				"icon": "fa-book"
+			},
+			{
+				"id": 6,
+				"title": "IT Security",
+				"description": "We will ensure entire information security in your corporate system based on Active Directory rights: Public key infrastructure (PKI); Active Directory Rights Management Services.",
+				"icon": "fa-lock"
+			}			
+		]
+	},
+	"team": {
+		"title": "Our team",
+		"list": [
+			{
+				"id": 1,
+				"name": "Jevgenijus Vinochodovas",
+				"title": "Solutions architect, founder",
+				"bio": "Microsoft Certified Trainer and has Microsoft Most Valuable Professional (MVP) Award. More recently he has become a Microsoft Private Cloud Facilitator and Microsoft vTSP. He has several Bachelor Degrees of IT and also graduated from Military Academy where he was awarded with the Lieutenant’s rank.",
+				"interests": ["IT", "virtualization", "big data"],
+				"photoUrl": "images/team/jevgenijus.jpg",
+				"fbUrl": "",
+				"twitterUrl": "",
+				"linkedinUrl": "http://lt.linkedin.com/pub/jevgenijus-vinochodovas/23/587/345"
+			},
+			{
+				"id": 2,
+				"name": "Rimantė Šilauskienė",
+				"title": "Head of Communications",
+				"bio": "Advertisement/Marketing Project Manager, Real Estate/Construction Development Coordinator experience. Diplomated specialist of electrical equipment of industry. Master of Psychology (specialize in Cognitive, Management fields). Organizational Climate and Culture Surveys. Personality assessment of employee by using projective and psychometric methods.",
+				"interests": ["Marketing", "development coordination", "project management"],
+				"photoUrl": "images/team/rimante.jpg",
+				"fbUrl": "",
+				"twitterUrl": "",
+				"linkedinUrl": ""
+			},
+			{
+				"id": 3,
+				"name": "Sergejus Barinovas",
+				"title": "Software engineering architect",
+				"bio": "Sergejus is a Software Architect. He is active community member in Lithuania, Microsoft Most Valuable Professional (MVP), blogger (http://sergejus.blogas.lt) and Lithuanian .NET User Group lead.",
+				"interests": ["scalability", "high load systems", "big data"],
+				"photoUrl": "images/team/sergey.jpg",
+				"fbUrl": "",
+				"twitterUrl": "",
+				"linkedinUrl": "https://www.linkedin.com/in/sergejus"
+			},
+			{
+				"id": 4,
+				"name": "Ekaterina Osipova",
+				"title": "The Business Development Manager",
+				"bio": "Microsoft Certified Professional, web-developer, programmer, social media administrator. Works in the IT industry for nearly a decade and constantly working on improving her IT skills.",
+				"interests": ["scalability", "high load systems", "big data"],
+				"photoUrl": "images/team/jekaterina.jpg",
+				"fbUrl": "",
+				"twitterUrl": "",
+				"linkedinUrl": "https://www.linkedin.com/in/sergejus"
+			}
+		]
+	},
+	"testimonials": {
+		"title": "Testimonials",
+		"list": [
+			{
+			"id": 1,
+			"name": "Adas Keserauskas",
+			"title": "IT Manager",
+			"company": "Kelprojektas",
+			"description": "An important part of our critical infrastructure is now in the cloud. We are possibly one of the first companies in Lithuania to move infrastructure and software to the cloud, but given the benefits we won’t be the last for sure."
+			},
+			{
+			"id": 2,
+			"name": "Sarunas Legeckas",
+			"title": "COO",
+			"company": "Place I Live",
+			"description": "We asked […] ALBARS to find an alternative platform and they suggested Windows Azure. The cloud was an attractive option because we could scale with virtual machines easily and quickly as needed."			
+			},
+			{
+			"id": 3,
+			"name": "Sarunas Legeckas",
+			"title": "COO",
+			"company": "Place I Live",
+			"description": "We were really surprised to discover we could run Linux on Windows Azure. But it’s been a great discovery and one which is enabling us to take our business worldwide with confidence and success."			
+			}
+		]
+	},
+	"clients": {
+		"title": "Our clients",
+		"list": [
+			{
+				"id": 1,
+				"name": "UAB 'Kelprojektas'",
+				"logo": "images/clients/kelprojektas.jpg",
+				"website": "http://www.kelprojektas.lt",
+				"case": "Kelprojektas wanted to strengthen its IT infrastructure and moved from an unreliable on-premise solution to a cloud-based infrastructure based around Windows Azure and Office 365 which provides it with great reliability, unbeatable cost savings and enviable flexibility.",
+				"readMore": "Read more",
+				"url": ""		
+			},
+			{
+				"id": 2,
+				"name": "Place I Live",
+				"logo": "images/clients/placeilive.jpg",
+				"website": "http://www.placeilive.com",
+				"case": "Place I Live’s business is built on delivering open data that provides information about living conditions and services in major global cities. When it piloted the service it used a local website hosting provider but soon discovered the service wasn’t robust and flexible enough to scale out to many cities. Consequently, it turned to Microsoft Azure which allows it confidently reach around the world with a cloud-based infrastructure that is reliable and flexible, and one that performs powerfully.",
+				"readMore": "Read more",
+				"url": ""
+			},
+			{
+				"id": 3,
+				"name": "Venipak",
+				"logo": "images/clients/venipak.jpg",
+				"website": "http://www.venipak.lt",
+				"case": "Productivity solutions to improve the efficiency of the company: Office 365 + Windows Azure + Microsoft Dynamics CRM Online.",
+				"readMore": "Read more",
+				"url": ""
+			},
+			{
+				"id": 4,
+				"name": "Kauno vandenys",
+				"logo": "images/clients/kv.jpg",
+				"website": "http://www.kaunovandenys.lt",
+				"case": "ALBARS recovered UAB “Kauno vandenys” critical data after disaster occurred and helped the organization better understand and move toward a more secure, well-managed IT infrastructure that will help reduce overall IT costs, make better use of IT resources, and make IT a strategic asset for the business, helped eliminate unnecessary cost and complexity, ensured that the business will be always up and running.",
+				"readMore": "Read more",
+				"url": ""
+			}
+		]
+	},
+	"footer": {
+		"backToTop": "Atpakaļ uz augšu",
+		"copyright": "Copyright"
+	}
+}
+},{}],4:[function(require,module,exports){
 module.exports={	
 	"menu": {
 		"home": "главная",
@@ -468,6 +726,32 @@ module.exports={
 			}
 		]
 	},
+	"testimonials": {
+		"title": "Testimonials",
+		"list": [
+			{
+			"id": 1,
+			"name": "Adas Keserauskas",
+			"title": "IT Manager",
+			"company": "Kelprojektas",
+			"description": "An important part of our critical infrastructure is now in the cloud. We are possibly one of the first companies in Lithuania to move infrastructure and software to the cloud, but given the benefits we won’t be the last for sure."
+			},
+			{
+			"id": 2,
+			"name": "Sarunas Legeckas",
+			"title": "COO",
+			"company": "Place I Live",
+			"description": "We asked […] ALBARS to find an alternative platform and they suggested Windows Azure. The cloud was an attractive option because we could scale with virtual machines easily and quickly as needed."			
+			},
+			{
+			"id": 3,
+			"name": "Sarunas Legeckas",
+			"title": "COO",
+			"company": "Place I Live",
+			"description": "We were really surprised to discover we could run Linux on Windows Azure. But it’s been a great discovery and one which is enabling us to take our business worldwide with confidence and success."			
+			}
+		]
+	},
 	"clients": {
 		"title": "наши клиенты",
 		"list": [
@@ -508,6 +792,10 @@ module.exports={
 				"url": ""
 			}
 		]
+	},
+	"footer": {
+		"backToTop": "Вернуться к началу",
+		"copyright": "Copyright"
 	}
 }
 },{}],5:[function(require,module,exports){
@@ -20984,7 +21272,7 @@ var InitializeActions = {
 
 module.exports = InitializeActions;
 
-},{"../api/api":168,"../constants/action-types":179,"../dispatcher/dispatcher":180}],167:[function(require,module,exports){
+},{"../api/api":168,"../constants/action-types":180,"../dispatcher/dispatcher":181}],167:[function(require,module,exports){
 "use strict";
 
 var Dispatcher = require('../dispatcher/dispatcher');
@@ -21003,7 +21291,7 @@ var MenuActions = {
 
 module.exports = MenuActions;
 
-},{"../constants/action-types":179,"../dispatcher/dispatcher":180}],168:[function(require,module,exports){
+},{"../constants/action-types":180,"../dispatcher/dispatcher":181}],168:[function(require,module,exports){
 "use strict";
 
 var Api = {
@@ -21068,7 +21356,7 @@ var App = React.createClass({
 
 module.exports = App;
 
-},{"./blog-component":170,"./carousel-component":171,"./clients-component":172,"./footer-component":173,"./services-component":174,"./team-component":175,"./top-header-component":176,"./top-menu-component":177,"./tweets-component":178,"react":165}],170:[function(require,module,exports){
+},{"./blog-component":170,"./carousel-component":171,"./clients-component":172,"./footer-component":173,"./services-component":174,"./team-component":176,"./top-header-component":177,"./top-menu-component":178,"./tweets-component":179,"react":165}],170:[function(require,module,exports){
 "use strict";
 var React = require('react');
 
@@ -21521,7 +21809,7 @@ var CarouselComponent = React.createClass({
 
 module.exports = CarouselComponent;
 
-},{"../stores/app-store":182,"react":165}],172:[function(require,module,exports){
+},{"../stores/app-store":183,"react":165}],172:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var AppStore = require('../stores/app-store');
@@ -21531,19 +21819,19 @@ var ClientItem = React.createClass({
 
   render: function render() {
     return React.createElement(
-      'li',
-      { className: 'col-sm-3 col-md-3 templatemo-client-item' },
+      'div',
+      { className: 'col-lg-3 col-md-3 col-sm-6 templatemo-client-item' },
       React.createElement(
         'a',
-        { href: this.props.client.website },
-        React.createElement('img', { src: this.props.client.logo, className: 'img-responsive', alt: this.props.client.name })
+        { href: this.props.client.website, target: '_blank' },
+        React.createElement('img', { src: this.props.client.logo, className: 'img-responsive', alt: this.props.client.name, style: { margin: "0 auto" } })
       ),
       React.createElement(
         'span',
         { className: 'templatemo-client-item-header' },
         React.createElement(
           'a',
-          { href: this.props.client.website },
+          { href: this.props.client.website, target: '_blank' },
           this.props.client.name
         )
       ),
@@ -21613,10 +21901,10 @@ var clientsComponent = React.createClass({
             { className: 'text-center' },
             React.createElement(
               'div',
-              { style: { marginTop: '60px' } },
+              { className: 'container' },
               React.createElement(
-                'ul',
-                { className: 'list-inline' },
+                'div',
+                { className: 'row' },
                 clientItems
               )
             )
@@ -21629,110 +21917,103 @@ var clientsComponent = React.createClass({
 
 module.exports = clientsComponent;
 
-},{"../stores/app-store":182,"react":165}],173:[function(require,module,exports){
+},{"../stores/app-store":183,"react":165}],173:[function(require,module,exports){
 "use strict";
 var React = require('react');
+var AppStore = require('../stores/app-store');
+var SocialIcon = require('./social-icon');
 
 var FooterComponent = React.createClass({
-    displayName: "FooterComponent",
+  displayName: 'FooterComponent',
 
-    render: function render() {
-        return React.createElement(
-            "div",
-            { className: "templatemo-footer", id: "templatemo-footer" },
+  getInitialState: function getInitialState() {
+    return {
+      footerData: AppStore.getFooter()
+    };
+  },
+  componentWillMount: function componentWillMount() {
+    AppStore.addChangeListener(this._onChange);
+  },
+
+  componentWillUnmount: function componentWillUnmount() {
+    AppStore.removeChangeListener(this._onChange);
+  },
+
+  _onChange: function _onChange() {
+    this.setState({
+      footerData: AppStore.getFooter()
+    });
+  },
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: 'templatemo-footer', id: 'templatemo-footer' },
+      React.createElement(
+        'div',
+        { className: 'container' },
+        React.createElement(
+          'div',
+          { className: 'row' },
+          React.createElement(
+            'div',
+            { className: 'text-center' },
             React.createElement(
-                "div",
-                { className: "container" },
+              'div',
+              { className: 'footer_container' },
+              React.createElement(
+                'ul',
+                { className: 'list-inline' },
                 React.createElement(
-                    "div",
-                    { className: "row" },
-                    React.createElement(
-                        "div",
-                        { className: "text-center" },
-                        React.createElement(
-                            "div",
-                            { className: "footer_container" },
-                            React.createElement(
-                                "ul",
-                                { className: "list-inline" },
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    React.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        React.createElement("span", { className: "social-icon-fb" })
-                                    )
-                                ),
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    React.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        React.createElement("span", { className: "social-icon-rss" })
-                                    )
-                                ),
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    React.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        React.createElement("span", { className: "social-icon-twitter" })
-                                    )
-                                ),
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    React.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        React.createElement("span", { className: "social-icon-linkedin" })
-                                    )
-                                ),
-                                React.createElement(
-                                    "li",
-                                    null,
-                                    React.createElement(
-                                        "a",
-                                        { href: "#" },
-                                        React.createElement("span", { className: "social-icon-dribbble" })
-                                    )
-                                )
-                            ),
-                            React.createElement("div", { className: "height30" }),
-                            React.createElement(
-                                "a",
-                                { className: "btn btn-lg btn-orange", href: "#", role: "button", id: "btn-back-to-top" },
-                                "Back To Top"
-                            ),
-                            React.createElement("div", { className: "height30" })
-                        ),
-                        React.createElement(
-                            "div",
-                            { className: "footer_bottom_content" },
-                            React.createElement(
-                                "span",
-                                null,
-                                "Copyright © 2015 ",
-                                React.createElement(
-                                    "a",
-                                    { href: "#" },
-                                    "Albars"
-                                )
-                            )
-                        )
-                    )
+                  'li',
+                  null,
+                  React.createElement(SocialIcon, { social_network: 'facebook', url: 'https://www.facebook.com/albars.eu' })
+                ),
+                React.createElement(
+                  'li',
+                  null,
+                  React.createElement(SocialIcon, { social_network: 'twitter', url: 'https://twitter.com/albars_eu' })
+                ),
+                React.createElement(
+                  'li',
+                  null,
+                  React.createElement(SocialIcon, { social_network: 'linkedin', url: 'https://www.linkedin.com/company/5317006' })
                 )
+              ),
+              React.createElement('div', { className: 'height30' }),
+              React.createElement(
+                'a',
+                { className: 'btn btn-lg btn-orange', href: '#', role: 'button', id: 'btn-back-to-top' },
+                this.state.footerData.backToTop
+              ),
+              React.createElement('div', { className: 'height30' })
+            ),
+            React.createElement(
+              'div',
+              { className: 'footer_bottom_content' },
+              React.createElement(
+                'span',
+                null,
+                this.state.footerData.copyright,
+                ' © ',
+                new Date().getFullYear(),
+                ' ',
+                React.createElement(
+                  'a',
+                  { href: '#' },
+                  'Albars'
+                )
+              )
             )
-        );
-    }
+          )
+        )
+      )
+    );
+  }
 });
 
 module.exports = FooterComponent;
 
-},{"react":165}],174:[function(require,module,exports){
+},{"../stores/app-store":183,"./social-icon":175,"react":165}],174:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var AppStore = require('../stores/app-store');
@@ -21849,10 +22130,49 @@ var ServicesComponent = React.createClass({
 
 module.exports = ServicesComponent;
 
-},{"../stores/app-store":182,"react":165}],175:[function(require,module,exports){
+},{"../stores/app-store":183,"react":165}],175:[function(require,module,exports){
+"use strict";
+var React = require('react');
+
+var SocialIcon = React.createClass({
+  displayName: 'SocialIcon',
+
+  render: function render() {
+
+    var iconClass = undefined;
+    switch (this.props.social_network) {
+      case 'facebook':
+        iconClass = "fa fa-facebook-f fa-stack-1x";
+        break;
+      case 'twitter':
+        iconClass = "fa fa-twitter fa-stack-1x";
+        break;
+      case 'linkedin':
+        iconClass = "fa fa-linkedin fa-stack-1x";
+        break;
+    }
+    var component = undefined;
+    if (this.props.url.length) {
+      return React.createElement(
+        'a',
+        { className: 'fa-stack fa-lg', href: this.props.url, rel: 'nofollow', target: '_blank', style: { fontSize: "24px" } },
+        React.createElement('i', { className: 'fa fa-square fa-stack-2x' }),
+        React.createElement('i', { className: iconClass, style: { color: "white" } })
+      );
+    } else {
+      return React.createElement('span', null);
+    }
+  }
+
+});
+
+module.exports = SocialIcon;
+
+},{"react":165}],176:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var AppStore = require('../stores/app-store');
+var SocialIcon = require('./social-icon');
 
 var TeamMember = React.createClass({
   displayName: 'TeamMember',
@@ -21872,31 +22192,11 @@ var TeamMember = React.createClass({
             'div',
             { className: 'thumb-overlay' },
             React.createElement(
-              'a',
-              { href: '#' },
-              React.createElement(
-                'span',
-                { className: 'social-icon-fb' },
-                this.props.member.fbUrl
-              )
-            ),
-            React.createElement(
-              'a',
-              { href: '#' },
-              React.createElement(
-                'span',
-                { className: 'social-icon-twitter' },
-                this.props.member.twitterUrl
-              )
-            ),
-            React.createElement(
-              'a',
-              { href: '#' },
-              React.createElement(
-                'span',
-                { className: 'social-icon-linkedin' },
-                this.props.member.linkedinUrl
-              )
+              'div',
+              { className: 'row' },
+              React.createElement(SocialIcon, { social_network: 'facebook', url: this.props.member.fbUrl }),
+              React.createElement(SocialIcon, { social_network: 'twitter', url: this.props.member.twitterUrl }),
+              React.createElement(SocialIcon, { social_network: 'linkedin', url: this.props.member.linkedinUrl })
             )
           )
         ),
@@ -21922,7 +22222,6 @@ var TeamMember = React.createClass({
       )
     );
   }
-
 });
 
 var TeamComponent = React.createClass({
@@ -21994,7 +22293,7 @@ var TeamComponent = React.createClass({
 
 module.exports = TeamComponent;
 
-},{"../stores/app-store":182,"react":165}],176:[function(require,module,exports){
+},{"../stores/app-store":183,"./social-icon":175,"react":165}],177:[function(require,module,exports){
 "use strict";
 var React = require('react');
 
@@ -22032,7 +22331,7 @@ var TopHeaderComponent = React.createClass({
 
 module.exports = TopHeaderComponent;
 
-},{"react":165}],177:[function(require,module,exports){
+},{"react":165}],178:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var MenuActions = require('../actions/menu-actions');
@@ -22063,8 +22362,11 @@ var TopMenuComponent = React.createClass({
 
   switchLanguage: function switchLanguage(key, event) {
     //event.preventDefault();
-    //window.location.search = '?lang=en';
+
     MenuActions.switchLanguage(key);
+    if ($('.navbar-toggle').is(":visible") == true) {
+      $('.navbar-collapse').collapse('toggle');
+    }
   },
 
   render: function render() {
@@ -22086,118 +22388,143 @@ var TopMenuComponent = React.createClass({
               { className: 'container' },
               React.createElement(
                 'div',
-                { className: 'navbar-header' },
+                { className: 'row' },
                 React.createElement(
-                  'button',
-                  { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '.navbar-collapse' },
+                  'div',
+                  { className: 'col-md-2 col-sm-2 col-xs-12' },
                   React.createElement(
-                    'span',
-                    { className: 'sr-only' },
-                    'Toggle navigation'
-                  ),
-                  React.createElement('span', { className: 'icon-bar' }),
-                  React.createElement('span', { className: 'icon-bar' })
+                    'div',
+                    { className: 'navbar-header' },
+                    React.createElement(
+                      'a',
+                      { href: '#', className: 'navbar-brand' },
+                      React.createElement('img', { src: 'images/albars_logo.png', alt: 'Albars', title: 'Albars' })
+                    ),
+                    React.createElement(
+                      'button',
+                      { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '.navbar-collapse' },
+                      React.createElement(
+                        'span',
+                        { className: 'sr-only' },
+                        'Toggle navigation'
+                      ),
+                      React.createElement('span', { className: 'icon-bar' }),
+                      React.createElement('span', { className: 'icon-bar' }),
+                      React.createElement('span', { className: 'icon-bar' })
+                    )
+                  )
                 ),
                 React.createElement(
-                  'a',
-                  { href: '#', className: 'navbar-brand' },
-                  React.createElement('img', { src: 'images/albars_logo.png', alt: 'Albars', title: 'Albars' })
-                )
-              ),
-              React.createElement(
-                'div',
-                { className: 'navbar-collapse collapse', id: 'templatemo-nav-bar' },
-                React.createElement(
-                  'ul',
-                  { className: 'nav navbar-nav navbar-right', style: { marginTop: '40px' } },
+                  'div',
+                  { className: 'col-md-10 col-sm-10 col-xs-12' },
                   React.createElement(
-                    'li',
-                    null,
+                    'div',
+                    { className: 'navbar-collapse collapse', id: 'templatemo-nav-bar' },
                     React.createElement(
-                      'a',
-                      { href: '#templatemo-top', 'data-target': '#top' },
-                      this.state.menuData.home.toUpperCase()
-                    )
-                  ),
-                  React.createElement(
-                    'li',
-                    null,
+                      'div',
+                      { className: 'row' },
+                      React.createElement(
+                        'ul',
+                        { className: 'nav navbar-nav navbar-right', style: { marginTop: '10px' } },
+                        React.createElement(
+                          'li',
+                          { style: { float: "right" } },
+                          React.createElement(
+                            'a',
+                            { rel: 'nofollow', href: '#/?lang=ru', 'data-target': '#', className: 'external-link', onClick: this.switchLanguage.bind(this, 'ru') },
+                            React.createElement('img', { src: 'images/flags/ru.png', alt: 'ru', title: 'По-русски' })
+                          )
+                        ),
+                        React.createElement(
+                          'li',
+                          { style: { float: "right" } },
+                          React.createElement(
+                            'a',
+                            { rel: 'nofollow', href: '#/?lang=en', 'data-target': '#', className: 'external-link', onClick: this.switchLanguage.bind(this, 'en') },
+                            React.createElement('img', { src: 'images/flags/en.png', alt: 'en', title: 'English' })
+                          )
+                        ),
+                        React.createElement(
+                          'li',
+                          { style: { float: "right" } },
+                          React.createElement(
+                            'a',
+                            { rel: 'nofollow', href: '#/?lang=lt', 'data-target': '#', className: 'external-link', onClick: this.switchLanguage.bind(this, 'lt') },
+                            React.createElement('img', { src: 'images/flags/lt.png', alt: 'lt', title: 'Lietuviškai' })
+                          )
+                        ),
+                        React.createElement(
+                          'li',
+                          { style: { float: "right" } },
+                          React.createElement(
+                            'a',
+                            { rel: 'nofollow', href: '#/?lang=lv', 'data-target': '#', className: 'external-link', onClick: this.switchLanguage.bind(this, 'lv') },
+                            React.createElement('img', { src: 'images/flags/lv.png', alt: 'lv', title: 'Latviešu' })
+                          )
+                        )
+                      )
+                    ),
                     React.createElement(
-                      'a',
-                      { href: '#templatemo-services', 'data-target': '#services' },
-                      this.state.menuData.services.toUpperCase()
-                    )
-                  ),
-                  React.createElement(
-                    'li',
-                    null,
-                    React.createElement(
-                      'a',
-                      { href: '#templatemo-about' },
-                      this.state.menuData.team.toUpperCase()
-                    )
-                  ),
-                  React.createElement(
-                    'li',
-                    null,
-                    React.createElement(
-                      'a',
-                      { href: '#templatemo-blog' },
-                      this.state.menuData.blog.toUpperCase()
-                    )
-                  ),
-                  React.createElement(
-                    'li',
-                    null,
-                    React.createElement(
-                      'a',
-                      { href: '#templatemo-clients' },
-                      this.state.menuData.clients.toUpperCase()
-                    )
-                  ),
-                  React.createElement(
-                    'li',
-                    null,
-                    React.createElement(
-                      'a',
-                      { href: '#templatemo-footer' },
-                      this.state.menuData.contact.toUpperCase()
-                    )
-                  ),
-                  React.createElement(
-                    'li',
-                    null,
-                    React.createElement(
-                      'a',
-                      { rel: 'nofollow', href: '#/?lang=ru', 'data-target': '#', className: 'external-link', onClick: this.switchLanguage.bind(this, 'ru') },
-                      React.createElement('img', { src: 'images/flags/ru.png', alt: 'ru', title: 'По-русски' })
-                    )
-                  ),
-                  React.createElement(
-                    'li',
-                    null,
-                    React.createElement(
-                      'a',
-                      { rel: 'nofollow', href: '#/?lang=en', 'data-target': '#', className: 'external-link', onClick: this.switchLanguage.bind(this, 'en') },
-                      React.createElement('img', { src: 'images/flags/en.png', alt: 'en', title: 'English' })
-                    )
-                  ),
-                  React.createElement(
-                    'li',
-                    null,
-                    React.createElement(
-                      'a',
-                      { rel: 'nofollow', href: '#/?lang=lt', 'data-target': '#', className: 'external-link', onClick: this.switchLanguage.bind(this, 'lt') },
-                      React.createElement('img', { src: 'images/flags/lt.png', alt: 'lt', title: 'Lietuviškai' })
-                    )
-                  ),
-                  React.createElement(
-                    'li',
-                    null,
-                    React.createElement(
-                      'a',
-                      { rel: 'nofollow', href: '#/?lang=lv', 'data-target': '#', className: 'external-link', onClick: this.switchLanguage.bind(this, 'lv') },
-                      React.createElement('img', { src: 'images/flags/lv.png', alt: 'lv', title: 'Latviešu' })
+                      'div',
+                      { className: 'row' },
+                      React.createElement(
+                        'ul',
+                        { className: 'nav navbar-nav navbar-right', style: { marginTop: '10px' } },
+                        React.createElement(
+                          'li',
+                          null,
+                          React.createElement(
+                            'a',
+                            { href: '#templatemo-top', 'data-target': '#top' },
+                            this.state.menuData.home.toUpperCase()
+                          )
+                        ),
+                        React.createElement(
+                          'li',
+                          null,
+                          React.createElement(
+                            'a',
+                            { href: '#templatemo-services', 'data-target': '#services' },
+                            this.state.menuData.services.toUpperCase()
+                          )
+                        ),
+                        React.createElement(
+                          'li',
+                          null,
+                          React.createElement(
+                            'a',
+                            { href: '#templatemo-about' },
+                            this.state.menuData.team.toUpperCase()
+                          )
+                        ),
+                        React.createElement(
+                          'li',
+                          null,
+                          React.createElement(
+                            'a',
+                            { href: '#templatemo-blog' },
+                            this.state.menuData.blog.toUpperCase()
+                          )
+                        ),
+                        React.createElement(
+                          'li',
+                          null,
+                          React.createElement(
+                            'a',
+                            { href: '#templatemo-clients' },
+                            this.state.menuData.clients.toUpperCase()
+                          )
+                        ),
+                        React.createElement(
+                          'li',
+                          null,
+                          React.createElement(
+                            'a',
+                            { href: '#templatemo-footer' },
+                            this.state.menuData.contact.toUpperCase()
+                          )
+                        )
+                      )
                     )
                   )
                 )
@@ -22212,54 +22539,78 @@ var TopMenuComponent = React.createClass({
 
 module.exports = TopMenuComponent;
 
-},{"../actions/menu-actions":167,"../stores/app-store":182,"react":165}],178:[function(require,module,exports){
+},{"../actions/menu-actions":167,"../stores/app-store":183,"react":165}],179:[function(require,module,exports){
 "use strict";
 var React = require('react');
+var AppStore = require('../stores/app-store');
 
 var TweetsComponent = React.createClass({
-        displayName: "TweetsComponent",
+  displayName: 'TweetsComponent',
 
-        render: function render() {
-                return React.createElement(
-                        "div",
-                        { className: "templatemo-tweets" },
-                        React.createElement(
-                                "div",
-                                { className: "container" },
-                                React.createElement(
-                                        "div",
-                                        { className: "row", style: { marginTop: '20px' } },
-                                        React.createElement("div", { className: "col-md-2" }),
-                                        React.createElement(
-                                                "div",
-                                                { className: "col-md-1" },
-                                                React.createElement("img", { src: "images/quote.png", alt: "icon" })
-                                        ),
-                                        React.createElement(
-                                                "div",
-                                                { className: "col-md-7 tweet_txt" },
-                                                React.createElement(
-                                                        "span",
-                                                        null,
-                                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit suspendiise as a molesti neque vestibulum,  persiutsor de andues mare fricilus ipsum dolor sit amet cons forukus."
-                                                ),
-                                                React.createElement("br", null),
-                                                React.createElement(
-                                                        "span",
-                                                        { className: "twitter_user" },
-                                                        "Moe Moe, Yangon"
-                                                )
-                                        ),
-                                        React.createElement("div", { className: "col-md-2" })
-                                )
-                        )
-                );
-        }
+  getInitialState: function getInitialState() {
+    return {
+      testimonialData: AppStore.getTestimonial()
+    };
+  },
+  componentWillMount: function componentWillMount() {
+    AppStore.addChangeListener(this._onChange);
+  },
+
+  componentWillUnmount: function componentWillUnmount() {
+    AppStore.removeChangeListener(this._onChange);
+  },
+
+  _onChange: function _onChange() {
+    this.setState({
+      testimonialData: AppStore.getTestimonial()
+    });
+  },
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: 'templatemo-tweets' },
+      React.createElement(
+        'div',
+        { className: 'container' },
+        React.createElement(
+          'div',
+          { className: 'row', style: { marginTop: '20px' } },
+          React.createElement('div', { className: 'col-md-2' }),
+          React.createElement('div', { className: 'col-md-1' }),
+          React.createElement(
+            'div',
+            { className: 'col-md-7 tweet_txt' },
+            React.createElement('i', { className: 'fa fa-quote-left' }),
+            React.createElement(
+              'span',
+              null,
+              ' ',
+              this.state.testimonialData.description,
+              ' '
+            ),
+            React.createElement('i', { className: 'fa fa-quote-right' }),
+            React.createElement('br', null),
+            React.createElement('br', null),
+            React.createElement(
+              'span',
+              { className: 'twitter_user' },
+              this.state.testimonialData.name,
+              ', ',
+              this.state.testimonialData.title,
+              ', ',
+              this.state.testimonialData.company
+            )
+          ),
+          React.createElement('div', { className: 'col-md-2' })
+        )
+      )
+    );
+  }
 });
 
 module.exports = TweetsComponent;
 
-},{"react":165}],179:[function(require,module,exports){
+},{"../stores/app-store":183,"react":165}],180:[function(require,module,exports){
 "use strict";
 
 var keyMirror = require('react/lib/keyMirror');
@@ -22269,14 +22620,14 @@ module.exports = keyMirror({
 	SWITCH_LANGUAGE: null
 });
 
-},{"react/lib/keyMirror":150}],180:[function(require,module,exports){
+},{"react/lib/keyMirror":150}],181:[function(require,module,exports){
 "use strict";
 
 var Dispatcher = require('flux').Dispatcher;
 
 module.exports = new Dispatcher();
 
-},{"flux":7}],181:[function(require,module,exports){
+},{"flux":7}],182:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -22304,7 +22655,7 @@ InitializeActions.initApp(lang);
 
 React.render(React.createElement(App, null), document.getElementById('HomePage'));
 
-},{"./actions/initialize-actions":166,"./components/app":169,"react":165}],182:[function(require,module,exports){
+},{"./actions/initialize-actions":166,"./components/app":169,"react":165}],183:[function(require,module,exports){
 "use strict";
 
 var Dispatcher = require('../dispatcher/dispatcher');
@@ -22315,8 +22666,7 @@ var Api = require('../api/api');
 
 var CHANGE_EVENT = 'change';
 
-var _content = undefined,
-    _menu = undefined;
+var _content = undefined;
 
 var AppStore = assign({}, EventEmitter.prototype, {
 	//let AppStore = Object.assign({}, EventEmitter.prototype, {
@@ -22355,6 +22705,15 @@ var AppStore = assign({}, EventEmitter.prototype, {
 
 	getClients: function getClients() {
 		return _content.clients;
+	},
+
+	getFooter: function getFooter() {
+		return _content.footer;
+	},
+
+	getTestimonial: function getTestimonial() {
+		var n = _content.testimonials.list.length;
+		return _content.testimonials.list[Math.floor(Math.random() * n)];
 	}
 });
 
@@ -22375,4 +22734,4 @@ Dispatcher.register(function (action) {
 
 module.exports = AppStore;
 
-},{"../api/api":168,"../constants/action-types":179,"../dispatcher/dispatcher":180,"events":5,"object-assign":10}]},{},[181]);
+},{"../api/api":168,"../constants/action-types":180,"../dispatcher/dispatcher":181,"events":5,"object-assign":10}]},{},[182]);

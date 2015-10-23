@@ -86,8 +86,8 @@
 				"bio": "Microsoft Certified Trainer and has Microsoft Most Valuable Professional (MVP) Award. More recently he has become a Microsoft Private Cloud Facilitator and Microsoft vTSP. He has several Bachelor Degrees of IT and also graduated from Military Academy where he was awarded with the Lieutenant’s rank.",
 				"interests": ["IT", "virtualization", "big data"],
 				"photoUrl": "images/team/jevgenijus.jpg",
-				"fbUrl": "",
-				"twitterUrl": "",
+				"fbUrl": "http://facebook.com",
+				"twitterUrl": "https://twitter.com/jevgenijus",
 				"linkedinUrl": "http://lt.linkedin.com/pub/jevgenijus-vinochodovas/23/587/345"
 			},
 			{
@@ -122,6 +122,32 @@
 				"fbUrl": "",
 				"twitterUrl": "",
 				"linkedinUrl": "https://www.linkedin.com/in/sergejus"
+			}
+		]
+	},
+	"testimonials": {
+		"title": "Testimonials",
+		"list": [
+			{
+			"id": 1,
+			"name": "Adas Keserauskas",
+			"title": "IT Manager",
+			"company": "Kelprojektas",
+			"description": "An important part of our critical infrastructure is now in the cloud. We are possibly one of the first companies in Lithuania to move infrastructure and software to the cloud, but given the benefits we won’t be the last for sure."
+			},
+			{
+			"id": 2,
+			"name": "Sarunas Legeckas",
+			"title": "COO",
+			"company": "Place I Live",
+			"description": "We asked […] ALBARS to find an alternative platform and they suggested Windows Azure. The cloud was an attractive option because we could scale with virtual machines easily and quickly as needed."			
+			},
+			{
+			"id": 3,
+			"name": "Sarunas Legeckas",
+			"title": "COO",
+			"company": "Place I Live",
+			"description": "We were really surprised to discover we could run Linux on Windows Azure. But it’s been a great discovery and one which is enabling us to take our business worldwide with confidence and success."			
 			}
 		]
 	},
@@ -165,5 +191,9 @@
 				"url": ""
 			}
 		]
+	},
+	"footer": {
+		"backToTop": "Back To Top",
+		"copyright": "Copyright"
 	}
 }

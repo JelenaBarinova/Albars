@@ -315,8 +315,6 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
     margin-right: 5px;
 }
 
-
-
 .team-inner {
     margin-top:10px;
 }
@@ -340,46 +338,6 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 .row_team li {
     list-style: none;
-}
-
-.templatemo-project-box {
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    cursor:pointer;
-    height: 200px;
-    width: 200px;
-}
-
-.templatemo-project-box:hover .project-overlay {
-    transition: all 0.3s ease-in-out 0s;
-    visibility: visible;
-    opacity: 1;
-}
-
-.project-overlay {
-    background : rgba(0,0,0,.75);
-    border : 2px solid #60C0E6;
-    visibility: hidden;
-    position: absolute;
-    text-align:center;
-    padding-top:40px;
-    color: #ffffff;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    right: 0;
-    top: 0;
-}
-
-
-.project-overlay hr {
-    width : 70%;
-	
-}
-
-.templatemo-project-gallery li {
-    margin:15px;
 }
 
 .txt_darkgrey {
@@ -457,9 +415,10 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 }
 
 .twitter_user {
-	color: #FFFF33; 
+	color: #ffffff; 
 	font-size: 14px;
 	float: right;
+  font-weight: 600;
 }
 
 .templatemo-clients {
@@ -558,43 +517,8 @@ a:hover .social-icon-dribbble {
     background: url('../images/social-icon-dribbble-over.png') no-repeat;
 }
 
-ul.templatemo-project-gallery  li  a img:hover {
-    border: 3px solid #60C0E6;
-}
-
-.templatemo-gallery-category a {
-	color:#333333; 
-}
-
-.templatemo-gallery-category a.active {
-	color:#35A2D8; 
-	text-decoration:none;
-}
-
-.templatemo-gallery-category a:focus {
-	color:#35A2D8;
-	text-decoration:none;	
-}
-
-.templatemo-gallery-category a:hover {
-	color:#35A2D8; 
-	text-decoration:none;
-}
-
 .link_blue:hover {
     text-decoration:none;
-}
-.templatemo-project-gallery {         
-    margin:0 0 0 0;
-    margin-top:30px;
-    margin-left: -40px;
-}
-.templatemo-project-gallery li {     
-    list-style:none;
-    margin-bottom:25px;           
-}
-.templatemo-project-gallery li img {
-  cursor: pointer;
 }
 
 .templatemo-tweets {
@@ -604,16 +528,6 @@ ul.templatemo-project-gallery  li  a img:hover {
     font-size:20px;
     color:#ffffff;
     margin-top:100px;
-}
-
-.form-control {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    font-style: italic;
 }
 
 .btn_loadmore {
@@ -626,14 +540,6 @@ ul.templatemo-project-gallery  li  a img:hover {
 }
 
 @media (min-width:991px) and (max-width:1200px) {
-    .templatemo-project-box, .project-overlay {
-        height:170px;
-        width:170px;
-    }
-
-    .templatemo-project-gallery {
-        margin-left: -70px;
-    }
 
     .templatemo-service-item-header {
         padding: 5px 10px 10px 10px;
@@ -668,15 +574,6 @@ ul.templatemo-project-gallery  li  a img:hover {
     .member-thumb .thumb-overlay {
         padding-left: 30%;
     }
-    .templatemo-project-box , .project-overlay {
-       height:130px;
-       width:130px;
-       padding-top: 0px;
-    }
-
-    .templatemo-project-gallery {
-       margin-left: 10px; 
-    }
 
     .blog_box{
        margin-right: -140px;
@@ -685,6 +582,7 @@ ul.templatemo-project-gallery  li  a img:hover {
 
 
 @media (min-width: 768px) {
+  
   .navbar-nav > li > a {
     padding-top: 9px;
     padding-bottom: 9px;
