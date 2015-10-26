@@ -55,7 +55,7 @@ let clientsComponent = React.createClass ({
             </div>
             <div className="clearfix"></div>
             <div className="text-center">
-              <div className="container">
+              <div className="container" style={{matginTop:'70px'}}>
                 <div className="row">
                   {clientItems}                   
                 </div>

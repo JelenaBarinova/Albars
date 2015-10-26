@@ -1,6 +1,6 @@
 {
 	"menu": {
-		"home": "home",
+		"home": "about us",
 		"team": "team",
 		"services": "services",
 		"blog": "blog",
@@ -9,34 +9,11 @@
 	},
 	"carousel":{
 		"title": "ALBARS - Innovative IT solutions for you business",
-		"description": "At ALBARS we believe in a quality, pragmatic, fast IT is possible in every and each business. We work with startup to enterprise companies bringing them to higher level by providing best in class IT consultations.",
-		"list": [
-			{
-				"id": 1,
-				"title": "Welcome to ALBARS",
-				"content": "We are very awesome team or young energetic smart and pragmatic people, who always looks how to make the best for the customer. We are really strong in informational technologies: both hardware and software wise. We provide a wide range of different services for small to enterprise level companies.",
-				"url": "#/services",
-				"more": "Read more"
-			},
-			{
-				"id": 2,
-				"title": "Meet our new team member Rimante!",
-				"content": "As a head of communications - Rimante is the one you want to conact if any questions!",
-				"url": "#/team",
-				"more": "Albars team"
-			},
-			{
-				"id": 3,
-				"title": "ALBARS at a biggest IT conference in Europe",
-				"content": "Recently our the one and only Jevgenij gave a talk at Powered by MVP conference.",
-				"url": "http://www.bebetterdeveloper.com",
-				"more": "Read more"
-			}
-		]
+		"description": "At ALBARS we believe in a quality, pragmatic, fast IT is possible in every and each business. We work with startup to enterprise companies bringing them to higher level by providing best in class IT consultations."
 	},
 	"services": {
 		"title": "Our services",
-		"description": "At ALBARS we believe in ellegant and fast IT, that really helps and improves your work. We can help you solve all the IT issues you have and prepare your infrastructure fro growth. We are the best for these services:",
+		"description": "At ALBARS we believe in ellegant and fast IT, that really helps and improves your work. We can help you solve all the IT issues you have and prepare your infrastructure fro growth. We are the best for these services",
 		"list": [
 			{
 				"id": 1,

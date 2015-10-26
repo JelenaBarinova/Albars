@@ -65,8 +65,7 @@ let TopMenuComponent = React.createClass ({
                         <ul className="nav navbar-nav navbar-right" style={{marginTop: '10px'}}>
                           <li style={{float: "right"}}><a rel="nofollow" href="#/?lang=ru" data-target="#" className="external-link" onClick={this.switchLanguage.bind(this,'ru')}><img src="images/flags/ru.png" alt="ru" title="По-русски" /></a></li>
                           <li style={{float: "right"}}><a rel="nofollow" href="#/?lang=en" data-target="#" className="external-link" onClick={this.switchLanguage.bind(this,'en')}><img src="images/flags/en.png" alt="en" title="English" /></a></li>
-                          <li style={{float: "right"}}><a rel="nofollow" href="#/?lang=lt" data-target="#" className="external-link" onClick={this.switchLanguage.bind(this,'lt')}><img src="images/flags/lt.png" alt="lt" title="Lietuviškai" /></a></li>
-                          <li style={{float: "right"}}><a rel="nofollow" href="#/?lang=lv" data-target="#" className="external-link" onClick={this.switchLanguage.bind(this,'lv')}><img src="images/flags/lv.png" alt="lv" title="Latviešu" /></a></li> 
+                          <li style={{float: "right"}}><a rel="nofollow" href="#/?lang=lt" data-target="#" className="external-link" onClick={this.switchLanguage.bind(this,'lt')}><img src="images/flags/lt.png" alt="lt" title="Lietuviškai" /></a></li>                          
                         </ul>              
                       </div>
                   

@@ -12,10 +12,7 @@ let Api = {
 					break;
 			case 'lt':
 					_content = require('../../data/lt.json');
-					break;
-			case 'lv':
-					_content = require('../../data/lv.json');
-					break;
+					break;			
 			default:
 					_content = require('../../data/en.json');
 		}

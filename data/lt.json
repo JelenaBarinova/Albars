@@ -1,6 +1,6 @@
 {
 	"menu": {
-		"home": "pagrindinis",
+		"home": "apie mus",
 		"team": "komanda",
 		"services": "paslaugos",
 		"blog": "naujienos",
@@ -9,30 +9,7 @@
 	},
 	"carousel":{
 		"title": "ALBARS - Inovartyvūs IT sprendimai Jūsų verslui",
-		"description": "ALBARS įmonėje mes tikime, kad kokybiškas, pragmatiškas, greitas IT yra galimas kiekviename versle. Mes dirbame su paleisties su įmonių bendrovių pareikšti jiems aukštesnį lygį teikiant geriausias klasės IT konsultacijos.",
-		"list": [
-			{
-				"id": 1,
-				"title": "Sveiki atvykę į ALBARS",
-				"content": "Mes esame labai nuostabus komanda ar jauni energingi ir protingi pragmatiški žmonės, kurie visada atrodo, kaip padaryti, kad klientas geriausias. Mes esame tikrai stiprūs informacinių technologijų: tiek aparatinės ir programinės įrangos išmintingas. Mes siūlome platų įvairių paslaugų mažas, kad įmonės lygiu įmonių.",
-				"url": "#/services",
-				"more": "Skaityti daugiau"
-			},
-			{
-				"id": 2,
-				"title": "Susipažinkite su mūsų naują komandos narę Rimante!",
-				"content": "Kaip ryšių vadovas - Rimantė yra vienas norite, jei dėl bet kokių klausimų susisiekti!",
-				"url": "#/team",
-				"more": "Albars komanda"
-			},
-			{
-				"id": 3,
-				"title": "ALBARS didžiausioje IT konferencijoje Europoje",
-				"content": "Neseniai mūsų vienintelis Jevgenij davė ne varomas Talk MVP konferencijoje.",
-				"url": "http://www.bebetterdeveloper.com",
-				"more": "Skaityti daugiau"
-			}
-		]
+		"description": "ALBARS įmonėje mes tikime, kad kokybiškas, pragmatiškas, greitas IT yra galimas kiekviename versle. Mes dirbame su paleisties su įmonių bendrovių pareikšti jiems aukštesnį lygį teikiant geriausias klasės IT konsultacijos."
 	},
 	"services": {
 		"title": "Mūsų paslaugos",

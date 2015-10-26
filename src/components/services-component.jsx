@@ -10,9 +10,9 @@ let ServiceItem = React.createClass({
         <div className="templatemo-service-item">
           <div className="row" >
             <div className="col-xs-2" id="service-logo">
-              <span className="fa-stack fa-lg">
-                <i className="fa fa-square-o fa-stack-2x"></i>
-                <i className={icon}></i>
+              <span className="fa-stack fa-lg" >
+                <i className="fa fa-square fa-stack-2x" style={{color: '#0067BF'}}></i>
+                <i className={icon} style={{color: 'white'}}></i>
               </span>
             </div>
             <div className="col-xs-10">
