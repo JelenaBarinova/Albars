@@ -21,7 +21,7 @@ Po pokalbio:
 
 1. ~~Išmesti karusėlę, pakeisti foninį paveiksliuką į Albars logo mėlynam fone~~
 
-2. Telefono ir pašto viršutinę eilutę perkelti į apačią prie kontaktų
+2. ~~Telefono ir pašto viršutinę eilutę perkelti į apačią prie kontaktų~~
 
 3. ~~Pakeisti logo, įdėti "su bangele"~~
 
@@ -35,7 +35,7 @@ Po pokalbio:
 
 8. Bloge išmesti, datą - palikti tik mėnesį
 
-9. Iš klientų padaryti nuorodas į Case Studies (pdf iš Rimantės)
+9. ~~Iš klientų padaryti nuorodas į Case Studies (pdf iš Rimantės)~~
 
 10. ~~Komandos fonas - baltas~~
 

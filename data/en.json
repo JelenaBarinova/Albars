@@ -138,7 +138,7 @@
 				"website": "http://www.kelprojektas.lt",
 				"case": "Kelprojektas wanted to strengthen its IT infrastructure and moved from an unreliable on-premise solution to a cloud-based infrastructure based around Windows Azure and Office 365 which provides it with great reliability, unbeatable cost savings and enviable flexibility.",
 				"readMore": "Read more",
-				"url": ""		
+				"url": "data/case-studies/en-kelprojektas.pdf"		
 			},
 			{
 				"id": 2,
@@ -147,7 +147,7 @@
 				"website": "http://www.placeilive.com",
 				"case": "Place I Live’s business is built on delivering open data that provides information about living conditions and services in major global cities. When it piloted the service it used a local website hosting provider but soon discovered the service wasn’t robust and flexible enough to scale out to many cities. Consequently, it turned to Microsoft Azure which allows it confidently reach around the world with a cloud-based infrastructure that is reliable and flexible, and one that performs powerfully.",
 				"readMore": "Read more",
-				"url": ""
+				"url": "data/case-studies/en-place-i-live.pdf"
 			},
 			{
 				"id": 3,

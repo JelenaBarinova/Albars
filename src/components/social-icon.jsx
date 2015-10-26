@@ -20,7 +20,7 @@ let SocialIcon = React.createClass ({
     if (this.props.url.length) {
       return (
         <a className="fa-stack fa-lg" href={this.props.url} rel="nofollow" target="_blank" style={{fontSize: "24px"}}>
-          <i className="fa fa-square fa-stack-2x"></i>
+          <i className="fa fa-stop fa-stack-2x"></i>
           <i className={iconClass} style={{color:"white"}}></i>
         </a>
       );      

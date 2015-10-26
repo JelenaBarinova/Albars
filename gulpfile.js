@@ -68,8 +68,9 @@ gulp.task('copy-jstheme', function() {
     .pipe(gulp.dest(output_dir + 'js/'));
 });
 
+
 gulp.task('copy-data', function() {
-  return gulp.src(['./data/*'])
+  return gulp.src(['./data/**/*'])
     .pipe(gulp.dest(output_dir + 'data/'));
 });
 

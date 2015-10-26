@@ -11,7 +11,7 @@ let ServiceItem = React.createClass({
           <div className="row" >
             <div className="col-xs-2" id="service-logo">
               <span className="fa-stack fa-lg" >
-                <i className="fa fa-square fa-stack-2x" style={{color: '#0067BF'}}></i>
+                <i className="fa fa-stop fa-stack-2x" style={{color: '#0067BF'}}></i>
                 <i className={icon} style={{color: 'white'}}></i>
               </span>
             </div>

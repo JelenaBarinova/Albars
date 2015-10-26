@@ -5,9 +5,8 @@ jQuery(function ($) {
 
   $(document).ready(function () {
     // scroll spy to auto active the nav item
-    var topBar = $('.templatemo-top-bar');
     var topMenu = $('.templatemo-top-menu');
-    $('body').scrollspy({ target: '#templatemo-nav-bar', offset: topBar.height() + topMenu.height() + 10 });
+    $('body').scrollspy({ target: '#templatemo-nav-bar', offset: topMenu.height() + 40 });
     $('.external-link').unbind('click');
     
     // scroll to top
@@ -41,10 +40,9 @@ function initialize() {
 // scroll animation 
 function scrollTo(selectors) {
   if (!$(selectors).size()) return;
-  
-  var topBar = $('.templatemo-top-bar');
-  var topMenu = $('.templatemo-top-menu');
-  var selector_top = $(selectors).offset().top - topBar.height();
+    
+  var topMenu = $('.templatemo-top-menu') ;
+  var selector_top = $(selectors).offset().top - 40;
   if(!topMenu.hasClass('isStuck')) {
     selector_top -= topMenu.height();
   }

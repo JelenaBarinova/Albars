@@ -1,7 +1,6 @@
 "use strict";
 let React = require('react');
 
-let TopHeaderComponent = require('./top-header-component');
 let TopMenuComponent = require('./top-menu-component');
 let CarouselComponent = require('./carousel-component');
 let ServicesComponent = require('./services-component');
@@ -18,8 +17,7 @@ let App = React.createClass ({
   render() {
     return (
       <div>
-        <TopHeaderComponent />
-      
+        
 	  	  <TopMenuComponent />
         <CarouselComponent />
         <ServicesComponent />
