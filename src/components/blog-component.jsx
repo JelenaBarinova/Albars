@@ -1,8 +1,26 @@
 "use strict";
 let React = require('react');
+let AppStore = require('../stores/app-store');
 
 let BlogComponent = React.createClass ({
-
+getInitialState() {
+    return {    
+       readMore: AppStore.getReadMore()
+    };
+  },
+  componentWillMount() {
+    AppStore.addChangeListener(this._onChange); 
+  },
+  
+  componentWillUnmount() {
+    AppStore.removeChangeListener(this._onChange); 
+  },
+  
+  _onChange() {
+    this.setState({ 
+      readMore: AppStore.getReadMore() 
+    });
+  },
   render() {
     return (
     
@@ -32,7 +50,7 @@ let BlogComponent = React.createClass ({
                                     <span>Posted by : <a className="link_blue" href="#"><span className="txt_blue">Tracy</span></a></span>
                                 </div>
                                 <div className="pull-right">
-                                    <a className="btn btn-blue" href="#" role="button">18 January 2084</a>
+                                    <a className="btn btn-blue" href="#" role="button">{this.state.readMore}</a>
                                 </div>
                                 <div className="clearfix"> </div>
                                 <p className="blog_text">
@@ -53,7 +71,7 @@ let BlogComponent = React.createClass ({
                                     <span>Posted by : <a className="link_blue" href="#"><span className="txt_blue">Mary</span></a></span>
                                 </div>
                                 <div className="pull-right">
-                                    <a className="btn btn-blue" href="#" role="button">16 January 2084</a>
+                                    <a className="btn btn-blue" href="#" role="button">{this.state.readMore}</a>
                                 </div>
                                 <div className="clearfix"> </div>
                                 <p className="blog_text">
@@ -76,7 +94,7 @@ let BlogComponent = React.createClass ({
                                     <span>Posted by : <a className="link_blue" href="#"><span className="txt_blue">Julia</span></a></span>
                                 </div>
                                 <div className="pull-right">
-                                    <a className="btn btn-blue" href="#" role="button">12 January 2084</a>
+                                    <a className="btn btn-blue" href="#" role="button">{this.state.readMore}</a>
                                 </div>
                                 <div className="clearfix"> </div>
                                 <p className="blog_text">
@@ -99,7 +117,7 @@ let BlogComponent = React.createClass ({
                                     <span>Posted by : <a className="link_blue" href="#"><span className="txt_blue">Linda</span></a></span>
                                 </div>
                                 <div className="pull-right">
-                                    <a className="btn btn-blue" href="#" role="button">10 January 2084</a>
+                                    <a className="btn btn-blue" href="#" role="button">{this.state.readMore}</a>
                                 </div>
                                 <div className="clearfix"> </div>
                                 <p className="blog_text">

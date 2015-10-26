@@ -7,9 +7,10 @@
 		"clients": "klientai",
 		"contact": "kontaktai"
 	},
+	"readMore": "Daugiau",
 	"carousel":{
 		"title": "ALBARS - Inovartyvūs IT sprendimai Jūsų verslui",
-		"description": "ALBARS įmonėje mes tikime, kad kokybiškas, pragmatiškas, greitas IT yra galimas kiekviename versle. Mes dirbame su paleisties su įmonių bendrovių pareikšti jiems aukštesnį lygį teikiant geriausias klasės IT konsultacijos."
+		"description": "UAB ALBARS yra Microsoft Certified Partner, kurios pagrindinė veikla – novatoriškiausių bei optimaliausių IT infrastruktūros sprendimų kūrimas ir įgyvendinimas siekiant užtikrinti įmonių veiklos aukštą produktyvumą, duomenų saugumą, įvairių produktų ir įrangos integraciją bei beveik neribotą funkcionalumą. Įmonėje dirba didelę patirtį ir techninių žinių bagažą sukaupę IT specialistai (keletas iš jų turi Microsoft Most Valuable Professional (MVP), Microsoft Certified Trainer (MCT) statusus), kurių kompetencijų sričių spektras: nuo dinaminių duomenų centrų/debesų iki aplikacijų kūrimo pagal užsakymą; nuo unifikuotos komunikavimo/bendradarbiavimo koncepcijos diegimo iki hibridinių sprendimų System Center ir Azure pagrindu. Nors mūsų prioritetas – IT sprendimai, pagrįsti Microsoft produktų pagrindu, bet puikia išmanome Open Sources, VMware, Citrix ir kt. Esame jau realizavę daugiau nei 50 projektų Baltijos šalyse, Skandinavijoje, JK, Vokietijoje bei Centrinėje Azijoje, plataus veiklos spektro ir įvairaus dydžio organizacijose (bankuose, viešojo sektoriaus, prekybos, inžinerijos, gamybos, naudingąsias iškasenas eksploatuojančiose įmonėse)."
 	},
 	"services": {
 		"title": "Mūsų paslaugos",

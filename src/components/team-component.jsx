@@ -11,7 +11,7 @@ let TeamMember = React.createClass ({
           <div className="member-thumb">
             <img src={this.props.member.photoUrl} className="img-responsive" alt={this.props.member.name}/>
             <div className="thumb-overlay">
-            <div className="row">
+            <div className="row" style={{position: 'absolute', bottom: '0'}}>
              <SocialIcon social_network="facebook" url={this.props.member.fbUrl} />
              <SocialIcon social_network="twitter" url={this.props.member.twitterUrl} />
              <SocialIcon social_network="linkedin" url={this.props.member.linkedinUrl} />
@@ -64,7 +64,7 @@ let TeamComponent = React.createClass ({
                 <div className="row">
                     <div className="templatemo-line-header">
                         <div className="text-center">
-                            <hr className="team_hr team_hr_left"/><span>{this.state.teamData.title.toUpperCase()}</span>
+                            <hr className="team_hr team_hr_left"/><span className="txt_darkgrey">{this.state.teamData.title.toUpperCase()}</span>
                             <hr className="team_hr team_hr_right" />
                         </div>
                     </div>

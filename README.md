@@ -27,19 +27,19 @@ Po pokalbio:
 
 4. ~~Pakeisti meniu "Home" į "About us"~~
 
-5. Pakeisti "Welcome message" į "Apie mus" tekstą, pridėti Silver partner
+5. ~~Pakeisti "Welcome message" į "Apie mus" tekstą, pridėti Silver partner~~
 
 6. ~~Paslaugų ikonas padaryti mėlynas~~
 
 7. ~~Visur pakeisti teksto spalvą - padaryti kaip senoje versijoje~~
 
-8. Bloge išmesti, datą - palikti tik mėnesį
+8. ~~Bloge išmesti, datą - palikti tik mėnesį~~
 
 9. ~~Iš klientų padaryti nuorodas į Case Studies (pdf iš Rimantės)~~
 
 10. ~~Komandos fonas - baltas~~
 
-11. Užvedus ant komandos nario rodyti mygtukus apačioje
+11. ~~Užvedus ant komandos nario rodyti mygtukus apačioje~~
 
 12. Įdėti meniu punktą ir sekciją "Trainings"
 

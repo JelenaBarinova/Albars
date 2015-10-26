@@ -7,9 +7,10 @@
 		"clients": "clients",
 		"contact": "contact"
 	},
+	"readMore": "Read more",
 	"carousel":{
 		"title": "ALBARS - Innovative IT solutions for you business",
-		"description": "At ALBARS we believe in a quality, pragmatic, fast IT is possible in every and each business. We work with startup to enterprise companies bringing them to higher level by providing best in class IT consultations."
+		"description": "The company ALBARS is a Microsoft Certified Partner, the main activity of which is the development and implementation of the most innovative and cutting-edge IT infrastructure solutions in order to ensure high productivity of companies, data safety, integration of various products and equipment, and almost unlimited functionality. IT specialists with vast experience and technical knowledge (some of them have Microsoft Most Valuable Professional (MVP), Microsoft Certified Trainer (MCT) status) are employed at the company. Their competence fields range from dynamic data centres/clouds to the creation of custom applications; from the implementation of th unified communication/collaboration concept to hybrid solutions based on System Center and Azure. Even though our priority is IT solutions based on Microsoft products, we have excellent knowledge of Open Sources, VMware, Citrix, etc. We have already implemented more than 50 projects in the Baltic States, Scandinavia, UK, Germany and Central Asia in organizations of a wide activity range and various sizes (in banks, public sector, trading, engineering, manufacturing, mineral resource companies)."
 	},
 	"services": {
 		"title": "Our services",

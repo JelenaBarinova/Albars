@@ -37,8 +37,15 @@ let CarouselComponent = React.createClass ({
           <div className="container">
             <div className="templatemo-slogan text-center">
               <span className="txt_darkgrey"></span><span className="txt_blue">{this.state.carouselData.title}</span>
-              <p className="txt_slogan"><i>{this.state.carouselData.description}</i></p>
-              
+              <div className="container">
+                <div className="row">
+                  
+                    <p className="txt_description"><i>{this.state.carouselData.description}</i></p>
+                  <p className="txt_slogan">
+                    <img src='images/ms-silver-partner.gif' className="img-responsive" alt='Microsoft Silver Parner'style={{margin: "0 auto"}}/>
+                 </p>
+                </div>
+              </div>
             </div>	
           </div>
         </div>

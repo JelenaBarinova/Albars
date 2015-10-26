@@ -53,6 +53,10 @@ let AppStore = assign({}, EventEmitter.prototype, {
 		return _content.footer;
 	},
 	
+	getReadMore() {
+		return _content.readMore;
+	},
+	
 	getTestimonial() {
 		let n = _content.testimonials.list.length;
 		return _content.testimonials.list[Math.floor(Math.random() * (n))];
