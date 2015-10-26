@@ -26,7 +26,7 @@ let FooterComponent = React.createClass ({
   },
   render() {
     return (
-      <div className="templatemo-footer" id="templatemo-footer">
+      <div className="templatemo-footer" id="albars-footer">
         <div className="container">
           <div className="row">
             <div className="text-center">

@@ -59,7 +59,7 @@ let ServicesComponent = React.createClass ({
     });
     
     return (
-        <div className="templatemo-service" id="templatemo-services">
+        <div className="templatemo-service" id="albars-services">
           <div className="container">
             <div className="row" style={{marginTop: '70px'}}>
               <div className="templatemo-line-header" style={{marginTop: '0px'}} >

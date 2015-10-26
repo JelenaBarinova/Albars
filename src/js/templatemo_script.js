@@ -12,7 +12,7 @@ jQuery(function ($) {
     // scroll to top
     $('#btn-back-to-top').click(function (e) {
       e.preventDefault();
-      scrollTo('#templatemo-top');
+      scrollTo('#albars-top');
     });    
 
 

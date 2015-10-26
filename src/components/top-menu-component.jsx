@@ -40,7 +40,7 @@ let TopMenuComponent = React.createClass ({
    
     return (
       <div>
-        <div className="templatemo-top-bar" id="templatemo-top" />
+        <div className="templatemo-top-bar" id="albars-top" />
         <div className="templatemo-top-menu">
           <div className="container">
             <div className="navbar navbar-default" role="navigation">
@@ -72,12 +72,12 @@ let TopMenuComponent = React.createClass ({
                   
                       <div className="row">
                         <ul className="nav navbar-nav navbar-right" style={{marginTop: '10px'}}>
-                          <li><a href="#templatemo-top" >{this.state.menuData.home.toUpperCase()}</a></li>
-                          <li><a href="#templatemo-services" >{this.state.menuData.services.toUpperCase()}</a></li>
-                          <li><a href="#templatemo-about">{this.state.menuData.team.toUpperCase()}</a></li>                  
-                          <li><a href="#templatemo-blog">{this.state.menuData.blog.toUpperCase()}</a></li>
-                          <li><a href="#templatemo-clients">{this.state.menuData.clients.toUpperCase()}</a></li>
-                          <li><a href="#templatemo-footer">{this.state.menuData.contact.toUpperCase()}</a></li>          
+                          <li><a href="#albars-top" >{this.state.menuData.home.toUpperCase()}</a></li>
+                          <li><a href="#albars-services" >{this.state.menuData.services.toUpperCase()}</a></li>
+                          <li><a href="#albars-about">{this.state.menuData.team.toUpperCase()}</a></li>                  
+                          <li><a href="#albars-blog">{this.state.menuData.blog.toUpperCase()}</a></li>
+                          <li><a href="#albars-clients">{this.state.menuData.clients.toUpperCase()}</a></li>
+                          <li><a href="#albars-footer">{this.state.menuData.contact.toUpperCase()}</a></li>          
                         </ul>  
                       </div>  
                                           

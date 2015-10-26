@@ -52,7 +52,7 @@ let clientsComponent = React.createClass ({
     });
     
     return (    
-      <div className="templatemo-clients" id="templatemo-clients" >
+      <div className="templatemo-clients" id="albars-clients" >
         <div className="container">
           <div className="row">
             <div className="templatemo-line-header" >

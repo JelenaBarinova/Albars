@@ -24,7 +24,7 @@ getInitialState() {
   render() {
     return (
     
-<div id="templatemo-blog">
+<div id="albars-blog">
             <div className="container">
                 <div className="row" style={{marginTop: '70px'}}>
                     <div className="templatemo-line-header" style={{marginTop: '0px'}} >

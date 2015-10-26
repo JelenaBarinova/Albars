@@ -59,7 +59,7 @@ let TeamComponent = React.createClass ({
     });
     return (
     
-    <div className="templatemo-team" id="templatemo-about">
+    <div className="templatemo-team" id="albars-about">
             <div className="container">
                 <div className="row">
                     <div className="templatemo-line-header">
