@@ -5,13 +5,14 @@ let ActionTypes = require('../constants/action-types');
 let EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
 let Api =  require('../api/api');
+const locales = require('../constants/locales');
 
 let CHANGE_EVENT = 'change';
 
-let _content;
+let _content, _blogs, _locale;
 
 let AppStore = assign({}, EventEmitter.prototype, {
-//let AppStore = Object.assign({}, EventEmitter.prototype, {
+//let AppStore = Object.assign({}, EventEmitter.prototype, {	
 	
 	addChangeListener(callback) {
 		this.on(CHANGE_EVENT, callback)
@@ -61,14 +62,22 @@ let AppStore = assign({}, EventEmitter.prototype, {
 		return _content.footer;
 	},
 	
-	getReadMore() {
-		return _content.readMore;
-	},
-	
 	getTestimonial() {
 		let n = _content.testimonials.list.length;
 		return _content.testimonials.list[Math.floor(Math.random() * (n))];
 	},
+	
+	getBlogsMeta() {
+		return _content.blogs;
+	},
+	
+	getBlogs() {
+		return _blogs;
+	},
+	
+	getLocale() {
+		return _locale;
+	}
 });
 
 Dispatcher.register(function(action){
@@ -76,10 +85,16 @@ Dispatcher.register(function(action){
 	switch(action.actionType) {
 		case ActionTypes.INITIALIZE:
 			_content = action.initialData.content;
+			_blogs = action.initialData.blogs;			
+			_locale = locales.get(action.initialData.language);
+			console.log(_blogs);
 			AppStore.emitChange();
 			break;
 		case ActionTypes.SWITCH_LANGUAGE:
 			_content = Api.getData(action.language);
+			_blogs = Api.getBlogs(action.language);
+			_locale = locales.get(action.language);
+			console.log(_blogs);
 			AppStore.emitChange();
 			break;
 		default:

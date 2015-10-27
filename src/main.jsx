@@ -17,8 +17,8 @@ let getQueryParams = function(str) {
 }
 
 let query_params = getQueryParams(window.location.href);
-let lang = query_params['lang'] || 'en-us';
+let language = query_params['lang'] || 'en';
 
-InitializeActions.initApp(lang);
+InitializeActions.initApp(language);
 
 React.render(<App />, document.getElementById('HomePage'));

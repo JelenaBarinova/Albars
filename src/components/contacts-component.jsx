@@ -8,7 +8,7 @@ let ContactsItem = React.createClass({
   render() {    
     return (
           
-      <div className="col-lg-3 col-md-3 col-sm-6 " style={{fontSize: "16px"}}>
+      <div className="col-lg-3 col-md-3 col-xs-5" style={{fontSize: "16px"}}>
         <div className="row" >
           <h3 >{this.props.contact.city}{', '}{this.props.contact.country}</h3>
         
@@ -44,7 +44,8 @@ let ContactsItem = React.createClass({
 let ContactsComponent = React.createClass ({
   getInitialState() {
     return {    
-       contactsData: AppStore.getContacts()
+       contactsData: AppStore.getContacts(),
+       footerData: AppStore.getFooter()
     };
   },
   componentWillMount() {
@@ -58,7 +59,8 @@ let ContactsComponent = React.createClass ({
   
   _onChange() {    
     this.setState({ 
-      contactsData: AppStore.getContacts() 
+      contactsData: AppStore.getContacts(),
+      footerData: AppStore.getFooter()
     });
   },
   
@@ -107,6 +109,20 @@ let ContactsComponent = React.createClass ({
             </div>
           </div>
         </div>
+        <div className="templatemo-footer" id="albars-footer">
+        <div className="container">
+          <div className="row">
+            <div className="text-center">
+              <div className="height30"></div>
+              <a className="btn btn-lg btn-blue" href="#" role="button" id="btn-back-to-top">{this.state.footerData.backToTop}</a>
+              <div className="height30"></div>
+              <div className="footer_bottom_content">
+                <span>{this.state.footerData.copyright} © {new Date().getFullYear()} <a href="#">Albars</a></span>
+              </div>        
+            </div>
+          </div>
+        </div>
+      </div> 
       </div> 
     );
   }
