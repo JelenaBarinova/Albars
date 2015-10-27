@@ -1,7 +1,7 @@
 "use strict";
 let React = require('react');
 let AppStore = require('../stores/app-store');
-
+let SocialIcon = require('./social-icon');
 
 let ContactsItem = React.createClass({
   
@@ -12,11 +12,16 @@ let ContactsItem = React.createClass({
         <div className="row" >
           <h3 >{this.props.contact.city}{', '}{this.props.contact.country}</h3>
         
-          <p>{this.props.contact.person}{', '}{this.props.contact.title}</p>
+          <div className="col-xs-10">
+              <span>{this.props.contact.person}</span>
+          </div>
+          <div className="col-xs-10">
+            <span>{this.props.contact.title}</span>
+          </div>
         
         </div>
         <div className="row">
-          <div className="col-xs-2">
+          <div className="col-xs-1">
               <i className="fa fa-phone" style={{color: '#0067BF', fontSize: 'large'}}></i>
           </div>
           <div className="col-xs-10">
@@ -24,7 +29,7 @@ let ContactsItem = React.createClass({
           </div>
         </div>
         <div className="row">
-          <div className="col-xs-2">
+          <div className="col-xs-1">
               <i className="fa fa-envelope-o" style={{color: '#0067BF', fontSize: 'large'}}></i>
           </div>
           <div className="col-xs-10">
@@ -67,7 +72,7 @@ let ContactsComponent = React.createClass ({
     return (
       <div id="albars-contacts">
         <div className="container">
-          <div className="row">
+          <div className="row" >
             <div className="templatemo-line-header">
               <div className="text-center">
                 <hr className="team_hr team_hr_left hr_gray"/><span className="txt_darkgrey">CONTACT US</span>
@@ -75,11 +80,31 @@ let ContactsComponent = React.createClass ({
               </div>
             </div>
             <div className="clearfix"> </div>
-            <div className="container">
-              <div className="row">
+            <div className="container" style={{marginTop: '70px'}}>
+              <div className="row" style={{padding: "10px"}}>
                 {contactsItems}
               </div>
             </div>            
+          </div>
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="text-center">
+        
+              <div className="footer_container">
+                <ul className="list-inline">
+                  <li>
+                    <SocialIcon social_network="facebook" url="https://www.facebook.com/albars.eu" />
+                  </li>
+                  <li>
+                    <SocialIcon social_network="twitter" url="https://twitter.com/albars_eu" />
+                  </li>
+                  <li>
+                    <SocialIcon social_network="linkedin" url="https://www.linkedin.com/company/5317006" />
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div> 

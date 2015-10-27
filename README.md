@@ -43,7 +43,7 @@ Po pokalbio:
 
 12. ~~Įdėti meniu punktą ir sekciją "Trainings"~~
 
-13. Prie kontaktų įrašyti kontaktinius telefonus visose šalyse.
+13. ~~Prie kontaktų įrašyti kontaktinius telefonus visose šalyse.~~
 
 14. Gauti daugiau komandos narių nuotraukų
 
