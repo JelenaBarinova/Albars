@@ -74,10 +74,11 @@ let TopMenuComponent = React.createClass ({
                         <ul className="nav navbar-nav navbar-right" style={{marginTop: '10px'}}>
                           <li><a href="#albars-top" >{this.state.menuData.home.toUpperCase()}</a></li>
                           <li><a href="#albars-services" >{this.state.menuData.services.toUpperCase()}</a></li>
+                          <li><a href="#albars-trainings" >{this.state.menuData.trainings.toUpperCase()}</a></li>
                           <li><a href="#albars-about">{this.state.menuData.team.toUpperCase()}</a></li>                  
                           <li><a href="#albars-blog">{this.state.menuData.blog.toUpperCase()}</a></li>
                           <li><a href="#albars-clients">{this.state.menuData.clients.toUpperCase()}</a></li>
-                          <li><a href="#albars-footer">{this.state.menuData.contact.toUpperCase()}</a></li>          
+                          <li><a href="#albars-contacts">{this.state.menuData.contacts.toUpperCase()}</a></li>          
                         </ul>  
                       </div>  
                                           

@@ -9,11 +9,11 @@ Done in React.js, using Flux, react-router and gulp. Beatiful design taken from 
 
 2. Minify external libs + css
 
-3. Rename anchors
+3. ~~Rename anchors~~
 
 4. Refactor blog part
 
-5. Contacts componenet
+5. ~~Contacts componenet~~
 
 ---
 
@@ -41,7 +41,7 @@ Po pokalbio:
 
 11. ~~Užvedus ant komandos nario rodyti mygtukus apačioje~~
 
-12. Įdėti meniu punktą ir sekciją "Trainings"
+12. ~~Įdėti meniu punktą ir sekciją "Trainings"~~
 
 13. Prie kontaktų įrašyti kontaktinius telefonus visose šalyse.
 

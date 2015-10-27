@@ -6,7 +6,7 @@ let ClientItem = React.createClass({
   
  
   render() {
-   let read_more; 
+    let read_more; 
     if (this.props.client.url)
     { 
       read_more = <a className="btn btn-blue" href={this.props.client.url} target="_blank" role="button">{this.props.client.readMore}</a>;

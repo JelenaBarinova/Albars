@@ -41,12 +41,20 @@ let AppStore = assign({}, EventEmitter.prototype, {
 		return _content.services;
 	},
 	
+	getTrainings() {
+		return _content.trainings;
+	},
+	
 	getTeam() {
 		return _content.team;
 	},
 
 	getClients() {
 		return _content.clients;
+	},
+	
+	getContacts() {
+		return _content.contacts;
 	},
 	
 	getFooter() {

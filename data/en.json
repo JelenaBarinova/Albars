@@ -3,9 +3,10 @@
 		"home": "about us",
 		"team": "team",
 		"services": "services",
+		"trainings": "trainings",
 		"blog": "blog",
 		"clients": "clients",
-		"contact": "contact"
+		"contacts": "contacts"
 	},
 	"readMore": "Read more",
 	"carousel":{
@@ -52,6 +53,40 @@
 				"description": "We will ensure entire information security in your corporate system based on Active Directory rights: Public key infrastructure (PKI); Active Directory Rights Management Services.",
 				"icon": "fa-lock"
 			}			
+		]
+	},
+	"trainings": {
+		"title": "Trainings",
+		"description": "ALBARS IT team develops and implements the most cutting-edge and effective complex IT infrastructure solutions for organizations of a wide activity range and various sizes all around the world, it develops demo environments to help customers in choosing the most suitable IT solutions that correspond with the company’s needs best. ALBARS IT specialists – trainers of high competence (Microsoft Most Valuable Professional (MVP), Microsoft Certified Trainer (MCT)), who have exceptional technical experience and deep knowledge, may provide colleagues with the most up-to-date theoretical and practical knowledge, which will assist companies to implement the set objectives and to make the most of their technologies on the way to the higher quality and development level.",
+		"schedule": "Schedule",
+		"scheduleUrl": "http://blog.albars.com/schedule",
+		"guide": "Download guide",
+		"guideUrl": "data/trainings/en-ms-training-and-certification-guide.pdf",
+		"list": [
+			{
+				"id": 1,
+				"title": "Server",
+				"description": "Windiws Server, Exchange Server, Lync, SharePoint, Microsoft Azure",
+				"icon": "fa-server"
+			},
+			{
+				"id": 2,
+				"title": "Desktop",
+				"description": "Windows, devices",
+				"icon": "fa-desktop"
+			},
+			{
+				"id": 3,
+				"title": "Applications",
+				"description": "Office, Office 365, Microsoft Dynamics",
+				"icon": "fa-folder-open-o"
+			},
+			{
+				"id": 4,
+				"title": "Database",
+				"description": "SQL Server",
+				"icon": "fa-database"
+			}		
 		]
 	},
 	"team": {
@@ -167,6 +202,47 @@
 				"case": "ALBARS recovered UAB “Kauno vandenys” critical data after disaster occurred and helped the organization better understand and move toward a more secure, well-managed IT infrastructure that will help reduce overall IT costs, make better use of IT resources, and make IT a strategic asset for the business, helped eliminate unnecessary cost and complexity, ensured that the business will be always up and running.",
 				"readMore": "Read more",
 				"url": ""
+			}
+		]
+	},
+	"contacts": {
+		"title": "We have offices and smart people all around the world. Please contact the closes office to you.",
+		"list": [
+			{
+				"id": 1,
+				"country": "Lithuania",
+				"city": "Vilnius",
+				"person": "Rimantė Šilauskienė",
+				"title": "Head of Communications",
+				"phone": "+370-6-73-06775",
+				"email": "info@albars.com"
+			},
+			{
+				"id": 2,
+				"country": "Russia",
+				"city": "Moscow",
+				"person": "Rimantė Šilauskienė",
+				"title": "Head of Communications",
+				"phone": "+370-6-73-06775",
+				"email": "info@albars.com"
+			},
+			{
+				"id": 3,
+				"country": "Latvia",
+				"city": "Riga",
+				"person": "Rimantė Šilauskienė",
+				"title": "Head of Communications",
+				"phone": "+370-6-73-06775",
+				"email": "info@albars.com"
+			},
+			{
+				"id": 4,
+				"country": "Kazakhstan",
+				"city": "Astana",
+				"person": "Rimantė Šilauskienė",
+				"title": "Head of Communications",
+				"phone": "+370-6-73-06775",
+				"email": "info@albars.com"
 			}
 		]
 	},
